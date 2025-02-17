@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* /-------Typography /--------------*/
+/* Body */
+html {
+  font-family: var(--font-poppins);
+  font-size: 20px;
+}
+/* Heading - Large */
+h1 {
+  font-family: var(--font-prata);
+  font-size: 60px;
+  font-weight: bold;
+  line-height: 90px;
+}
+
+/* Heading - Medium */
+h2 {
+  font-family: var(--font-prata);
+  font-size: 48px;
+}
+
+/* Subheading */
+h3 {
+  font-family: var(--font-poppins);
+  font-size: 32px;
+}
+
+/* Label */
+h4 {
+  font-family: var(--font-prata);
+  font-size: 22px;
+  letter-spacing: 25%;
+}
+
+/* /--------------------------Colors------------------------------- */
