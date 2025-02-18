@@ -2,6 +2,7 @@ import "@/styles/globals.css";
 
 import { Poppins, Prata } from "next/font/google";
 import { type Metadata } from "next";
+import Header from "@/components/Layout/Header";
 
 export const metadata: Metadata = {
   title: "Create T3 App",
@@ -27,8 +28,14 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${poppins.variable} ${prata.variable}`}>
-      <body>{children}</body>
+    <html
+      lang="en"
+      className={`${poppins.variable} ${prata.variable} bg-bgCream`}
+    >
+      <body>
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }
