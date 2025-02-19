@@ -16,7 +16,7 @@ const HeaderBanner = () => {
           </p>
         </div>
       </div>
-      <div className="parent flex h-[540px] w-screen flex-col justify-end bg-[url('/images/headerBg.png')] bg-cover bg-center">
+      <div className="parent flex h-[540px] w-screen flex-col justify-end bg-[url('/images/homepage/header.png')] bg-cover bg-center">
         {/* /----------------absolute card---------------- */}
         <div className="absolute right-24 top-1/4">
           <div className="parent flex h-[433px] w-[344px] flex-col justify-start bg-[url('/images/homepage/card.png')] bg-cover bg-center">
