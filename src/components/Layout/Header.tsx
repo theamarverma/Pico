@@ -7,34 +7,34 @@ const Nav = () => {
     <div className="flex items-center gap-10">
       <Link
         href="/"
-        className="hover:text-picoTeal group relative mt-2 inline-block"
+        className="group relative mt-2 inline-block hover:text-picoTeal"
       >
         Home
-        <span className="bg-picoTeal absolute -bottom-2 left-1/2 hidden h-[2px] w-0 -translate-x-1/2 transform transition-all duration-300 group-hover:flex group-hover:w-[40px] group-hover:items-center group-hover:justify-center md:block"></span>
+        <span className="absolute -bottom-2 left-1/2 hidden h-[2px] w-0 -translate-x-1/2 transform bg-picoTeal transition-all duration-300 group-hover:flex group-hover:w-[40px] group-hover:items-center group-hover:justify-center md:block"></span>
       </Link>
 
       <Link
         href="/about"
-        className="hover:text-picoTeal group relative mt-2 inline-block"
+        className="group relative mt-2 inline-block hover:text-picoTeal"
       >
         About Us
-        <span className="bg-picoTeal absolute -bottom-2 left-1/2 hidden h-[2px] w-0 -translate-x-1/2 transform transition-all duration-300 group-hover:flex group-hover:w-[40px] group-hover:items-center group-hover:justify-center md:block"></span>
+        <span className="absolute -bottom-2 left-1/2 hidden h-[2px] w-0 -translate-x-1/2 transform bg-picoTeal transition-all duration-300 group-hover:flex group-hover:w-[40px] group-hover:items-center group-hover:justify-center md:block"></span>
       </Link>
 
       <Link
         href="/gallery"
-        className="hover:text-picoTeal group relative mt-2 inline-block"
+        className="group relative mt-2 inline-block hover:text-picoTeal"
       >
         Gallery
-        <span className="bg-picoTeal absolute -bottom-2 left-1/2 hidden h-[2px] w-0 -translate-x-1/2 transform transition-all duration-300 group-hover:flex group-hover:w-[40px] group-hover:items-center group-hover:justify-center md:block"></span>
+        <span className="absolute -bottom-2 left-1/2 hidden h-[2px] w-0 -translate-x-1/2 transform bg-picoTeal transition-all duration-300 group-hover:flex group-hover:w-[40px] group-hover:items-center group-hover:justify-center md:block"></span>
       </Link>
 
       <Link
         href="/contact"
-        className="hover:text-picoTeal group relative mt-2 inline-block"
+        className="group relative mt-2 inline-block hover:text-picoTeal"
       >
         Contact Us
-        <span className="bg-picoTeal absolute -bottom-2 left-1/2 hidden h-[2px] w-0 -translate-x-1/2 transform transition-all duration-300 group-hover:flex group-hover:w-[40px] group-hover:items-center group-hover:justify-center md:block"></span>
+        <span className="absolute -bottom-2 left-1/2 hidden h-[2px] w-0 -translate-x-1/2 transform bg-picoTeal transition-all duration-300 group-hover:flex group-hover:w-[40px] group-hover:items-center group-hover:justify-center md:block"></span>
       </Link>
     </div>
   );
@@ -42,18 +42,20 @@ const Nav = () => {
 
 const Header = () => {
   return (
-    <div className="border-picoJuteBrown bg-bgCream border-b">
-      <div className="flex justify-between px-20 py-4">
-        <Link href="/" className="flex items-center justify-center">
-          <Image
-            className=""
-            src="/logo.png"
-            alt="logo"
-            width={80}
-            height={80}
-          />
-        </Link>
-        <Nav />
+    <div className="fixed z-[100000] w-full">
+      <div className="border-b border-picoJuteBrown bg-bgCream">
+        <div className="flex justify-between px-20 py-4">
+          <Link href="/" className="flex items-center justify-center">
+            <Image
+              className=""
+              src="/logo.png"
+              alt="logo"
+              width={80}
+              height={80}
+            />
+          </Link>
+          <Nav />
+        </div>
       </div>
     </div>
   );
