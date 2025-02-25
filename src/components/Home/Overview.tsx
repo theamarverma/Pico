@@ -4,8 +4,8 @@ import PicoButton from "../Global/PicoButton";
 
 const Overview = () => {
   return (
-    <div className="h-full overflow-hidden bg-bgCreamDark">
-      <div className="grid py-14 md:mx-20 md:grid-cols-2 md:gap-14">
+    <div className="h-full">
+      <div className="grid md:mx-20 md:grid-cols-2 md:gap-14">
         <div className="leftContent flex flex-col justify-evenly gap-4">
           <div className="flex gap-2">
             {" "}
@@ -28,6 +28,7 @@ const Overview = () => {
         </div>
         <div className="right">
           <Image
+            className="h-full"
             alt="overview"
             src={"/images/homepage/overview.png"}
             width={1000}
