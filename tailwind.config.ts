@@ -15,6 +15,7 @@ export default {
         // -----------------------Custom Colors-------------------------------
 
         picoTeal: "#008083",
+        picoText: "#e6e6e6",
         picoJuteBrown: "#BF8440",
         bgCream: "#FFF8F0",
         bgCreamDark: "#FCEFE0",
