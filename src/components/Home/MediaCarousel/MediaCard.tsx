@@ -4,7 +4,7 @@ import React from "react";
 
 const MediaCard = () => {
   return (
-    <div className="w-[400px] rounded-2xl bg-bgCreamDark p-2">
+    <div className="rounded-2xl bg-bgCreamDark p-2">
       <div className="relative">
         <Image
           src={"/images/homepage/media/image.png"}

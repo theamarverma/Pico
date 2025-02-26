@@ -1,6 +1,7 @@
 import BestMenu from "@/components/Home/BestMenu";
 import Features from "@/components/Home/Features";
 import FindUs from "@/components/Home/FindUs";
+import FounderBanner from "@/components/Home/FounderBanner";
 import HeaderBanner from "@/components/Home/HeaderBanner";
 import MediaCarousel from "@/components/Home/MediaCarousel/MediaCarousel";
 import Overview from "@/components/Home/Overview";
@@ -30,13 +31,17 @@ export default function HomePage() {
         {" "}
         <FindUs />
       </section>
-      <section className="my-14">
+      <section className="mx-20 my-14">
         {" "}
         <MediaCarousel />
       </section>
       <section className="mx-20 my-14">
         {" "}
         <Testimonial />
+      </section>
+      <section className="mx-20 my-14">
+        {" "}
+        <FounderBanner />
       </section>
     </>
   );
