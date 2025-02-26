@@ -4,6 +4,7 @@ import FindUs from "@/components/Home/FindUs";
 import HeaderBanner from "@/components/Home/HeaderBanner";
 import MediaCarousel from "@/components/Home/MediaCarousel/MediaCarousel";
 import Overview from "@/components/Home/Overview";
+import Testimonial from "@/components/Home/TestimonialCarousel/Testimonial";
 import Link from "next/link";
 
 export default function HomePage() {
@@ -32,6 +33,10 @@ export default function HomePage() {
       <section className="my-14">
         {" "}
         <MediaCarousel />
+      </section>
+      <section className="mx-20 my-14">
+        {" "}
+        <Testimonial />
       </section>
     </>
   );
