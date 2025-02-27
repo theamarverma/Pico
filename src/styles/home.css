@@ -4,3 +4,20 @@
   margin: 0px 20px;
   margin-top: 2rem;
 }
+
+/* Footer */
+#footer-style h3 {
+  font-size: 24px;
+}
+
+#footer-style ul {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+#footer-style > ul li {
+  font-size: 18px;
+  text-decoration: underline;
+  color: #6b6b6b;
+}

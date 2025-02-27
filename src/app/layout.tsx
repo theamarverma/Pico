@@ -3,6 +3,7 @@ import "@/styles/globals.css";
 import { Poppins, Prata } from "next/font/google";
 import { type Metadata } from "next";
 import Header from "@/components/Layout/Header";
+import Footer from "@/components/Layout/Footer";
 
 export const metadata: Metadata = {
   title: "Create T3 App",
@@ -35,6 +36,7 @@ export default function RootLayout({
       <body>
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );

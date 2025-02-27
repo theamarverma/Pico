@@ -4,7 +4,12 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { useCallback, useState, useEffect } from "react"; // Add useEffect
 
-import { GrFormNextLink, GrFormPreviousLink } from "react-icons/gr";
+import {
+  GrFormNextLink,
+  GrFormPreviousLink,
+  GrNext,
+  GrPrevious,
+} from "react-icons/gr";
 
 import { Autoplay } from "swiper/modules"; // Import Autoplay module
 
@@ -51,18 +56,18 @@ const MediaCarousel = () => {
           <div className="hidden gap-4 md:flex">
             <div>
               <button
-                className="border-primary-dark hover:bg-primary-dark hover:text-charity-primary flex h-14 w-14 items-center justify-center rounded-full border"
+                className="hover:bg-primary-dark hover:text-charity-primary flex h-10 w-10 items-center justify-center rounded-full border border-picoJuteBrown text-picoJuteBrown"
                 onClick={handlePrevious}
               >
-                <GrFormPreviousLink size={30} />
+                <GrPrevious size={20} />
               </button>
             </div>
             <div>
               <button
-                className="border-primary-dark hover:bg-primary-dark hover:text-charity-primary flex h-14 w-14 items-center justify-center rounded-full border"
+                className="hover:bg-primary-dark hover:text-charity-primary flex h-10 w-10 items-center justify-center rounded-full border border-picoJuteBrown text-picoJuteBrown"
                 onClick={handleNext}
               >
-                <GrFormNextLink size={30} />
+                <GrNext size={20} />
               </button>
             </div>
           </div>

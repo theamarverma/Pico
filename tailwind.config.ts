@@ -18,6 +18,7 @@ export default {
         picoText: "#e6e6e6",
         picoJuteBrown: "#BF8440",
         bgCream: "#FFF8F0",
+        bgGray: "#F0F0F0",
         bgCreamDark: "#FCEFE0",
         borderGray: "#B0BABF",
         background: "hsl(var(--background))",
