@@ -16,6 +16,8 @@ export default {
 
         picoTeal: "#008083",
         picoText: "#e6e6e6",
+        picoTextGray: "#6B6B6B",
+
         picoJuteBrown: "#BF8440",
         bgCream: "#FFF8F0",
         bgGray: "#F0F0F0",

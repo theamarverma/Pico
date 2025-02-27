@@ -4,12 +4,12 @@ import "../../styles/home.css";
 const HeaderBanner = () => {
   return (
     <div>
-      <div className="mx-20 w-[790px]">
+      <div className="mx-10 w-[790px]">
         <h1>Welcome to PICO – Where Pizza Meets Coffee</h1>
 
-        <div className="flex gap-2">
-          <div className="mt-3 w-2/3 border-t-2 border-borderGray"></div>
-          <p>
+        <div className="flex gap-2 p-4">
+          <div className="mt-3 w-2/4 border-t-2 border-borderGray"></div>
+          <p className="text-picoTextGray">
             your cozy corner for speciality coffee and hand-tossed
             Neapolitan-style pizzas. Good vibes, great food, —what more could
             you ask for?

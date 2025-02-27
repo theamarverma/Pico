@@ -13,7 +13,7 @@ import Link from "next/link";
 export default function HomePage() {
   return (
     <>
-      <section className="">
+      <section className="pt-28">
         {" "}
         <HeaderBanner />
       </section>
