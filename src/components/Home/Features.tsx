@@ -5,7 +5,7 @@ const Features = () => {
   return (
     <section className="">
       <div className="flex gap-4">
-        <h2 className="left flex h-[160px] w-1/2 items-center justify-center rounded-br-3xl bg-picoTeal p-8 text-white">
+        <h2 className="left flex h-[160px] w-1/2 items-center justify-center rounded-br-[50px] bg-picoTeal p-8 text-white">
           Where flavours meet{" "}
           <span className="w-1/6 border-t-2 border-borderGray"></span>
         </h2>
