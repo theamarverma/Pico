@@ -71,16 +71,18 @@ const VideoContainer = () => {
       >
         {mediaItems.map((item, index) => (
           <SwiperSlide key={index}>
-            <video
-              className="rounded-3xl"
-              width="320"
-              height="440"
-              controls
-              preload="none"
-            >
-              <source src="/path/to/video.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
+            <div className="min-h-[500px]">
+              <video
+                className="h-full min-h-[500px] rounded-xl"
+                width="320"
+                height="440"
+                controls
+                preload="none"
+              >
+                <source src="/videos/video.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
           </SwiperSlide>
         ))}
       </Swiper>
