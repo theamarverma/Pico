@@ -28,9 +28,9 @@ const ContactBanner = () => {
               <p className="px-4 text-white">
                 We invite you to experience the best Pizzeria &amp; Coffee Bar,
                 where every meal is a celebration of flavors and every cup of
-                coffee tells a story. Whether you're here for a casual hangout
-                or an intimate gathering, we promise an experience that will
-                linger in your memory...
+                coffee tells a story. Whether you&apos;re here for a casual
+                hangout or an intimate gathering, we promise an experience that
+                will linger in your memory...
               </p>
             </div>
           </div>
