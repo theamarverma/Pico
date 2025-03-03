@@ -14,9 +14,9 @@ const AboutBanner = () => {
 
       {/* popup Label*/}
       <div className="absolute bottom-10 left-0 z-[10]">
-        <div className="pop w-[430px]">
+        <div className="pop w-[400px]">
           <div className="flex h-[72px]">
-            <div className="w-[15%] bg-picoTeal"></div>
+            <div className="w-[10%] bg-picoTeal"></div>
             <div className="flex-grow bg-picoJuteBrown">
               <h2 className="ml-10 mt-4 text-2xl text-white">
                 {" "}

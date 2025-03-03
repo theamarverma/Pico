@@ -52,7 +52,8 @@ const MediaCarousel = () => {
         >
           Programs and Initiatives
         </h1>
-        <div className="right">
+        {/* Prev  Next Buttons */}
+        <div className="btns">
           <div className="hidden gap-4 md:flex">
             <div>
               <button

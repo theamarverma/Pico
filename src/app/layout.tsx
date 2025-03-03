@@ -29,10 +29,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html
-      lang="en"
-      className={`${poppins.variable} ${prata.variable} bg-bgCream`}
-    >
+    <html lang="en" className={`${poppins.variable} ${prata.variable} `}>
       <body>
         <Header />
         {children}

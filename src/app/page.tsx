@@ -17,39 +17,39 @@ export default function HomePage() {
         {" "}
         <HeaderBanner />
       </section>
-      <section className="my-14">
+      <section className="my-24">
         {" "}
         <Overview />
       </section>
-      <section className="my-14">
+      <section className="my-24">
         {" "}
         <Features />
       </section>
-      <section className="my-14">
+      <section className="my-24">
         {" "}
         <BestMenu />
       </section>
-      <section className="my-14">
+      <section className="my-24">
         {" "}
         <FindUs />
       </section>
-      <section className="mx-20 my-14">
+      <section className="mx-20 my-24">
         {" "}
         <MediaCarousel />
       </section>
-      <section className="mx-20 my-14">
+      <section className="mx-20 my-24">
         {" "}
         <Testimonial />
       </section>
-      <section className="mx-20 my-14">
+      <section className="mx-20 my-24">
         {" "}
         <FounderBanner />
       </section>
-      <section className="mx-20 my-14">
+      <section className="mx-20 my-24">
         {" "}
         <Services />
       </section>
-      <section className="mx-20 my-14">
+      <section className="mx-20 my-24">
         {" "}
         <Gallery />
       </section>

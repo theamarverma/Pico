@@ -3,7 +3,7 @@ import React from "react";
 
 const FounderBanner = () => {
   return (
-    <div className="h-screen">
+    <div className="">
       <div className="relative h-[600px] w-[80%] bg-picoTeal">
         <div className="flex w-[60%] flex-col gap-10 p-10">
           {" "}
@@ -13,7 +13,7 @@ const FounderBanner = () => {
             <h5 className="uppercase text-white">About the founder</h5>
           </div>
           <h2 className="text-white">Meet Prateek Didwania</h2>
-          <p className="text-picoText text-sm">
+          <p className="text-sm text-picoText">
             The man behind the beans and dough. rateek, an IIM Kozhikode
             graduate, left the corporate world to follow his passion. After the
             success of Snacking Café, he created PICO to marry his love for

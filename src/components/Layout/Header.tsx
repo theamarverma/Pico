@@ -14,7 +14,7 @@ const Nav = () => {
       </Link>
 
       <Link
-        href="/about"
+        href="/about-us"
         className="group relative mt-2 inline-block hover:text-picoTeal"
       >
         About Us
@@ -30,7 +30,7 @@ const Nav = () => {
       </Link>
 
       <Link
-        href="/contact"
+        href="/contact-us"
         className="group relative mt-2 inline-block hover:text-picoTeal"
       >
         Contact Us
