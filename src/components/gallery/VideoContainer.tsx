@@ -1,5 +1,5 @@
 "use client";
-import { Swiper as SwiperClass } from "swiper/types";
+import type { Swiper as SwiperClass } from "swiper/types";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { useCallback, useState, useEffect } from "react";
@@ -12,7 +12,6 @@ import {
 } from "react-icons/gr";
 
 import { Autoplay } from "swiper/modules";
-import Image from "next/image";
 
 const VideoContainer = () => {
   const mediaItems = [1, 2, 3, 4, 5];

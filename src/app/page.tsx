@@ -8,7 +8,6 @@ import MediaCarousel from "@/components/Home/MediaCarousel/MediaCarousel";
 import Overview from "@/components/Home/Overview";
 import Services from "@/components/Home/Services";
 import Testimonial from "@/components/Home/TestimonialCarousel/Testimonial";
-import Link from "next/link";
 
 export default function HomePage() {
   return (

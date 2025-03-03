@@ -1,15 +1,10 @@
 "use client";
-import { Swiper as SwiperClass } from "swiper/types";
+import type { Swiper as SwiperClass } from "swiper/types";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { useCallback, useState, useEffect } from "react"; // Add useEffect
 
-import {
-  GrFormNextLink,
-  GrFormPreviousLink,
-  GrNext,
-  GrPrevious,
-} from "react-icons/gr";
+import { GrNext, GrPrevious } from "react-icons/gr";
 
 import { Autoplay } from "swiper/modules"; // Import Autoplay module
 

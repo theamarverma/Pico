@@ -26,7 +26,7 @@ const ContactBanner = () => {
             <div className="flex flex-col items-center justify-center p-4">
               <h5 className="uppercase text-white">our vibe</h5>
               <p className="px-4 text-white">
-                We invite you to experience the best Pizzeria & Coffee Bar,
+                We invite you to experience the best Pizzeria &amp; Coffee Bar,
                 where every meal is a celebration of flavors and every cup of
                 coffee tells a story. Whether you're here for a casual hangout
                 or an intimate gathering, we promise an experience that will

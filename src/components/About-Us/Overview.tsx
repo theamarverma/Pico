@@ -10,8 +10,8 @@ const Overview = () => {
           <h2>A perfect blend of brews and wood-fired magic</h2>
 
           <p>
-            <i> Nestled near Vivekananda Park in South Kolkata,</i> Pico
-            Pizzeria & Coffee Bar is your go-to spot for authentic{" "}
+            <i>Nestled near Vivekananda Park in South Kolkata,</i> Pico Pizzeria
+            &amp; Coffee Bar is your go-to spot for authentic{" "}
             <i>Neapolitan pizzas and specialty coffees.</i> We're more than just
             a café; we're a community hub where flavours and conversations blend
             seamlessly. After three years of meticulous planning and research,
