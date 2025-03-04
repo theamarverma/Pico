@@ -6,8 +6,8 @@ const ContactBanner = () => {
     <div className="">
       <div className="px-20 py-12">
         {" "}
-        <h2>Brewed strong -</h2>
-        <h2>Baked fresh.</h2>
+        <h2 className="text-picoTeal">Brewed strong -</h2>
+        <h2 className="text-picoJuteBrown">Baked fresh.</h2>
         <div>Open Everyday</div>
         <p>11 AM - 11 PM</p>
       </div>
