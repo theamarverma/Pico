@@ -20,7 +20,7 @@ export default function HomePage() {
         {" "}
         <Overview />
       </section>
-      <section className="my-24">
+      <section className="bg-bgCream py-24">
         {" "}
         <Features />
       </section>

@@ -5,23 +5,26 @@ const Features = () => {
   return (
     <section className="">
       <div className="flex gap-4">
-        <h2 className="left flex h-[160px] w-1/2 items-center justify-center rounded-br-[50px] bg-picoTeal p-8 text-white">
-          Where flavours meet{" "}
-          <span className="w-1/6 border-t-2 border-borderGray"></span>
-        </h2>
-        <div className="right">
+        <div className="w-2/3">
+          <h1 className="left text-header flex h-[160px] items-center justify-center rounded-br-[50px] bg-picoTeal p-8 text-white">
+            Where flavours <br /> meet{" "}
+          </h1>
+          <span className="w-1/2 border-t-2 border-borderGray"></span>
+        </div>
+
+        <div className="right space-y-6">
           <div className="flex items-center justify-start gap-4">
             <div className="w-1/6 border-t-2 border-borderGray"></div>{" "}
-            <h4 className="uppercase">Features</h4>
+            <h1 className="tracking-label text-lg uppercase">Features</h1>
           </div>
-          <p>
-            we serve up a mix of tradition & innovation- because great food &
+          <p className="">
+            We serve up a mix of tradition & innovation—because great food &
             coffee deserve the best.
           </p>
         </div>
       </div>
 
-      <div className="mx-20 grid grid-cols-2">
+      <div className="mx-20 mt-10 grid grid-cols-2">
         <div className="left">
           <div className="my-4 flex gap-4">
             <div>
@@ -37,7 +40,7 @@ const Features = () => {
               </div>
             </div>
             <div>
-              <h3>Wood-Fired Perfection</h3>
+              <div className="text-2xl font-medium">Wood-Fired Perfection</div>
               <p>
                 Hand-tossed Neapolitan pizzas, baked to crispy perfection in a
                 wood-fired oven.

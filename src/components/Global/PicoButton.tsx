@@ -12,7 +12,7 @@ const PicoButton = ({ title }: Props) => {
         className="h-[50px] w-[160px] rounded-3xl border border-picoTeal bg-transparent text-picoTeal"
         variant="outline"
       >
-        {title}
+        <h1> {title}</h1>
       </Button>
     </div>
   );
