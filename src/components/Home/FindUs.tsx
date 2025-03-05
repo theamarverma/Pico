@@ -4,7 +4,7 @@ import React from "react";
 const FindUs = () => {
   return (
     <div className="flex flex-col items-center justify-center space-y-10">
-      <h4 className="">Find us at</h4>
+      <h1 className="text-header">Find us at</h1>
       <div className="flex h-[154px] gap-6">
         <Image
           className="h-full"
