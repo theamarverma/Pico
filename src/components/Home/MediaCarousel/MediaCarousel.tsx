@@ -40,30 +40,25 @@ const MediaCarousel = () => {
 
   return (
     <>
-      <div className="mx-4 mb-10 flex justify-between">
-        <h1
-          data-aos-duration="200"
-          className="leading-tighter text-primary-dark text-center text-4xl font-semibold md:text-start"
-        >
-          Programs and Initiatives
-        </h1>
+      <div className="mb-10 flex justify-between">
+        <h1 className="text-header">Media Coverage</h1>
         {/* Prev  Next Buttons */}
         <div className="btns">
           <div className="hidden gap-4 md:flex">
             <div>
               <button
-                className="hover:bg-primary-dark hover:text-charity-primary flex h-10 w-10 items-center justify-center rounded-full border border-picoJuteBrown text-picoJuteBrown"
+                className="hover:bg-primary-dark hover:text-charity-primary flex h-16 w-16 items-center justify-center rounded-full border border-picoTextGray text-picoTextGray"
                 onClick={handlePrevious}
               >
-                <GrPrevious size={20} />
+                <GrPrevious size={24} />
               </button>
             </div>
             <div>
               <button
-                className="hover:bg-primary-dark hover:text-charity-primary flex h-10 w-10 items-center justify-center rounded-full border border-picoJuteBrown text-picoJuteBrown"
+                className="hover:bg-primary-dark hover:text-charity-primary flex h-16 w-16 items-center justify-center rounded-full border border-picoJuteBrown text-picoJuteBrown"
                 onClick={handleNext}
               >
-                <GrNext size={20} />
+                <GrNext size={24} />
               </button>
             </div>
           </div>

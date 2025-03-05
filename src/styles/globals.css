@@ -18,7 +18,9 @@ h1 {
 /* Mulish */
 h2 {
   font-family: var(--font-mulish);
-  font-size: 30px;
+}
+li {
+  font-family: var(--font-mulish);
 }
 
 @layer base {

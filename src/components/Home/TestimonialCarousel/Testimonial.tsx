@@ -9,8 +9,8 @@ const Testimonial = () => {
           {" "}
           <div className="flex flex-col items-start justify-start gap-6">
             {" "}
-            <h1 className="text-white">What They Say:</h1>
-            <p className="text-white">
+            <h1 className="text-subheader text-white">What They Say:</h1>
+            <p className="text-lg font-light text-white">
               Worth it. And definitely worth a few visits. Loved the Fungi Pesto
               Pizza. Out of the world. And the Tiramisu is unparalleled.
             </p>
@@ -18,11 +18,11 @@ const Testimonial = () => {
             <div className="flex w-full items-center justify-start gap-3">
               {" "}
               <div className="w-[20%] border-t-2 border-borderGray"></div>
-              <h5 className="text-white">Arpit Lohia</h5>
+              <h1 className="tracking-label text-xl text-white">Arpit Lohia</h1>
             </div>
             {/* Right side  */}
             <div className="space-y-4 self-end">
-              <div className="flex justify-end gap-2 text-white">
+              <div className="flex justify-end gap-2 text-lg text-white">
                 4.5{" "}
                 <span>
                   <svg
@@ -39,7 +39,7 @@ const Testimonial = () => {
                   </svg>
                 </span>
               </div>
-              <div className="flex items-center justify-center gap-2 text-white">
+              <div className="flex items-center justify-center gap-2 font-light text-white">
                 Review from
                 <Image
                   src={"/images/homepage/testimonial/zomato.png"}

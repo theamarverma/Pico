@@ -6,7 +6,16 @@ import Link from "next/link";
 const Gallery = () => {
   return (
     <div>
-      <div className="grid max-h-[675px] grid-cols-3 gap-4 overflow-hidden">
+      {/* Header */}
+      <div className="space-y-4">
+        <h1 className="text-header flex items-center justify-center">
+          Pico Gallery
+        </h1>
+        <div className="flex items-center justify-center text-xl text-picoTextGray">
+          A Glimpse Into Our World
+        </div>
+      </div>
+      <div className="mt-8 grid max-h-[675px] grid-cols-3 gap-4 overflow-hidden">
         <div className="left col-span-2 space-y-2">
           <div className="h-1/2">
             <Image

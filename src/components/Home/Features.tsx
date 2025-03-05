@@ -17,7 +17,7 @@ const Features = () => {
             <div className="w-1/6 border-t-2 border-borderGray"></div>{" "}
             <h1 className="tracking-label text-lg uppercase">Features</h1>
           </div>
-          <p className="">
+          <p className="font-light">
             We serve up a mix of tradition & innovation—because great food &
             coffee deserve the best.
           </p>
@@ -25,7 +25,7 @@ const Features = () => {
       </div>
 
       <div className="mx-20 mt-10 grid grid-cols-2">
-        <div className="left">
+        <div className="left space-y-12">
           <div className="my-4 flex gap-4">
             <div>
               {" "}
@@ -40,8 +40,10 @@ const Features = () => {
               </div>
             </div>
             <div>
-              <div className="text-2xl font-medium">Wood-Fired Perfection</div>
-              <p>
+              <div className="text-2xl font-medium text-picoTextGray">
+                Wood-Fired Perfection
+              </div>
+              <p className="font-light">
                 Hand-tossed Neapolitan pizzas, baked to crispy perfection in a
                 wood-fired oven.
               </p>
@@ -53,41 +55,45 @@ const Features = () => {
               <div className="flex h-24 w-24 items-center justify-center rounded-full bg-picoJuteBrown p-3">
                 <Image
                   className=""
-                  src={"images/svgs/fire.svg"}
-                  alt="fire"
+                  src={"images/svgs/cozy.svg"}
+                  alt="cozy"
                   width={60}
                   height={60}
                 />
               </div>
             </div>
             <div>
-              <h3>Wood-Fired Perfection</h3>
-              <p>
-                Hand-tossed Neapolitan pizzas, baked to crispy perfection in a
-                wood-fired oven.
+              <div className="text-2xl font-medium text-picoTextGray">
+                Cozy Ambiance
+              </div>
+              <p className="font-light">
+                A warm, inviting space perfect for good food and great
+                conversations.
               </p>
             </div>
           </div>
         </div>
-        <div className="right">
+        <div className="right space-y-12">
           <div className="my-4 flex gap-4">
             <div>
               {" "}
               <div className="flex h-24 w-24 items-center justify-center rounded-full bg-picoJuteBrown p-3">
                 <Image
                   className=""
-                  src={"images/svgs/fire.svg"}
-                  alt="fire"
+                  src={"images/svgs/coffee.svg"}
+                  alt="coffee"
                   width={60}
                   height={60}
                 />
               </div>
             </div>
             <div>
-              <h3>Wood-Fired Perfection</h3>
-              <p>
-                Hand-tossed Neapolitan pizzas, baked to crispy perfection in a
-                wood-fired oven.
+              <div className="text-2xl font-medium text-picoTextGray">
+                Speciality Coffee
+              </div>
+              <p className="font-light">
+                Freshly brewed, single-origin coffee with rich aroma and bold
+                flavors.
               </p>
             </div>
           </div>
@@ -97,18 +103,20 @@ const Features = () => {
               <div className="flex h-24 w-24 items-center justify-center rounded-full bg-picoJuteBrown p-3">
                 <Image
                   className=""
-                  src={"images/svgs/fire.svg"}
-                  alt="fire"
+                  src={"images/svgs/quality.svg"}
+                  alt="quality"
                   width={60}
                   height={60}
                 />
               </div>
             </div>
             <div>
-              <h3>Wood-Fired Perfection</h3>
-              <p>
-                Hand-tossed Neapolitan pizzas, baked to crispy perfection in a
-                wood-fired oven.
+              <div className="text-2xl font-medium text-picoTextGray">
+                Quality Ingredients
+              </div>
+              <p className="font-light">
+                Only the freshest, finest ingredients for an authentic taste in
+                every bite.
               </p>
             </div>
           </div>

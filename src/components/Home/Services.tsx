@@ -4,7 +4,7 @@ import React from "react";
 const Services = () => {
   return (
     <div>
-      <div className="img mt-20 grid grid-cols-3 gap-10">
+      <div className="img grid grid-cols-3 gap-10">
         <div className="flex flex-col items-center justify-center">
           <Image
             src={"/images/homepage/services/coffee_beans.png"}
@@ -12,7 +12,7 @@ const Services = () => {
             width={400}
             height={400}
           />
-          Excellent Ingredients
+          <h1 className="mt-3 text-lg">Excellent Ingredients</h1>
         </div>
         <div className="flex flex-col items-center justify-center">
           {" "}
@@ -22,7 +22,7 @@ const Services = () => {
             width={400}
             height={400}
           />
-          Made By Professional
+          <h1 className="mt-3 text-lg"> Made By Professional</h1>
         </div>
         <div className="flex flex-col items-center justify-center">
           <Image
@@ -31,7 +31,7 @@ const Services = () => {
             width={400}
             height={400}
           />
-          With The best Service
+          <h1 className="mt-3 text-lg"> With The best Service</h1>
         </div>
       </div>
     </div>

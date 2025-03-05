@@ -20,35 +20,35 @@ export default function HomePage() {
         {" "}
         <Overview />
       </section>
-      <section className="bg-bgCream py-24">
+      <section className="bg-bgCream pb-24">
         {" "}
         <Features />
       </section>
-      <section className="my-24">
+      <section className="bg-bgCream pb-24">
         {" "}
         <BestMenu />
       </section>
-      <section className="my-24">
+      <section className="bg-bgCream pb-24">
         {" "}
         <FindUs />
       </section>
-      <section className="mx-20 my-24">
+      <section className="bg-bgCream px-20 pb-24">
         {" "}
         <MediaCarousel />
       </section>
-      <section className="mx-20 my-24">
+      <section className="bg-bgCream px-20 pb-24">
         {" "}
         <Testimonial />
       </section>
-      <section className="mx-20 my-24">
+      <section className="bg-bgCream px-20 pb-24">
         {" "}
         <FounderBanner />
       </section>
-      <section className="mx-20 my-24">
+      <section className="bg-bgCream px-20 pb-24">
         {" "}
         <Services />
       </section>
-      <section className="mx-20 my-24">
+      <section className="bg-bgCream px-20 pb-24">
         {" "}
         <Gallery />
       </section>
