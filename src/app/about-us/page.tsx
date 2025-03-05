@@ -6,13 +6,13 @@ import React from "react";
 const page = () => {
   return (
     <div>
-      <section className="pt-28">
+      <section className="bg-bgCream pt-28">
         <AboutBanner />
       </section>
-      <section className="my-24 ml-20">
+      <section className="bg-bgCream py-24 pl-20">
         <Overview />
       </section>
-      <section className="my-24">
+      <section className="bg-bgCream pb-24">
         <Specialities />
       </section>
     </div>

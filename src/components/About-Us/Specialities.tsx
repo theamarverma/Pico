@@ -6,18 +6,20 @@ const Specialities = () => {
     <div>
       {/* Header */}
       <div className="flex gap-4">
-        <h2 className="left flex h-[160px] w-2/3 items-center justify-center rounded-br-[50px] bg-picoTeal p-8 text-white">
-          Relax, sip, and enjoy in PICO style!
-          <span className="w-1/6 border-t-2 border-borderGray"></span>
-        </h2>
-        <div className="right">
+        <h1 className="left flex h-[160px] w-2/3 items-center justify-center rounded-br-[50px] bg-picoTeal p-8 px-10 text-white">
+          <h1 className="text-header flex">
+            Relax, sip, and enjoy in PICO style!{" "}
+          </h1>
+        </h1>
+        <div className="right mx-10 space-y-6">
           <div className="flex items-center justify-start gap-4">
             <div className="w-1/6 border-t-2 border-borderGray"></div>{" "}
-            <h5 className="uppercase">Our Specialities</h5>
+            <h1 className="tracking-label uppercase">Our Specialities</h1>
           </div>
-          <p>
-            We offer authentic Neapolitan pizzas and over 100 specialty
-            ⁠Artisnal coffee brews.
+          <p className="font-light">
+            We offer authentic{" "}
+            <i className="font-semibold">Neapolitan pizzas</i> and over 100
+            specialty <i className="font-semibold">⁠Artisnal coffee brews.</i>
           </p>
         </div>
       </div>
@@ -33,7 +35,10 @@ const Specialities = () => {
             width={1000}
             height={600}
           />
-          <h6 className="mt-4 text-center"> Woodfire Neapolitan Pizzas</h6>
+          <h1 className="mt-4 text-center text-xl">
+            {" "}
+            Woodfire Neapolitan Pizzas
+          </h1>
         </div>
         <div className="h-[460px]">
           {" "}
@@ -44,7 +49,7 @@ const Specialities = () => {
             width={1000}
             height={600}
           />
-          <h6 className="mt-4 text-center">Specialty Coffees</h6>
+          <h1 className="mt-4 text-center text-xl">Specialty Coffees</h1>
         </div>
         <div className="h-[460px]">
           {" "}
@@ -55,7 +60,9 @@ const Specialities = () => {
             width={1000}
             height={600}
           />
-          <h6 className="mt-4 text-center">Artisanal Breads and More</h6>
+          <h1 className="mt-4 text-center text-xl">
+            Artisanal Breads and More
+          </h1>
         </div>
       </div>
     </div>

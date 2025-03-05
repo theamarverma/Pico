@@ -36,7 +36,7 @@ const AboutBanner = () => {
               width={242}
               height={242}
             />
-            <p className="px-4">
+            <p className="px-4 font-light text-white">
               From hand-stretched dough to freshly roasted beans, every element
               at PICO is about authenticity and taste. We serve up a mix of
               tradition and innovation—because great food and coffee deserve the
