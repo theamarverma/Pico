@@ -19,7 +19,12 @@ h1 {
 h2 {
   font-family: var(--font-mulish);
 }
-
+ul {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 8px;
+}
 li {
   font-family: var(--font-mulish);
   text-decoration: underline;
