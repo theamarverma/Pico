@@ -10,10 +10,12 @@ const Overview = () => {
           <div className="flex gap-2">
             {" "}
             <div className="mt-3 w-1/6 border-t-2 border-borderGray"></div>
-            <h5 className="uppercase">Overview</h5>
+            <h1 className="tracking-label uppercase">Overview</h1>
           </div>
 
-          <h2>A perfect blend of brews and wood-fired magic</h2>
+          <h1 className="text-subheader">
+            A perfect blend of brews and wood-fired magic
+          </h1>
           <p>
             “Pi” is for pizza, and “Co” is for coffee. Together, it’s a match
             made in heaven. Founded by Prateek Didwania, we’re here nestled in

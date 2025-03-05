@@ -3,49 +3,22 @@
 @tailwind utilities;
 
 /* /-------Typography --------------*/
-/* Body */
+/* Poppins by default */
 html {
   font-family: var(--font-poppins);
   color: #373f43;
-  font-size: 20px;
-  /* background-color: #fff8f0; */
+  font-size: 18px;
 }
-/* Heading - Large */
+
+/* Prata */
 h1 {
   font-family: var(--font-prata);
-  color: #2e3538;
-  font-size: 50px;
-  /* font-weight: semibold; */
-  line-height: 90px;
 }
 
-/* Heading - Medium */
+/* Mulish */
 h2 {
-  font-family: var(--font-prata);
-  font-size: 48px;
-}
-
-/* Subheading */
-h3 {
-  font-family: var(--font-poppins);
-  font-size: 32px;
-}
-/* subheading prata */
-h4 {
-  font-family: var(--font-prata);
+  font-family: var(--font-mulish);
   font-size: 30px;
-}
-
-/* Label */
-h5 {
-  font-family: var(--font-prata);
-  font-size: 22px;
-  letter-spacing: 25%;
-}
-
-h6 {
-  font-family: var(--font-prata);
-  font-size: 24px;
 }
 
 @layer base {

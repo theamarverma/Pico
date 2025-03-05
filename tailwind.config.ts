@@ -11,6 +11,19 @@ export default {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+      letterSpacing: {
+        label: "0.25em", // roughly 25% of the font size
+      },
+      // /---------custom font sizes--------------
+      fontSize: {
+        header: "50px",
+        subheader: "48px",
+        lg: "22px",
+        xl: "24px",
+        "2xl": "30px",
+        "3xl": "32px",
+        "4xl": "40px",
+      },
       colors: {
         // -----------------------Custom Colors-------------------------------
 

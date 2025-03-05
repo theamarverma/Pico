@@ -1,6 +1,6 @@
 import "@/styles/globals.css";
 
-import { Poppins, Prata } from "next/font/google";
+import { Poppins, Prata, Mulish } from "next/font/google";
 import { type Metadata } from "next";
 import Header from "@/components/Layout/Header";
 import Footer from "@/components/Layout/Footer";
@@ -25,13 +25,20 @@ const prata = Prata({
   display: "swap",
 });
 
+const mulish = Mulish({
+  subsets: ["latin"],
+  variable: "--font-mulish",
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
+});
+
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html
       lang="en"
-      className={`${poppins.variable} ${prata.variable} bg-bgCream`}
+      className={`${poppins.variable} ${prata.variable} ${mulish.variable} `}
     >
       <body>
         <Header />
