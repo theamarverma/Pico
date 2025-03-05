@@ -54,6 +54,7 @@ export default function ReservationForm() {
   return (
     <div>
       <form
+        className="space-y-10"
         onSubmit={(e) => {
           e.preventDefault();
           e.stopPropagation();
@@ -72,13 +73,13 @@ export default function ReservationForm() {
             {(field) => (
               <>
                 <label
-                  className="text-xs text-picoFormText"
+                  className="text-sm text-picoFormText"
                   htmlFor={field.name}
                 >
                   Name:
                 </label>
                 <input
-                  className="w-full border border-picoFormBorder bg-white p-1 text-picoFormText placeholder:text-xs placeholder:text-gray-500"
+                  className="w-full border border-picoFormBorder bg-white p-2 text-picoFormText placeholder:text-sm placeholder:text-gray-500"
                   placeholder="Input Your Name"
                   id={field.name}
                   name={field.name}
@@ -109,13 +110,13 @@ export default function ReservationForm() {
             {(field) => (
               <>
                 <label
-                  className="text-xs text-picoFormText"
+                  className="text-sm text-picoFormText"
                   htmlFor={field.name}
                 >
                   Email:
                 </label>
                 <input
-                  className="w-full border border-picoFormBorder bg-white p-1 text-picoFormText placeholder:text-xs placeholder:text-gray-500"
+                  className="w-full border border-picoFormBorder bg-white p-2 text-picoFormText placeholder:text-sm placeholder:text-gray-500"
                   placeholder="Input Your Email"
                   type="email"
                   id={field.name}
@@ -142,13 +143,13 @@ export default function ReservationForm() {
             {(field) => (
               <>
                 <label
-                  className="text-xs text-picoFormText"
+                  className="text-sm text-picoFormText"
                   htmlFor={field.name}
                 >
                   Phone:
                 </label>
                 <input
-                  className="w-full border border-picoFormBorder bg-white p-1 text-picoFormText placeholder:text-xs placeholder:text-gray-500"
+                  className="w-full border border-picoFormBorder bg-white p-2 text-picoFormText placeholder:text-sm placeholder:text-gray-500"
                   placeholder="Input Your Phone Number"
                   type="tel"
                   id={field.name}
@@ -175,7 +176,7 @@ export default function ReservationForm() {
             {(field) => (
               <>
                 <label
-                  className="text-xs text-picoFormText"
+                  className="text-sm text-picoFormText"
                   htmlFor={field.name}
                 >
                   Reservation Date & Time:
@@ -202,14 +203,14 @@ export default function ReservationForm() {
             {(field) => (
               <>
                 <label
-                  className="text-xs text-picoFormText"
+                  className="text-sm text-picoFormText"
                   htmlFor={field.name}
                 >
                   Seats:
                 </label>
                 <select
                   id={field.name}
-                  className="w-full border border-picoFormBorder bg-white p-1 text-picoFormText placeholder:text-xs placeholder:text-gray-500"
+                  className="w-full border border-picoFormBorder bg-white p-2 text-picoFormText placeholder:text-sm placeholder:text-gray-500"
                   name={field.name}
                   value={field.state.value}
                   onBlur={field.handleBlur}
@@ -239,13 +240,13 @@ export default function ReservationForm() {
             {(field) => (
               <>
                 <label
-                  className="text-xs text-picoFormText"
+                  className="text-sm text-picoFormText"
                   htmlFor={field.name}
                 >
                   Special Request:
                 </label>
                 <textarea
-                  className="w-full border border-picoFormBorder bg-white p-1 text-picoFormText placeholder:text-xs placeholder:text-gray-500"
+                  className="w-full border border-picoFormBorder bg-white p-2 text-picoFormText placeholder:text-sm placeholder:text-gray-500"
                   placeholder="Input Your Special Request"
                   id={field.name}
                   name={field.name}
@@ -264,7 +265,7 @@ export default function ReservationForm() {
         >
           {([canSubmit, isSubmitting]) => (
             <button
-              className="mt-4 bg-picoTeal p-2 px-4 text-xs text-white"
+              className="mt-4 bg-picoTeal p-2 px-4 text-sm text-white"
               type="submit"
               disabled={!canSubmit}
             >

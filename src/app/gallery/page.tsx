@@ -8,16 +8,16 @@ const page = () => {
   return (
     <div>
       {" "}
-      <section className="pt-28">
+      <section className="bg-bgCream pt-28">
         <GalleryBanner />
       </section>
-      <section className="mx-20 my-28">
+      <section className="bg-bgCream px-20 py-24">
         <VideoContainer />
       </section>
-      <section className="mx-20 my-28">
+      <section className="bg-bgCream px-20 pb-24">
         <CoffeeGallery />
       </section>
-      <section className="mx-20 my-28">
+      <section className="bg-bgCream px-20 pb-24">
         <CoffeeGallery />
       </section>
     </div>

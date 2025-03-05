@@ -19,8 +19,11 @@ h1 {
 h2 {
   font-family: var(--font-mulish);
 }
+
 li {
   font-family: var(--font-mulish);
+  text-decoration: underline;
+  color: #6b6b6b;
 }
 
 @layer base {

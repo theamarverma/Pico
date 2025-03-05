@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import "../../styles/home.css";
+
 import Link from "next/link";
 import {
   IoLocationOutline,

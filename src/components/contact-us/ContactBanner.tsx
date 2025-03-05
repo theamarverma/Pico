@@ -6,10 +6,18 @@ const ContactBanner = () => {
     <div className="">
       <div className="px-20 py-12">
         {" "}
-        <h2 className="text-picoTeal">Brewed strong -</h2>
-        <h2 className="text-picoJuteBrown">Baked fresh.</h2>
-        <div>Open Everyday</div>
-        <p>11 AM - 11 PM</p>
+        <h1 className="text-header text-picoTeal">Brewed strong -</h1>
+        <h1 className="text-header text-picoJuteBrown">Baked fresh.</h1>
+        <div className="flex items-center">
+          <div className="w-[10%] border-t-2 border-picoTextGray"></div>
+          <div>
+            {" "}
+            <div className="tracking-label text-2xl font-extrabold uppercase">
+              Open Everyday
+            </div>
+            <p className="text-xl font-light">11 AM - 11 PM</p>
+          </div>
+        </div>
       </div>
 
       <div className="relative w-full">
@@ -23,9 +31,12 @@ const ContactBanner = () => {
         {/* popup image */}
         <div className="absolute -top-48 right-32 z-[10]">
           <div className="h-[470px] w-[380px] bg-[url(/images/about/popupCard.png)] bg-cover bg-center">
-            <div className="flex flex-col items-center justify-center p-4">
-              <h5 className="uppercase text-white">our vibe</h5>
-              <p className="px-4 text-white">
+            <div className="flex flex-col items-center justify-center p-8">
+              <div className="flex w-full items-center gap-2">
+                <div className="w-1/4 border-t border-white"></div>
+                <h1 className="text-lg uppercase text-white">our vibe</h1>
+              </div>
+              <p className="mt-8 leading-[38px] text-white">
                 We invite you to experience the best Pizzeria &amp; Coffee Bar,
                 where every meal is a celebration of flavors and every cup of
                 coffee tells a story. Whether you&apos;re here for a casual

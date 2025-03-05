@@ -24,10 +24,10 @@ const ContactSection = () => {
         <div className="flex flex-col justify-around">
           <div>
             {" "}
-            <h3 className="text-sm font-bold uppercase text-picoTeal">
+            <h3 className="text-lg font-bold uppercase text-picoTeal">
               Get in Touch
             </h3>
-            <h2 className="uppercase">Visit Pico</h2>
+            <h1 className="text-subheader uppercase">Visit Pico</h1>
           </div>
 
           <div className="space-y-4">
@@ -71,7 +71,7 @@ const ContactSection = () => {
                 <Link
                   href={"https://maps.app.goo.gl/xoLKckSdLAG375uFA"}
                   target="_blank"
-                  className="w-[1/2] hover:cursor-pointer hover:underline"
+                  className="w-[1/2] underline hover:cursor-pointer hover:underline"
                 >
                   559, Lake Rd, Southern
                   <br /> Avenue , Kolkata - 700029 <br /> (Opp. Sabyasachi

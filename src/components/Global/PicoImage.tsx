@@ -25,7 +25,7 @@ const PicoImage = ({ path, name }: Props) => {
         />
         {/* Text Overlay */}
         <div className="absolute bottom-0 left-0 right-0 z-30 p-2 text-center text-white">
-          {name}
+          <h1 className="text-xl"> {name}</h1>
         </div>
       </div>
     </div>

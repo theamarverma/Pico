@@ -16,23 +16,9 @@ L.Icon.Default.mergeOptions({
 });
 
 const PicoMap = () => {
-  // Generate a unique key so that every instance gets a unique container id.
-  const [mapKey] = useState(Date.now());
-  const containerId = `map-container-${mapKey}`;
-
-  useEffect(() => {
-    // Remove any existing _leaflet_id from the container with this unique id.
-    const container = document.getElementById(containerId);
-    if (container && (container as any)._leaflet_id) {
-      container.removeAttribute("_leaflet_id");
-    }
-  }, [containerId]);
-
   return (
     <div>
       <MapContainer
-        key={mapKey}
-        id={containerId}
         center={[22.5156495, 88.3584106]}
         zoom={13}
         scrollWheelZoom={false}

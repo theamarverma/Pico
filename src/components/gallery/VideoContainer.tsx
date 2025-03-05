@@ -41,7 +41,7 @@ const VideoContainer = () => {
 
   return (
     <>
-      <h1 className="leading-tighter text-primary-dark flex items-center justify-center text-center text-4xl font-semibold md:text-start">
+      <h1 className="text-header flex items-center justify-center">
         Experience the Magic in Motion
       </h1>
 
@@ -70,10 +70,9 @@ const VideoContainer = () => {
       >
         {mediaItems.map((item, index) => (
           <SwiperSlide key={index}>
-            <div className="min-h-[500px]">
+            <div className="min-h-[500px] border border-picoTextGray">
               <video
-                className="h-full min-h-[500px] rounded-xl"
-                width="320"
+                className="h-full min-h-[500px]"
                 height="440"
                 controls
                 preload="none"
@@ -90,18 +89,18 @@ const VideoContainer = () => {
         <div className="hidden justify-between gap-4 md:flex">
           <div>
             <button
-              className="hover:bg-primary-dark hover:text-charity-primary flex h-10 w-10 items-center justify-center rounded-full border border-picoJuteBrown text-picoJuteBrown"
+              className="hover:bg-primary-dark hover:text-charity-primary flex h-16 w-16 items-center justify-center rounded-full border border-picoJuteBrown text-picoJuteBrown"
               onClick={handlePrevious}
             >
-              <GrPrevious size={20} />
+              <GrPrevious size={24} />
             </button>
           </div>
           <div>
             <button
-              className="hover:bg-primary-dark hover:text-charity-primary flex h-10 w-10 items-center justify-center rounded-full border border-picoJuteBrown text-picoJuteBrown"
+              className="hover:bg-primary-dark hover:text-charity-primary flex h-16 w-16 items-center justify-center rounded-full border border-picoJuteBrown text-picoJuteBrown"
               onClick={handleNext}
             >
-              <GrNext size={20} />
+              <GrNext size={24} />
             </button>
           </div>
         </div>

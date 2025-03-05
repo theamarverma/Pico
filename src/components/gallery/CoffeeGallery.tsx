@@ -42,7 +42,9 @@ const CoffeeGallery = () => {
 
   return (
     <>
-      <h1 className="flex items-center justify-center">Speciality Coffee</h1>
+      <h1 className="text-header flex items-center justify-center">
+        Speciality Coffee
+      </h1>
       <div className="my-6 grid grid-cols-3 gap-4">
         <PicoImage path="/images/gallery/coffees/1.png" name="Coffee 1" />
         <PicoImage path="/images/gallery/coffees/1.png" name="Coffee 1" />
@@ -82,18 +84,18 @@ const CoffeeGallery = () => {
         <div className="hidden justify-between gap-4 md:flex">
           <div>
             <button
-              className="hover:bg-primary-dark hover:text-charity-primary flex h-10 w-10 items-center justify-center rounded-full border border-picoJuteBrown text-picoJuteBrown"
+              className="hover:bg-primary-dark hover:text-charity-primary flex h-16 w-16 items-center justify-center rounded-full border border-picoJuteBrown text-picoJuteBrown"
               onClick={handlePrevious}
             >
-              <GrPrevious size={20} />
+              <GrPrevious size={24} />
             </button>
           </div>
           <div>
             <button
-              className="hover:bg-primary-dark hover:text-charity-primary flex h-10 w-10 items-center justify-center rounded-full border border-picoJuteBrown text-picoJuteBrown"
+              className="hover:bg-primary-dark hover:text-charity-primary flex h-16 w-16 items-center justify-center rounded-full border border-picoJuteBrown text-picoJuteBrown"
               onClick={handleNext}
             >
-              <GrNext size={20} />
+              <GrNext size={24} />
             </button>
           </div>
         </div>

@@ -7,13 +7,13 @@ import React from "react";
 const page = () => {
   return (
     <div>
-      <section className="pt-28">
+      <section className="bg-bgCream pt-28">
         <ContactBanner />
       </section>
-      <section className="bg-bgCreamDark">
+      <section className="bg-bgCream">
         <FormSection />
       </section>
-      <section className="bg-bgCreamDark py-24">
+      <section className="bg-bgCream py-24">
         <ContactSection />
       </section>
     </div>
