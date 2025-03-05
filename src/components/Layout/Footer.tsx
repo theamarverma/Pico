@@ -5,7 +5,7 @@ import React from "react";
 const Footer = () => {
   return (
     <footer className="bg-bgGray">
-      <div className="flex gap-10 px-20 py-10">
+      <div className="flex gap-10 px-20 pt-10">
         <div>
           <Image
             className="h-[160px] w-[160px]"
@@ -39,7 +39,7 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        <div id="footer-style">
+        <div>
           <h2>Social Links</h2>
           <ul>
             <li>
@@ -62,7 +62,7 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        <div id="footer-style">
+        <div>
           <h2>Important Links</h2>
           <ul>
             <li>
@@ -96,6 +96,31 @@ const Footer = () => {
             </li>
           </ul>
         </div>
+      </div>
+      {/* Zomato Logo */}
+      <div className="inline-flex w-full justify-end gap-4 pb-8 pr-20">
+        <h2 className="self-end text-xl font-semibold">Order Online</h2>
+        <Link href={"https://zomato.onelink.me/xqzv/xk1kk43l"} target="_blank">
+          <Image
+            src={"/images/zomato.png"}
+            alt="Zomato Logo"
+            height={64}
+            width={64}
+          />
+        </Link>
+        <Link
+          href={
+            "https://swiggy.onelink.me/BVRZ?af_dp=swiggydiners%3A%2F%2Fdetails%2F903624%3Fsource%3Dsharing"
+          }
+          target="_blank"
+        >
+          <Image
+            src={"/images/swiggy.png"}
+            alt="Swiggy Logo"
+            height={64}
+            width={64}
+          />
+        </Link>
       </div>
       <div className="flex h-16 items-center justify-center gap-2 bg-picoTeal font-light text-white">
         <span className="text-picoOrange">© PICO</span> all rights reserved
