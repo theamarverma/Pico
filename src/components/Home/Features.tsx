@@ -6,16 +6,21 @@ const Features = () => {
     <section className="">
       <div className="flex gap-4">
         <div className="w-2/3">
-          <h1 className="left text-header flex h-[160px] items-center justify-center rounded-br-[50px] bg-picoTeal p-8 text-white">
-            Where flavours <br /> meet{" "}
-          </h1>
-          <span className="w-1/2 border-t-2 border-borderGray"></span>
+          <div className="left flex items-center justify-center rounded-br-[50px] bg-picoTeal text-white">
+            <h1 className="flex flex-col text-header">
+              Where flavours{" "}
+              <div className="flex w-full items-center gap-4">
+                meet{" "}
+                <span className="w-1/2 border-t-2 border-borderGray"></span>
+              </div>
+            </h1>
+          </div>
         </div>
 
         <div className="right space-y-6">
           <div className="flex items-center justify-start gap-4">
             <div className="w-1/6 border-t-2 border-borderGray"></div>{" "}
-            <h1 className="tracking-label text-lg uppercase">Features</h1>
+            <h1 className="text-lg uppercase tracking-label">Features</h1>
           </div>
           <p className="font-light">
             We serve up a mix of tradition & innovation—because great food &
