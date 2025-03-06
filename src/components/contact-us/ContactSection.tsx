@@ -93,7 +93,7 @@ const ContactSection = () => {
                 href="https://embed-googlemap.com"
                 className="absolute bottom-0 right-0 text-xs" //Optional styling, adjust as needed.
               >
-                embed google map
+                {/* Pico - Pizzeria & Coffee Bar <br /> পিকো - পিজ্জেরিয়া & কফি বার */}
               </a>
             </div>
           </div>
