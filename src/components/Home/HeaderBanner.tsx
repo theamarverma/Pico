@@ -73,7 +73,8 @@ const HeaderBanner = () => {
             </div>
           </div>
         </div>
-        <div className="mx-20 mb-8 flex gap-4 text-white">
+        {/* Image content */}
+        <div className="mx-20 mb-8 flex justify-between gap-8 text-white">
           <div className="pizza flex gap-4">
             <Image
               alt="pizza"
@@ -83,7 +84,7 @@ const HeaderBanner = () => {
             />
             <h1 className="text-header text-white">Pizza Sold: 5000+</h1>
           </div>
-          <div className="border-l-4 border-picoJuteBrown text-picoJuteBrown"></div>
+          <div className="rounded-xl border-l-8 border-picoJuteBrown text-picoJuteBrown"></div>
           <div className="coffee flex gap-4">
             <h1 className="text-header text-white">Coffee Sold: 6000+</h1>
             <Image
