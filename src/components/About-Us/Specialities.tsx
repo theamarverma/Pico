@@ -6,15 +6,19 @@ const Specialities = () => {
     <div>
       {/* Header */}
       <div className="flex gap-4">
-        <h1 className="left flex h-[160px] w-2/3 items-center justify-center rounded-br-[50px] bg-picoTeal p-8 px-10 text-white">
-          <h1 className="text-header flex">
-            Relax, sip, and enjoy in PICO style!{" "}
+        <div className="left w-[60%] rounded-br-[50px] bg-picoTeal text-white">
+          <h1 className="mx-20 flex w-full flex-col text-header">
+            Relax, sip, and enjoy in
+            <div className="flex w-full items-baseline gap-2">
+              PICO style!
+              <span className="w-1/3 border-t-2 border-white"></span>
+            </div>
           </h1>
-        </h1>
+        </div>
         <div className="right mx-10 space-y-6">
           <div className="flex items-center justify-start gap-4">
             <div className="w-1/6 border-t-2 border-borderGray"></div>{" "}
-            <h1 className="tracking-label uppercase">Our Specialities</h1>
+            <h1 className="uppercase tracking-label">Our Specialities</h1>
           </div>
           <p className="font-light">
             We offer authentic{" "}
