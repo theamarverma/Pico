@@ -33,10 +33,10 @@ const ContactBanner = () => {
           <div className="h-[470px] w-[380px] bg-[url(/images/about/popupCard.png)] bg-cover bg-center">
             <div className="flex flex-col items-center justify-center p-8">
               <div className="flex w-full items-center gap-2">
-                <div className="w-1/4 border-t border-white"></div>
+                <div className="w-1/6 border-t border-white"></div>
                 <h1 className="text-lg uppercase text-white">our vibe</h1>
               </div>
-              <p className="mt-8 leading-[38px] text-white">
+              <p className="mt-4 font-light leading-[38px] text-white">
                 We invite you to experience the best Pizzeria &amp; Coffee Bar,
                 where every meal is a celebration of flavors and every cup of
                 coffee tells a story. Whether you&apos;re here for a casual
