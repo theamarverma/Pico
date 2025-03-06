@@ -10,12 +10,12 @@ import { LuClock9 } from "react-icons/lu";
 import dynamic from "next/dynamic";
 import Link from "next/link";
 
-const DynamicPicoMap = dynamic(
-  () => import("@/components/contact-us/PicoMap"),
-  {
-    ssr: false,
-  },
-);
+// const DynamicPicoMap = dynamic(
+//   () => import("@/components/contact-us/PicoMap"),
+//   {
+//     ssr: false,
+//   },
+// );
 
 const ContactSection = () => {
   return (
@@ -81,8 +81,22 @@ const ContactSection = () => {
             </div>
           </div>
         </div>
+        {/* Google Map */}
         <div className="w-[70%]">
-          <DynamicPicoMap />
+          <div className="relative h-[900px] w-full text-right">
+            <div className="h-[900px] w-full overflow-hidden bg-none">
+              <iframe
+                className="h-[900px] w-full"
+                src="https://maps.google.com/maps?width=626&height=900&hl=en&q=pico cafe kolkata&t=&z=14&ie=UTF8&iwloc=B&output=embed"
+              ></iframe>
+              <a
+                href="https://embed-googlemap.com"
+                className="absolute bottom-0 right-0 text-xs" //Optional styling, adjust as needed.
+              >
+                embed google map
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
