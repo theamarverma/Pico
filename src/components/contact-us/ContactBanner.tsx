@@ -6,13 +6,13 @@ const ContactBanner = () => {
     <div className="">
       <div className="px-20 py-12">
         {" "}
-        <h1 className="text-header text-picoTeal">Brewed strong -</h1>
+        <h1 className="text-header text-picoTeal">Brewed strong - </h1>
         <h1 className="text-header text-picoJuteBrown">Baked fresh.</h1>
-        <div className="flex items-center">
-          <div className="w-[10%] border-t-2 border-picoTextGray"></div>
+        <div className="flex gap-2">
+          <div className="mt-4 w-[10%] border-t-2 border-picoTextGray"></div>
           <div>
             {" "}
-            <div className="tracking-label text-2xl font-extrabold uppercase">
+            <div className="text-2xl font-extrabold uppercase tracking-label">
               Open Everyday
             </div>
             <p className="text-xl font-light">11 AM - 11 PM</p>

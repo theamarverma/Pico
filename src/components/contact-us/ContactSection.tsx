@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import "../../styles/map.css";
+// import "../../styles/map.css";
 import {
   IoCallOutline,
   IoMailOutline,
