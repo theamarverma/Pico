@@ -4,14 +4,13 @@ import React from "react";
 const Features = () => {
   return (
     <section className="">
-      <div className="flex gap-4">
+      <div className="flex gap-8">
         <div className="w-2/3">
           <div className="left flex items-center justify-center rounded-br-[50px] bg-picoTeal text-white">
             <h1 className="flex flex-col text-header">
               Where flavours{" "}
-              <div className="flex w-full items-center gap-4">
-                meet{" "}
-                <span className="w-1/2 border-t-2 border-borderGray"></span>
+              <div className="flex w-full items-center gap-6">
+                meet <span className="w-1/2 border-t-2 border-white"></span>
               </div>
             </h1>
           </div>
