@@ -1,5 +1,5 @@
 import BestMenu from "@/components/Home/BestMenu";
-import Features from "@/components/Home/Features";
+import Features from "@/components/Home/Features/Features";
 import FindUs from "@/components/Home/FindUs";
 import FounderBanner from "@/components/Home/FounderBanner";
 import Gallery from "@/components/Home/Gallery";
