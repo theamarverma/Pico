@@ -12,13 +12,14 @@ import { CiMail } from "react-icons/ci";
 const HeaderBanner = () => {
   return (
     <div>
-      <div className="mx-20 w-[790px]">
-        <h1 className="text-header">
-          Welcome to PICO – Where Pizza Meets Coffee
+      <div className="md:mx-20 md:w-[790px]">
+        <h1 className="text-xl md:text-header">
+          <span className="text-picoTeal"> Welcome to PICO –</span> <br />{" "}
+          <span className="text-picoOrange">Where Pizza Meets Coffee</span>
         </h1>
 
         <div className="flex gap-2 p-4">
-          <div className="mt-3 w-2/4 border-t-2 border-borderGray"></div>
+          <div className="mt-3 border-t-2 border-borderGray md:w-2/4"></div>
           <p className="text-picoTextGray">
             your cozy corner for speciality coffee and hand-tossed
             Neapolitan-style pizzas. Good vibes, great food, —what more could
@@ -28,7 +29,7 @@ const HeaderBanner = () => {
       </div>
       <div className="parent flex h-[540px] w-screen flex-col justify-end bg-[url('/images/homepage/header.png')] bg-cover bg-center">
         {/* /----------------popup card---------------- */}
-        <div className="absolute right-16 top-1/4">
+        <div className="absolute right-16 top-1/4 hidden md:block">
           <div className="parent flex h-[433px] w-[344px] flex-col justify-start bg-[url('/images/homepage/card.png')] bg-cover bg-center">
             <div className="mt-10 flex flex-col items-center justify-center">
               <h1 className="text-2xl text-white">Cafe Timings:</h1>
@@ -74,7 +75,7 @@ const HeaderBanner = () => {
           </div>
         </div>
         {/* Image content */}
-        <div className="mx-20 mb-8 flex justify-between gap-8 text-white">
+        <div className="mx-20 mb-8 hidden justify-between gap-8 text-white md:flex">
           <div className="pizza flex gap-4">
             <Image
               alt="pizza"

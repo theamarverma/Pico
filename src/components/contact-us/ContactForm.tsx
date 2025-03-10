@@ -3,6 +3,7 @@ import * as React from "react";
 import { useForm } from "@tanstack/react-form";
 import type { AnyFieldApi } from "@tanstack/react-form";
 import { DateTimePicker } from "./DateTimePicker";
+import axios from "axios";
 
 type ReservationFormValues = {
   name: string;
@@ -25,18 +26,7 @@ function FieldInfo({ field }: { field: AnyFieldApi }) {
 }
 
 export default function ReservationForm() {
-  const form = useForm<
-    ReservationFormValues,
-    any,
-    any,
-    any,
-    any,
-    any,
-    any,
-    any,
-    any,
-    any
-  >({
+  const form = useForm({
     defaultValues: {
       name: "",
       email: "",
@@ -44,10 +34,24 @@ export default function ReservationForm() {
       datetime: undefined,
       seats: "",
       specialRequest: "",
-    },
+    } as ReservationFormValues,
     onSubmit: async ({ value }) => {
-      // Process your form data here
-      console.log(value);
+      try {
+        const response = await axios.post("/api/contact", value);
+        if (response.status === 200) {
+          alert("Reservation submitted successfully!");
+          // Optionally, reset the form or provide additional feedback here.
+        } else {
+          alert(`Submission failed: ${response.data.error}`);
+        }
+      } catch (error: any) {
+        console.error("Error submitting reservation:", error);
+        if (error.response && error.response.data) {
+          alert(`Submission failed: ${error.response.data.error}`);
+        } else {
+          alert("Something went wrong. Please try again.");
+        }
+      }
     },
   });
 

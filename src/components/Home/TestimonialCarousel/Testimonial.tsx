@@ -18,7 +18,7 @@ const Testimonial = () => {
             <div className="flex w-full items-center justify-start gap-3">
               {" "}
               <div className="w-[20%] border-t-2 border-borderGray"></div>
-              <h1 className="tracking-label text-xl text-white">Arpit Lohia</h1>
+              <h1 className="text-xl tracking-label text-white">Arpit Lohia</h1>
             </div>
             {/* Right side  */}
             <div className="space-y-4 self-end">
@@ -64,7 +64,7 @@ const Testimonial = () => {
       </div>
       {/* Counter and Buttons */}
       <div className="flex w-[50%] justify-between">
-        <div>03/10</div>
+        <h1 className="text-header text-picoOrange">03/10</h1>
         <div className="buttons">Buttons</div>
       </div>
     </div>
