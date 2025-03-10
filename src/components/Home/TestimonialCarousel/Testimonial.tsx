@@ -53,7 +53,7 @@ const Testimonial = () => {
         </div>
 
         {/* Popup-Image */}
-        <div className="absolute -bottom-24 -right-44">
+        <div className="-bottom-24 -right-44 md:absolute">
           <Image
             src={"/images/homepage/testimonial/pizza.png"}
             alt="popup"

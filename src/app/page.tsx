@@ -16,39 +16,39 @@ export default function HomePage() {
         {" "}
         <HeaderBanner />
       </section>
-      <section className="bg-bgCream py-24">
+      <section className="bg-bgCream py-10 md:py-24">
         {" "}
         <Overview />
       </section>
-      <section className="bg-bgCream pb-24">
+      <section className="bg-bgCream pb-10 md:pb-24">
         {" "}
         <Features />
       </section>
-      <section className="bg-bgCream pb-24">
+      <section className="bg-bgCream pb-10 md:pb-24">
         {" "}
         <BestMenu />
       </section>
-      <section className="bg-bgCream pb-24">
+      <section className="bg-bgCream pb-10 md:pb-24">
         {" "}
         <FindUs />
       </section>
-      <section className="bg-bgCream px-20 pb-24">
+      <section className="bg-bgCream px-4 pb-10 md:px-20 md:pb-24">
         {" "}
         <MediaCarousel />
       </section>
-      <section className="bg-bgCream px-20 pb-24">
+      <section className="hidden bg-bgCream md:px-20 md:pb-24">
         {" "}
         <Testimonial />
       </section>
-      <section className="bg-bgCream px-20 pb-24">
+      <section className="bg-bgCream px-4 pb-24 md:px-20">
         {" "}
         <FounderBanner />
       </section>
-      <section className="bg-bgCream px-20 pb-24">
+      <section className="bg-bgCream px-4 pb-10 md:px-20 md:pb-24">
         {" "}
         <Services />
       </section>
-      <section className="bg-bgCream px-20 pb-24">
+      <section className="bg-bgCream px-4 pb-10 md:px-20 md:pb-24">
         {" "}
         <Gallery />
       </section>

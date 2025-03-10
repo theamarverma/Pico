@@ -40,7 +40,7 @@ const MediaCarousel = () => {
 
   return (
     <>
-      <div className="mb-10 flex justify-between">
+      <div className="mb-10 flex items-center justify-center md:justify-between">
         <h1 className="text-xl md:text-header">Media Coverage</h1>
         {/* Prev  Next Buttons */}
         <div className="btns">

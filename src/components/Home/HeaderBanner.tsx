@@ -12,10 +12,10 @@ import { CiMail } from "react-icons/ci";
 const HeaderBanner = () => {
   return (
     <div>
-      <div className="md:mx-20 md:w-[790px]">
+      <div className="mx-4 md:mx-20 md:w-[790px]">
         <h1 className="text-xl md:md:text-header">
           <span className="text-picoTeal"> Welcome to PICO –</span> <br />{" "}
-          <span className="text-picoOrange">Where Pizza Meets Coffee</span>
+          <span className="text-picoJuteBrown">Where Pizza Meets Coffee</span>
         </h1>
 
         <div className="flex gap-2 p-4">

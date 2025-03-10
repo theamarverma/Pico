@@ -11,7 +11,7 @@ const MediaCard = () => {
           width={1000}
           height={500}
         />
-        <h1 className="text-4xl">The Telegraph Online My Kolkata</h1>
+        <h1 className="text-xl md:text-4xl">The Telegraph Online My Kolkata</h1>
         <p className="">9 July 2024</p>
         {/* popup arrow  */}
         <div className="absolute right-2 top-2">

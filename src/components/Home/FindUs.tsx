@@ -5,7 +5,7 @@ const FindUs = () => {
   return (
     <div className="flex flex-col items-center justify-center space-y-10">
       <h1 className="text-xl md:text-header">Find us at</h1>
-      <div className="flex h-[154px] gap-6">
+      <div className="mx-4 flex gap-3 md:mx-0 md:h-[154px] md:gap-6">
         <Image
           className="h-full"
           src={"/images/homepage/icons/google.png"}

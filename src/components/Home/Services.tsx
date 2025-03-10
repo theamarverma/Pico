@@ -4,7 +4,7 @@ import React from "react";
 const Services = () => {
   return (
     <div>
-      <div className="img grid grid-cols-3 gap-10">
+      <div className="img grid gap-10 md:grid-cols-3">
         <div className="flex flex-col items-center justify-center">
           <Image
             src={"/images/homepage/services/coffee_beans.png"}

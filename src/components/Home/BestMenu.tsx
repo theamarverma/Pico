@@ -5,7 +5,8 @@ import PicoButton from "../Global/PicoButton";
 const BestMenu = () => {
   return (
     <div>
-      <div className="flex h-full w-full gap-10">
+      {/* Desktop */}
+      <div className="hidden h-full w-full gap-10 md:flex">
         <div className="w-[60%]">
           <div className="flex gap-4">
             <div>
@@ -56,6 +57,35 @@ const BestMenu = () => {
               customers every day
             </p>
             <div className="flex gap-2">
+              {/* {" todo links pdf"} */}
+              <PicoButton title="Food Menu" classname="underline" />
+              <PicoButton title="Beverage Menu" classname="underline" />
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* Mobile */}
+      <div className="flex flex-col gap-6 md:hidden">
+        <h1 className="mx-4 text-sm uppercase tracking-label text-picoTeal">
+          BEST Menu
+        </h1>
+        <h1 className="mx-4 text-xl">
+          What do you like <br /> the Most ?
+        </h1>
+        <div className="flex min-h-[400px]">
+          <Image
+            className="h-full"
+            src={"/images/homepage/menu/coffee.png"}
+            alt="best menu"
+            width={600}
+            height={500}
+          />
+          <div className="mx-4">
+            <p className="font-light">
+              Check the menu that is most liked and ordered by our loyal
+              customers every day
+            </p>
+            <div className="flex flex-col gap-2">
               {/* {" todo links pdf"} */}
               <PicoButton title="Food Menu" classname="underline" />
               <PicoButton title="Beverage Menu" classname="underline" />

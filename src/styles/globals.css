@@ -6,7 +6,7 @@
 /* Poppins by default */
 html {
   font-family: var(--font-poppins);
-  color: #373f43;
+
   font-size: 18px;
 }
 
@@ -19,6 +19,7 @@ h1 {
 h2 {
   font-family: var(--font-mulish);
 }
+
 ul {
   display: flex;
   flex-direction: column;
@@ -31,6 +32,14 @@ li {
   color: #6b6b6b;
 }
 
+/* Mobile screen */
+@media only screen and (max-width: 600px) {
+  html {
+    font-family: var(--font-poppins);
+
+    font-size: 16px;
+  }
+}
 @layer base {
   :root {
     --background: 0 0% 100%;
