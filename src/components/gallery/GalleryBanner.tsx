@@ -18,10 +18,10 @@ const GalleryBanner = () => {
           <div className="flex h-[72px]">
             <div className="w-[10%] bg-picoTeal"></div>
             <div className="flex-grow bg-picoJuteBrown">
-              <h2 className="ml-10 mt-4 text-2xl text-white">
+              <h1 className="ml-10 mt-4 text-3xl text-white">
                 {" "}
                 A Glimpse Into Our World
-              </h2>
+              </h1>
             </div>
           </div>
         </div>

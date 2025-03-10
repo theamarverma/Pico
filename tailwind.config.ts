@@ -16,13 +16,14 @@ export default {
       },
       // /---------custom font sizes--------------
       fontSize: {
-        header: "50px",
-        subheader: "48px",
-        lg: "22px",
-        xl: "24px",
-        "2xl": "30px",
-        "3xl": "32px",
-        "4xl": "40px",
+        header: "3.125rem", // 50px
+        subheader: "3rem", // 48px
+        md: "1.25rem", // 20px
+        lg: "1.375rem", // 22px
+        xl: "1.5rem", // 24px
+        "2xl": "1.875rem", // 30px
+        "3xl": "2rem", // 32px
+        "4xl": "2.5rem", // 40px
       },
       colors: {
         // -----------------------Custom Colors-------------------------------

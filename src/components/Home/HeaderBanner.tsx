@@ -20,7 +20,7 @@ const HeaderBanner = () => {
 
         <div className="flex gap-2 p-4">
           <div className="mt-3 w-1/2 border-t-2 border-borderGray md:w-2/4"></div>
-          <p className="text-picoTextGray">
+          <p className="text-picoTextGray md:text-lg">
             your cozy corner for speciality coffee and hand-tossed
             Neapolitan-style pizzas. Good vibes, great food, —what more could
             you ask for?
@@ -31,8 +31,8 @@ const HeaderBanner = () => {
       {/* Laptop screen */}
       <div className="parent hidden w-full flex-col justify-end bg-[url('/images/homepage/header.png')] bg-cover bg-center md:flex md:h-[540px]">
         {/* /----------------popup card---------------- */}
-        <div className="absolute right-16 top-1/4">
-          <div className="parent flex h-[433px] w-[344px] flex-col justify-start bg-[url('/images/homepage/card.png')] bg-cover bg-center">
+        <div className="absolute right-16 top-1/3">
+          <div className="parent flex h-[400px] w-[340px] flex-col justify-start bg-[url('/images/homepage/card.png')] bg-cover bg-center">
             <div className="mt-10 flex flex-col items-center justify-center">
               <h1 className="text-2xl text-white">Cafe Timings:</h1>
               <h3 className="text-2xl text-white">11am - 11 pm</h3>

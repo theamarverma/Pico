@@ -18,10 +18,10 @@ const AboutBanner = () => {
           <div className="flex h-[72px]">
             <div className="w-[10%] bg-picoTeal"></div>
             <div className="flex-grow bg-picoJuteBrown">
-              <h2 className="ml-10 mt-4 text-2xl text-white">
+              <h1 className="ml-10 mt-4 text-2xl text-white">
                 {" "}
                 Slice of Life !
-              </h2>
+              </h1>
             </div>
           </div>
         </div>

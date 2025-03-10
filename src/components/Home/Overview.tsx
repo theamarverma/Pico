@@ -5,7 +5,7 @@ import PicoButton from "../Global/PicoButton";
 const Overview = () => {
   return (
     <div className="h-full">
-      <div className="mx-4 grid md:mx-20 md:grid-cols-2 md:gap-14">
+      <div className="mx-4 grid gap-4 md:mx-20 md:grid-cols-2 md:gap-14">
         <div className="leftContent flex flex-col justify-evenly gap-4">
           <div className="flex gap-2">
             {" "}
@@ -26,18 +26,26 @@ const Overview = () => {
           </p>
 
           <PicoButton title="Learn More" />
-          <h1 className="flex h-12 items-center justify-center border-l-[10px] border-picoTeal bg-picoJuteBrown text-center text-white md:w-2/3">
+          <h1 className="hidden h-12 items-center justify-center border-l-[10px] border-picoTeal bg-picoJuteBrown text-center text-white md:flex md:w-2/3">
             Pizza. Coffee Happiness. Repeat
           </h1>
         </div>
         <div className="right">
-          <Image
-            className="h-full"
-            alt="overview"
-            src={"/images/homepage/overview.png"}
-            width={1000}
-            height={600}
-          />
+          <div className="mx-4 md:mx-0">
+            <Image
+              className=""
+              alt="overview"
+              src={"/images/homepage/overview.png"}
+              width={1000}
+              height={600}
+            />
+          </div>
+          {/* Only for mobile Label over the image */}
+          <h1 className="flex h-14 items-center justify-center border-l-[15px] border-picoTeal bg-picoJuteBrown text-center font-light uppercase tracking-label text-white md:hidden">
+            Pizza. Coffee
+            <br />
+            Happiness. Repeat!
+          </h1>
         </div>
       </div>
     </div>
