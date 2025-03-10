@@ -7,7 +7,7 @@ const Features = () => {
       <div className="flex gap-8">
         <div className="w-2/3">
           <div className="left flex items-center justify-center rounded-br-[50px] bg-picoTeal text-white">
-            <h1 className="flex flex-col text-header">
+            <h1 className="flex flex-col text-xl md:text-header">
               Where flavours{" "}
               <div className="flex w-full items-center gap-6">
                 meet <span className="w-1/2 border-t-2 border-white"></span>

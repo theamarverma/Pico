@@ -12,11 +12,11 @@ const FounderBanner = () => {
           <div className="flex items-center justify-start gap-3">
             {" "}
             <div className="w-[30%] border-t-2 border-borderGray"></div>
-            <h1 className="tracking-label uppercase text-white">
+            <h1 className="uppercase tracking-label text-white">
               About the founder
             </h1>
           </div>
-          <h1 className="text-header text-white">
+          <h1 className="text-xl text-white md:text-header">
             <span className="text-picoOrange">Meet</span> Prateek Didwania
           </h1>
           <p className="font-light leading-[38px] text-picoText">

@@ -7,7 +7,7 @@ const Specialities = () => {
       {/* Header */}
       <div className="flex gap-4">
         <div className="left w-[60%] rounded-br-[50px] bg-picoTeal text-white">
-          <h1 className="mx-20 flex w-full flex-col text-header">
+          <h1 className="mx-20 flex w-full flex-col text-xl md:text-header">
             Relax, sip, and enjoy in
             <div className="flex w-full items-baseline gap-2">
               PICO style!

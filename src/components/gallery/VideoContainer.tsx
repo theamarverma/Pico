@@ -41,7 +41,7 @@ const VideoContainer = () => {
 
   return (
     <>
-      <h1 className="text-header flex items-center justify-center">
+      <h1 className="flex items-center justify-center text-xl md:text-header">
         Experience the Magic in Motion
       </h1>
 

@@ -41,7 +41,7 @@ const MediaCarousel = () => {
   return (
     <>
       <div className="mb-10 flex justify-between">
-        <h1 className="text-header">Media Coverage</h1>
+        <h1 className="text-xl md:text-header">Media Coverage</h1>
         {/* Prev  Next Buttons */}
         <div className="btns">
           <div className="hidden gap-4 md:flex">

@@ -42,7 +42,7 @@ const CoffeeGallery = () => {
 
   return (
     <>
-      <h1 className="text-header flex items-center justify-center">
+      <h1 className="flex items-center justify-center text-xl md:text-header">
         Speciality Coffee
       </h1>
       <div className="my-6 grid grid-cols-3 gap-4">

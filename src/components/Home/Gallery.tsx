@@ -8,7 +8,7 @@ const Gallery = () => {
     <div>
       {/* Header */}
       <div className="space-y-4">
-        <h1 className="text-header flex items-center justify-center">
+        <h1 className="flex items-center justify-center text-xl md:text-header">
           Pico Gallery
         </h1>
         <div className="flex items-center justify-center text-xl text-picoTextGray">

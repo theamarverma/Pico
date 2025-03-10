@@ -44,11 +44,11 @@ const BestMenu = () => {
             <div className="flex items-center justify-start gap-3">
               {" "}
               <div className="w-[20%] border-t-2 border-picoTeal"></div>
-              <h1 className="tracking-label text-lg uppercase text-picoTeal">
+              <h1 className="text-lg uppercase tracking-label text-picoTeal">
                 Best Menu
               </h1>
             </div>
-            <h1 className="text-header text-black">
+            <h1 className="text-xl text-black md:text-header">
               What do you like the Most ?
             </h1>
             <p className="text-lg font-light">

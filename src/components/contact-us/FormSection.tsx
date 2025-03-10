@@ -6,11 +6,11 @@ const FormSection = () => {
     <div>
       <div className="mx-20 flex gap-10 py-12">
         <div className="left w-[40%]">
-          <h1 className="text-header text-picoTeal">
+          <h1 className="text-xl text-picoTeal md:text-header">
             {" "}
             Crafted with love, served with passion.
           </h1>{" "}
-          <h1 className="text-header text-picoJuteBrown">
+          <h1 className="text-xl text-picoJuteBrown md:text-header">
             {" "}
             Come taste the magic!
           </h1>

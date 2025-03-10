@@ -6,8 +6,12 @@ const ContactBanner = () => {
     <div className="">
       <div className="px-20 py-12">
         {" "}
-        <h1 className="text-header text-picoTeal">Brewed strong - </h1>
-        <h1 className="text-header text-picoJuteBrown">Baked fresh.</h1>
+        <h1 className="text-xl text-picoTeal md:text-header">
+          Brewed strong -{" "}
+        </h1>
+        <h1 className="text-xl text-picoJuteBrown md:text-header">
+          Baked fresh.
+        </h1>
         <div className="flex gap-2">
           <div className="mt-4 w-[10%] border-t-2 border-picoTextGray"></div>
           <div>

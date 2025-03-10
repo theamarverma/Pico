@@ -64,7 +64,7 @@ const Testimonial = () => {
       </div>
       {/* Counter and Buttons */}
       <div className="flex w-[50%] justify-between">
-        <h1 className="text-header text-picoOrange">03/10</h1>
+        <h1 className="text-xl text-picoOrange md:text-header">03/10</h1>
         <div className="buttons">Buttons</div>
       </div>
     </div>
