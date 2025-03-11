@@ -15,10 +15,10 @@ const AboutBanner = () => {
       {/* popup Label*/}
       <div className="absolute bottom-10 left-0 z-[10] mx-6 md:mx-0">
         <div className="pop w-[400px]">
-          <div className="flex w-1/2 md:h-[72px] md:w-full">
+          <div className="flex w-[45%] md:h-[72px] md:w-full">
             <div className="w-[10%] bg-picoTeal"></div>
             <div className="flex-grow bg-picoJuteBrown">
-              <h1 className="ml-10 mt-4 text-lg text-white md:text-2xl">
+              <h1 className="ml-10 mt-4 text-white md:text-2xl">
                 {" "}
                 Slice of Life !
               </h1>
@@ -27,7 +27,7 @@ const AboutBanner = () => {
         </div>
       </div>
       {/* poup Middle Image */}
-      <div className="absolute z-[10] mx-10 md:-bottom-48 md:right-32 md:mx-0">
+      <div className="absolute -bottom-32 right-3 z-[10] mx-10 md:-bottom-48 md:right-32 md:mx-0">
         <div className="bg-[url(/images/about/popupCard.png)] bg-cover bg-center md:h-[470px] md:w-[380px]">
           <div className="flex flex-col items-center justify-center">
             <Image
@@ -37,7 +37,7 @@ const AboutBanner = () => {
               width={242}
               height={242}
             />
-            <p className="px-4 font-light text-white">
+            <p className="px-4 py-4 text-sm font-light text-white md:text-base">
               From hand-stretched dough to freshly roasted beans, every element
               at PICO is about authenticity and taste. We serve up a mix of
               tradition and innovation—because great food and coffee deserve the

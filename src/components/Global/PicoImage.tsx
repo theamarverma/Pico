@@ -8,7 +8,7 @@ interface Props {
 const PicoImage = ({ path, name }: Props) => {
   return (
     <div>
-      <div className="relative h-[500px]">
+      <div className="relative h-[196px] md:h-[500px]">
         {/* Base Image */}
         <Image
           src={path}

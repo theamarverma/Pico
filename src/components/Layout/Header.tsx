@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
-import { GiHamburgerMenu } from "react-icons/gi";
+import { RxHamburgerMenu } from "react-icons/rx";
 import { IoMdClose } from "react-icons/io";
 
 const MobileNavLinks = () => {
@@ -78,15 +78,12 @@ const Header = () => {
       </div>
 
       {/* Mobile Header */}
-      <div className="flex items-center justify-between border-picoJuteBrown bg-bgCream px-4 py-4 md:hidden">
+      <div className="flex items-center justify-between border-b border-picoJuteBrown bg-bgCream px-4 py-2 md:hidden">
         <Link href="/" className="flex items-center justify-center">
-          <Image src="/logo.png" alt="logo" width={80} height={80} />
+          <Image src="/logo.png" alt="logo" width={60} height={60} />
         </Link>
-        <button
-          onClick={() => setMobileNavOpen(true)}
-          className="text-picoTeal"
-        >
-          <GiHamburgerMenu className="h-6 w-6" />
+        <button onClick={() => setMobileNavOpen(true)} className="text-black">
+          <RxHamburgerMenu className="h-8 w-8" />
           <span className="sr-only">Open navigation menu</span>
         </button>
       </div>
@@ -110,7 +107,7 @@ const Header = () => {
             onClick={() => setMobileNavOpen(false)}
             className="mb-4 text-picoTeal"
           >
-            <IoMdClose className="h-6 w-6" />
+            <IoMdClose className="h-8 w-8" />
             <span className="sr-only">Close navigation menu</span>
           </button>
           <MobileNavLinks />

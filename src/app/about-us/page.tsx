@@ -9,7 +9,7 @@ const page = () => {
       <section className="bg-bgCream pt-28">
         <AboutBanner />
       </section>
-      <section className="bg-bgCream py-24 pl-20">
+      <section className="bg-bgCream px-4 pb-14 pt-32 md:py-24 md:pl-20">
         <Overview />
       </section>
       <section className="bg-bgCream pb-24">

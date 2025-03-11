@@ -72,7 +72,7 @@ const BestMenu = () => {
         <h1 className="mx-4 text-xl">
           What do you like <br /> the Most ?
         </h1>
-        <div className="flex min-h-[400px]">
+        <div className="flex">
           <Image
             className="h-full"
             src={"/images/homepage/menu/coffee.png"}

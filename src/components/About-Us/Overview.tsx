@@ -4,17 +4,17 @@ import React from "react";
 const Overview = () => {
   return (
     <div>
-      <div className="grid grid-cols-2">
+      <div className="grid md:grid-cols-2">
         <div className="left flex w-[90%] flex-col items-start justify-center gap-4">
           <div className="flex w-full items-center gap-2">
             <span className="w-1/6 border-t-2 border-picoTextGray"></span>{" "}
-            <h1 className="tracking-label text-xl uppercase">Overview</h1>
+            <h1 className="uppercase tracking-label md:text-xl">Overview</h1>
           </div>
-          <h1 className="text-subheader">
+          <h1 className="text-xl md:text-subheader">
             A perfect blend of brews and wood-fired magic
           </h1>
 
-          <p className="font-light leading-[38px]">
+          <p className="font-light md:leading-[38px]">
             <i className="font-semibold">
               Nestled near Vivekananda Park in South Kolkata,
             </i>{" "}
@@ -36,6 +36,7 @@ const Overview = () => {
         </div>
         <div className="right">
           <Image
+            className="object-cover object-center"
             src={"/images/about/chair.png"}
             alt="banner"
             width={873}

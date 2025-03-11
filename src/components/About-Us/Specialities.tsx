@@ -5,9 +5,9 @@ const Specialities = () => {
   return (
     <div>
       {/* Header */}
-      <div className="flex gap-4">
-        <div className="left w-[60%] rounded-br-[50px] bg-picoTeal text-white">
-          <h1 className="mx-20 flex w-full flex-col text-xl md:text-header">
+      <div className="flex flex-col gap-4 md:flex-row">
+        <div className="left w-[90%] rounded-br-[50px] bg-picoTeal text-white md:w-[60%]">
+          <h1 className="flex w-full flex-col text-xl md:mx-20 md:text-header">
             Relax, sip, and enjoy in
             <div className="flex w-full items-baseline gap-2">
               PICO style!
@@ -28,7 +28,7 @@ const Specialities = () => {
         </div>
       </div>
       {/* Images */}
-      <div className="mx-10 mt-10 grid grid-cols-3 gap-10">
+      <div className="mx-10 mt-10 grid gap-10 md:grid-cols-3">
         {" "}
         <div className="h-[460px]">
           {" "}
@@ -39,7 +39,7 @@ const Specialities = () => {
             width={1000}
             height={600}
           />
-          <h1 className="mt-4 text-center text-xl">
+          <h1 className="text-center text-xl md:mt-4">
             {" "}
             Woodfire Neapolitan Pizzas
           </h1>

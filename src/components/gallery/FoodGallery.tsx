@@ -3,19 +3,31 @@ import type { Swiper as SwiperClass } from "swiper/types";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { useCallback, useState, useEffect } from "react";
-
+import "swiper/css/grid";
 import {
   GrFormNextLink,
   GrFormPreviousLink,
   GrNext,
   GrPrevious,
 } from "react-icons/gr";
+import { Autoplay, Grid } from "swiper/modules";
+import PicoImage from "../Global/PicoImage";
 
-import { Autoplay } from "swiper/modules";
-import { HeroVideoDialogDemo } from "./Test";
-
-const VideoContainer = () => {
-  const mediaItems = [1, 2, 3, 4, 5];
+const FoodGallery = () => {
+  const foodItems = [
+    { name: "Coffee 1", path: "/images/gallery/coffees/1.png" },
+    { name: "Coffee 2", path: "/images/gallery/coffees/1.png" },
+    { name: "Coffee 3", path: "/images/gallery/coffees/1.png" },
+    { name: "Coffee 4", path: "/images/gallery/coffees/1.png" },
+    { name: "Coffee 5", path: "/images/gallery/coffees/1.png" },
+    { name: "Coffee 6", path: "/images/gallery/coffees/1.png" },
+    { name: "Coffee 7", path: "/images/gallery/coffees/1.png" },
+    { name: "Coffee 8", path: "/images/gallery/coffees/1.png" },
+    { name: "Coffee 9", path: "/images/gallery/coffees/1.png" },
+    { name: "Coffee 10", path: "/images/gallery/coffees/1.png" },
+    { name: "Coffee 11", path: "/images/gallery/coffees/1.png" },
+    { name: "Coffee 12", path: "/images/gallery/coffees/1.png" },
+  ];
   const [swiperRef, setSwiperRef] = useState<SwiperClass | null>(null);
   const [isMobile, setIsMobile] = useState(false);
 
@@ -43,12 +55,16 @@ const VideoContainer = () => {
   return (
     <>
       <h1 className="flex items-center justify-center text-xl md:text-header">
-        Experience the Magic in Motion
+        Wood Fired Specials
       </h1>
 
       <Swiper
         onSwiper={setSwiperRef}
-        slidesPerView={2} // Default to 1 slide for mobile
+        slidesPerView={2}
+        grid={{
+          rows: 2,
+          fill: "row",
+        }}
         spaceBetween={16}
         breakpoints={{
           576: {
@@ -67,22 +83,11 @@ const VideoContainer = () => {
               }
             : false
         }
-        modules={[Autoplay]}
+        modules={[Autoplay, Grid]}
       >
-        {mediaItems.map((item, index) => (
+        {foodItems.map((item, index) => (
           <SwiperSlide key={index}>
-            {/* <HeroVideoDialogDemo /> */}
-            <div className="min-h-[300px] border border-picoTextGray md:min-h-[500px]">
-              <video
-                className="h-full min-h-[300px] md:min-h-[500px]"
-                height="400"
-                controls
-                preload="none"
-              >
-                <source src="/videos/video.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-            </div>
+            <PicoImage path={item.path} name={item.name} />
           </SwiperSlide>
         ))}
       </Swiper>
@@ -133,4 +138,4 @@ const VideoContainer = () => {
   );
 };
 
-export default VideoContainer;
+export default FoodGallery;

@@ -12,7 +12,7 @@ import Testimonial from "@/components/Home/TestimonialCarousel/Testimonial";
 export default function HomePage() {
   return (
     <>
-      <section className="bg-bgCream pt-28 md:pt-40">
+      <section className="bg-bgCream pt-24 md:pt-40">
         {" "}
         <HeaderBanner />
       </section>
@@ -36,7 +36,7 @@ export default function HomePage() {
         {" "}
         <MediaCarousel />
       </section>
-      <section className="hidden bg-bgCream md:px-20 md:pb-24">
+      <section className="bg-bgCream pb-14 md:px-20 md:pb-24">
         {" "}
         <Testimonial />
       </section>
