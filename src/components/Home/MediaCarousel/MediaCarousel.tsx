@@ -2,31 +2,78 @@
 import type { Swiper as SwiperClass } from "swiper/types";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import { useCallback, useState, useEffect } from "react"; // Add useEffect
-
+import { useCallback, useState, useEffect } from "react";
 import { GrNext, GrPrevious } from "react-icons/gr";
-
-import { Autoplay } from "swiper/modules"; // Import Autoplay module
-
+import { Autoplay } from "swiper/modules";
 import MediaCard from "./MediaCard";
 
 const MediaCarousel = () => {
   const [swiperRef, setSwiperRef] = useState<SwiperClass | null>(null);
-  const [isMobile, setIsMobile] = useState(false); // State to track mobile screen size
-  const mediaItems = [1, 2, 3, 4, 5];
-  // Check screen size on component mount and window resize
+  const [isMobile, setIsMobile] = useState(false);
+
+  const cards = [
+    {
+      title: "The Telegraph Online",
+      date: "9 July 2024",
+      imageSrc: "/images/homepage/media/image.png",
+      link: "https://www.telegraphindia.com/my-kolkata/food/...",
+    },
+    {
+      title: "E paper",
+      date: "29 May 2024",
+      imageSrc: "/images/homepage/media/image.png",
+      link: "https://epaper.telegraphindia.com/imageview/...",
+    },
+    {
+      title: "T2 online",
+      date: "29 May 2024",
+      imageSrc: "/images/homepage/media/image.png",
+      link: "https://t2online.in/goodlife/food-beverage/...",
+    },
+    {
+      title: "The Telegraph Online",
+      date: "19 June 2024",
+      imageSrc: "/images/homepage/media/image.png",
+      link: "https://www.telegraphindia.com/my-kolkata/food/...",
+    },
+    {
+      title: "Indulge",
+      date: "27 July 2024",
+      imageSrc: "/images/homepage/media/image.png",
+      link: "https://www.indulgexpress.com/food/food-calcutta/...",
+    },
+    {
+      title: "E paper",
+      date: "11 Nov 2024",
+      imageSrc: "/images/homepage/media/image.png",
+      link: "https://epaper.telegraphindia.com/t2/2024-11-11/...",
+    },
+    {
+      title: "T2 online",
+      date: "11 Nov 2024",
+      imageSrc: "/images/homepage/media/image.png",
+      link: "https://t2online.in/goodlife/food-beverage/...",
+    },
+    {
+      title: "The Telegraph Online",
+      date: "03 Dec 2024",
+      imageSrc: "/images/homepage/media/image.png",
+      link: "https://www.telegraphindia.com/my-kolkata/food/...",
+    },
+    {
+      title: "T2 online",
+      date: "11 Jan 2025",
+      imageSrc: "/images/homepage/media/image.png",
+      link: "https://epaper.telegraphindia.com/imageview/...",
+    },
+  ];
+
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth < 768); // Set isMobile to true if screen width is less than 768px
+      setIsMobile(window.innerWidth < 768);
     };
-
-    // Initial check
     handleResize();
-
-    // Add event listener for window resize
     window.addEventListener("resize", handleResize);
-
-    // Cleanup event listener on component unmount
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
@@ -42,7 +89,6 @@ const MediaCarousel = () => {
     <>
       <div className="mb-10 flex items-center justify-center md:justify-between">
         <h1 className="text-xl md:text-header">Media Coverage</h1>
-        {/* Prev  Next Buttons */}
         <div className="btns">
           <div className="hidden gap-4 md:flex">
             <div>
@@ -64,56 +110,40 @@ const MediaCarousel = () => {
           </div>
         </div>
       </div>
-
       <Swiper
         onSwiper={setSwiperRef}
-        slidesPerView={1} // Default to 1 slide for mobile
+        slidesPerView={1}
         spaceBetween={16}
         breakpoints={{
           576: {
-            slidesPerView: 2, // 2 slides for tablets
+            slidesPerView: 2,
           },
           768: {
-            slidesPerView: 3, // 3 slides for desktop
+            slidesPerView: 3,
           },
         }}
         loop={false}
         autoplay={
           isMobile
             ? {
-                delay: 300, // Autoplay delay for mobile
-                disableOnInteraction: false, // Continue autoplay after user interaction
+                delay: 300,
+                disableOnInteraction: false,
               }
-            : false // Disable autoplay for larger screens
+            : false
         }
-        modules={[Autoplay]} // Add Autoplay module
+        modules={[Autoplay]}
       >
-        {mediaItems.map((item, index) => (
+        {cards.map((card, index) => (
           <SwiperSlide key={index}>
-            <MediaCard />
+            <MediaCard
+              title={card.title}
+              date={card.date}
+              imageSrc={card.imageSrc}
+              link={card.link}
+            />
           </SwiperSlide>
         ))}
       </Swiper>
-
-      {/* Mobile Navigation Buttons */}
-      {/* <div className="mt-5 flex w-full items-center justify-center gap-8 md:hidden">
-        <div>
-          <button
-            className="border-primary-dark hover:bg-primary-dark hover:text-charity-primary flex h-14 w-14 items-center justify-center rounded-full border"
-            onClick={handlePrevious}
-          >
-            <GrFormPreviousLink size={30} />
-          </button>
-        </div>
-        <div>
-          <button
-            className="border-primary-dark hover:bg-primary-dark hover:text-charity-primary flex h-14 w-14 items-center justify-center rounded-full border"
-            onClick={handleNext}
-          >
-            <GrFormNextLink size={30} />
-          </button>
-        </div>
-      </div> */}
     </>
   );
 };
