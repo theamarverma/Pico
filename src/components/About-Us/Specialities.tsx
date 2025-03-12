@@ -15,7 +15,7 @@ const Specialities = () => {
             </div>
           </h1>
         </div>
-        <div className="right mx-10 space-y-6">
+        <div className="right mx-4 space-y-3 md:mx-10 md:space-y-6">
           <div className="flex items-center justify-start gap-4">
             <div className="w-1/6 border-t-2 border-borderGray"></div>{" "}
             <h1 className="uppercase tracking-label">Our Specialities</h1>
@@ -28,12 +28,12 @@ const Specialities = () => {
         </div>
       </div>
       {/* Images */}
-      <div className="mx-10 mt-10 grid gap-10 md:grid-cols-3">
+      <div className="mx-4 grid md:mx-10 md:mt-10 md:grid-cols-3 md:gap-10">
         {" "}
         <div className="h-[460px]">
           {" "}
           <Image
-            className="h-full"
+            className="h-[90%] md:h-full"
             src={"/images/about/pizzas.png"}
             alt="best menu"
             width={1000}
@@ -47,24 +47,24 @@ const Specialities = () => {
         <div className="h-[460px]">
           {" "}
           <Image
-            className="h-full"
+            className="h-[90%] md:h-full"
             src={"/images/about/coffees.png"}
             alt="best menu"
             width={1000}
             height={600}
           />
-          <h1 className="mt-4 text-center text-xl">Specialty Coffees</h1>
+          <h1 className="text-center text-xl md:mt-4">Specialty Coffees</h1>
         </div>
         <div className="h-[460px]">
           {" "}
           <Image
-            className="h-full"
+            className="h-[90%] md:h-full"
             src={"/images/about/breads.png"}
             alt="best menu"
             width={1000}
             height={600}
           />
-          <h1 className="mt-4 text-center text-xl">
+          <h1 className="text-center text-xl md:mt-4">
             Artisanal Breads and More
           </h1>
         </div>

@@ -27,17 +27,18 @@ const AboutBanner = () => {
         </div>
       </div>
       {/* poup Middle Image */}
-      <div className="absolute top-[50%] z-[10] mx-10 md:-bottom-48 md:right-32 md:mx-0">
-        <div className="bg-[url(/images/about/popupCard.png)] bg-cover bg-center md:h-[470px] md:w-[380px]">
-          <div className="flex flex-col items-center justify-center">
+      <div className="absolute top-[50%] z-[10] mx-10 md:right-32 md:top-[80%] md:mx-0">
+        <div className="bg-[url(/images/about/popupCard.png)] bg-cover bg-center md:w-[350px]">
+          <div className="flex flex-col items-center justify-center py-4 md:py-8">
             <Image
-              className="hidden md:block"
-              src={"/pico_logo.svg"}
+              className="hidden h-full brightness-0 invert filter md:block"
+              src="/pico_logo.svg"
               alt="banner"
-              width={242}
-              height={242}
+              width={200}
+              height={200}
             />
-            <p className="px-4 py-4 text-sm font-light text-white md:text-base">
+
+            <p className="px-4 text-sm font-light text-white md:px-8 md:text-base md:leading-[25px]">
               From hand-stretched dough to freshly roasted beans, every element
               at PICO is about authenticity and taste. We serve up a mix of
               tradition and innovation—because great food and coffee deserve the
