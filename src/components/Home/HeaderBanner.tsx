@@ -105,14 +105,14 @@ const HeaderBanner = () => {
       </div>
       {/* Mobile screen */}
 
-      <div className="md:hidden">
+      <div className="relative h-[350px] md:hidden">
         <Image
           src={"/images/homepage/header.png"}
           alt="header"
           width={1000}
           height={540}
         />
-        <div className="top-1/4 mx-4">
+        <div className="absolute top-1/3 mx-8">
           <div className="flex flex-col justify-start bg-picoTeal">
             <div className="mx-4 my-4 flex flex-col gap-2">
               <h1 className="text-sm text-white">PRODUCTS</h1>
@@ -121,14 +121,14 @@ const HeaderBanner = () => {
                 place for you to relax
               </p>
               <div className="w-full border-t border-borderGray"></div>
-              <div className="mt-6 space-y-4 text-white">
+              <div className="mt-2 space-y-4 text-white">
                 <Link
                   href={"tel:+918240912328"}
                   target="_blank"
                   className="flex gap-2"
                 >
                   <IoCallOutline color="white" />
-                  <div className="text-xs">+91 8240912328</div>
+                  <div className="text-sm">+91 8240912328</div>
                 </Link>
                 <Link
                   href={"mailto:info@picokolkata.com"}
@@ -136,13 +136,13 @@ const HeaderBanner = () => {
                   className="flex gap-2"
                 >
                   <CiMail color="white" />
-                  <div className="text-xs underline">info@picokolkata.com</div>
+                  <div className="text-sm underline">info@picokolkata.com</div>
                 </Link>
 
                 <Link
                   href={"https://maps.app.goo.gl/xoLKckSdLAG375uFA"}
                   target="_blank"
-                  className="flex gap-2 text-xs underline hover:cursor-pointer"
+                  className="flex gap-2 text-sm underline hover:cursor-pointer"
                 >
                   <IoLocationOutline color="white" /> P,559, Lake Rd, Southern
                   <br /> Avenue , Kolkata - 700029 <br /> (Opp. Sabyasachi
