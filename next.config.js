@@ -5,6 +5,6 @@
 import "./src/env.js";
 
 /** @type {import("next").NextConfig} */
-const config = {};
+const config = { "@next/next/no-img-element": "warn" };
 
 export default config;

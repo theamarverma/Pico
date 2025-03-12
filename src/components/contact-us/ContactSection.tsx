@@ -7,7 +7,7 @@ import {
   IoLocationOutline,
 } from "react-icons/io5";
 import { LuClock9 } from "react-icons/lu";
-import dynamic from "next/dynamic";
+
 import Link from "next/link";
 
 // const DynamicPicoMap = dynamic(

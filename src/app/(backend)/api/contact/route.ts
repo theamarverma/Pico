@@ -1,8 +1,9 @@
-import { NextApiRequest } from "next";
+import type { NextRequest } from "next/server";
+
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
-export async function POST(req: NextResponse) {
+export async function POST(req: NextRequest) {
   const body = await req.json();
   const { name, email, phone, datetime, seats, specialRequest } = body;
 

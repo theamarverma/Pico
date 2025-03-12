@@ -12,7 +12,6 @@ import {
 } from "react-icons/gr";
 
 import { Autoplay } from "swiper/modules";
-import { HeroVideoDialogDemo } from "./Test";
 
 const VideoContainer = () => {
   const mediaItems = [1, 2, 3, 4, 5];

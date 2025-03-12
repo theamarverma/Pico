@@ -4,12 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/grid"; // Import grid CSS
 import { useCallback, useState, useEffect } from "react";
-import {
-  GrFormNextLink,
-  GrFormPreviousLink,
-  GrNext,
-  GrPrevious,
-} from "react-icons/gr";
+import { GrNext, GrPrevious } from "react-icons/gr";
 import { Autoplay, Grid } from "swiper/modules";
 import PicoImage from "../Global/PicoImage";
 import React from "react";
