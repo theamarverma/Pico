@@ -269,7 +269,7 @@ export default function ReservationForm() {
         >
           {([canSubmit, isSubmitting]) => (
             <button
-              className="mt-4 bg-picoTeal p-2 px-4 text-sm text-white"
+              className="mt-4 w-full bg-picoTeal p-3 px-4 text-sm text-white md:w-40"
               type="submit"
               disabled={!canSubmit}
             >

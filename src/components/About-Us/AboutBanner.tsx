@@ -3,9 +3,9 @@ import React from "react";
 
 const AboutBanner = () => {
   return (
-    <div className="relative mt-12 px-6 md:px-20">
+    <div className="relative mt-12 h-[300px] px-6 md:h-full md:px-20">
       <Image
-        className="w-full"
+        className="h-[180px] w-full md:h-full"
         src={"/images/about/aboutBanner.png"}
         alt="banner"
         width={1000}
@@ -13,7 +13,7 @@ const AboutBanner = () => {
       />
 
       {/* popup Label*/}
-      <div className="absolute bottom-10 left-0 z-[10] mx-6 md:mx-0">
+      <div className="absolute bottom-40 left-0 z-[10] mx-6 md:mx-0">
         <div className="pop w-[400px]">
           <div className="flex w-[45%] md:h-[72px] md:w-full">
             <div className="w-[10%] bg-picoTeal"></div>
@@ -27,7 +27,7 @@ const AboutBanner = () => {
         </div>
       </div>
       {/* poup Middle Image */}
-      <div className="absolute -bottom-32 right-3 z-[10] mx-10 md:-bottom-48 md:right-32 md:mx-0">
+      <div className="absolute top-[50%] z-[10] mx-10 md:-bottom-48 md:right-32 md:mx-0">
         <div className="bg-[url(/images/about/popupCard.png)] bg-cover bg-center md:h-[470px] md:w-[380px]">
           <div className="flex flex-col items-center justify-center">
             <Image

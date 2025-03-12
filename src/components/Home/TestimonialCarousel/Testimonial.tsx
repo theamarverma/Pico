@@ -27,6 +27,7 @@ const TestimonialSection = ({
 }: TestimonialProps) => {
   return (
     <>
+      {/* Desktop Screen */}
       <div className="hidden w-full bg-bgCream md:block">
         <div className="parent relative flex h-[500px] flex-col bg-picoTeal bg-cover md:w-[80%]">
           <div className="mx-10 flex h-full items-center justify-center md:w-[60%]">
@@ -86,7 +87,6 @@ const TestimonialSection = ({
         </div>
       </div>
       {/* Mobile Screen */}
-
       <div className="relative block h-[600px] w-full bg-bgCream md:hidden">
         <div className="parent flex h-[70%] flex-col bg-picoTeal bg-cover md:w-[80%]">
           <div className="mt-6 flex items-center justify-center">
@@ -94,7 +94,7 @@ const TestimonialSection = ({
               <h1 className="w-full text-xl text-white md:text-subheader">
                 What They Say:
               </h1>
-              <p className="font-light text-white md:text-lg">{review}</p>
+              <p className="mx-10 font-light text-white md:text-lg">{review}</p>
               <div className="flex w-full items-center justify-center gap-3">
                 {" "}
                 <div className="flex gap-2 text-lg text-white">

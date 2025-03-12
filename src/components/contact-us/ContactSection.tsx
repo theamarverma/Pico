@@ -20,14 +20,14 @@ import Link from "next/link";
 const ContactSection = () => {
   return (
     <div>
-      <div className="mx-20 flex gap-20">
-        <div className="flex flex-col justify-around">
+      <div className="mx-4 flex flex-col md:mx-20 md:flex-row md:gap-20">
+        <div className="flex flex-col gap-4 md:justify-around">
           <div>
             {" "}
-            <h3 className="text-lg font-bold uppercase text-picoTeal">
+            <h3 className="text-lg uppercase text-picoTeal md:font-bold">
               Get in Touch
             </h3>
-            <h1 className="text-subheader uppercase">Visit Pico</h1>
+            <h1 className="text-xl uppercase md:text-subheader">Visit Pico</h1>
           </div>
 
           <div className="space-y-4">
@@ -82,20 +82,18 @@ const ContactSection = () => {
           </div>
         </div>
         {/* Google Map */}
-        <div className="w-[70%]">
-          <div className="relative h-[900px] w-full text-right">
-            <div className="h-[900px] w-full overflow-hidden bg-none">
-              <iframe
-                className="h-[900px] w-full"
-                src="https://maps.google.com/maps?width=626&height=900&hl=en&q=pico cafe kolkata&t=&z=14&ie=UTF8&iwloc=B&output=embed"
-              ></iframe>
-              <a
-                href="https://embed-googlemap.com"
-                className="absolute bottom-0 right-0 text-xs" //Optional styling, adjust as needed.
-              >
-                {/* Pico - Pizzeria & Coffee Bar <br /> পিকো - পিজ্জেরিয়া & কফি বার */}
-              </a>
-            </div>
+        <div className="md:w-[70%]">
+          <div className="h-[400px] w-full overflow-hidden bg-none md:h-[900px]">
+            <iframe
+              className="h-[400px] w-full md:h-[900px]"
+              src="https://maps.google.com/maps?width=626&height=900&hl=en&q=pico cafe kolkata&t=&z=14&ie=UTF8&iwloc=B&output=embed"
+            ></iframe>
+            <a
+              href="https://embed-googlemap.com"
+              className="absolute bottom-0 right-0 text-xs" //Optional styling, adjust as needed.
+            >
+              {/* Pico - Pizzeria & Coffee Bar <br /> পিকো - পিজ্জেরিয়া & কফি বার */}
+            </a>
           </div>
         </div>
       </div>

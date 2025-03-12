@@ -4,8 +4,8 @@ import ContactForm from "./ContactForm";
 const FormSection = () => {
   return (
     <div>
-      <div className="mx-20 flex gap-10 py-12">
-        <div className="left w-[40%]">
+      <div className="flex flex-col gap-10 md:mx-20 md:flex-row md:py-12">
+        <div className="left text-center md:w-[40%] md:text-start">
           <h1 className="text-xl text-picoTeal md:text-header">
             {" "}
             Crafted with love, served with passion.
@@ -15,7 +15,7 @@ const FormSection = () => {
             Come taste the magic!
           </h1>
         </div>
-        <div className="right flex-grow">
+        <div className="right mx-4 flex-grow">
           <ContactForm />
         </div>
       </div>
