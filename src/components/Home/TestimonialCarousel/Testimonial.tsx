@@ -236,7 +236,21 @@ const Testimonial = () => {
         ))}
       </Swiper>
       {/* Below the carousel Buttons  */}
-      <div>
+      <div className="justify-between md:flex md:w-[80%]">
+        {/* Counter */}
+        <span className="mt-4 hidden md:block">
+          <div className="flex">
+            <h1 className="text-4xl text-picoJuteBrown">
+              {String(currentSlide + 1).padStart(2, "0")}
+            </h1>
+
+            <h1 className="self-end text-3xl text-picoJuteBrown">
+              {" "}
+              /{String(testimonials.length).padStart(2, "0")}
+            </h1>
+          </div>
+        </span>
+        {/* buttons */}
         <div className="btns my-4 flex items-center justify-center md:block md:w-1/2">
           <div className="flex gap-4">
             <div>
@@ -257,10 +271,6 @@ const Testimonial = () => {
             </div>
           </div>
         </div>
-        <span className="hidden md:block">
-          {String(currentSlide + 1).padStart(2, "0")}/
-          {String(testimonials.length).padStart(2, "0")}
-        </span>
       </div>
     </>
   );
