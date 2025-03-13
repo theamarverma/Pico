@@ -35,7 +35,7 @@ const TestimonialSection = ({
               <h1 className="w-full text-xl text-white md:text-subheader">
                 What They Say:
               </h1>
-              <p className="font-light text-white md:text-lg">{review}</p>
+              <p className="font-light text-white">{review}</p>
               <div className="flex w-full items-center justify-start gap-3">
                 <div className="w-[20%] border-t-2 border-borderGray"></div>
                 <h1 className="text-sm tracking-label text-white md:text-xl">
@@ -159,30 +159,93 @@ const Testimonial = () => {
   const testimonials: TestimonialProps[] = [
     {
       review:
-        "Worth it. And definitely worth a few visits. Loved the Fungi Pesto Pizza. Out of the world. And the Tiramisu is unparalleled.",
-      name: "Arpit Lohia",
+        "All 5 stars to this place! Tried the pesto burrata pizza, filo starter, berry blast coffee & cranberry cold brew. All the items were fantastic. Excellent & warm staff. Fine decor. Quick service too. I can see myself visiting Pico more often. Must visit.",
+      name: "Joy",
       companyName: "Zomato",
-      rating: 4.5,
+      rating: 5,
       imgsrc: "/images/homepage/testimonial/pizza.png",
       companyLogo: "/images/homepage/testimonial/zomato.png",
     },
     {
       review:
-        "Amazing food and fantastic service! The ambience makes every visit memorable.",
-      name: "John Doe",
-      companyName: "Foodie Magazine",
-      rating: 4.7,
-      imgsrc: "/images/homepage/testimonial/testimonial2.png",
-      companyLogo: "/images/homepage/testimonial/foodiemag.png",
+        "Had the pleasure of visiting Pico today, and as always, the warmth and hospitality were truly unmatched—especially when it’s anything connected with Prateek Didwania. From the perfectly grilled fish to the delicious pizza, every bite was a delight! But what truly stole the show was the experience behind the coffee bar—where magic unfolds with every brew. A short yet excitement-filled visit that left me completely overwhelmed in the best way possible. Absolutely loved the place and can’t wait to be back again (and again)!",
+      name: "Kobid Sinha",
+      companyName: "Zomato",
+      rating: 5,
+      imgsrc: "/images/homepage/testimonial/pizza.png",
+      companyLogo: "/images/homepage/testimonial/zomato.png",
     },
     {
       review:
-        "A delightful experience. The pizza was perfectly baked and the atmosphere was inviting.",
-      name: "Jane Smith",
-      companyName: "Gourmet Reviews",
-      rating: 4.9,
-      imgsrc: "/images/homepage/testimonial/testimonial3.png",
-      companyLogo: "/images/homepage/testimonial/gourmet.png",
+        "Pico - Pizzeria & Coffee Bar is a fantastic spot for a delightful meal. We tried the Fire E Chicken pizza, which was bursting with flavor and perfectly cooked, and the grilled chicken steak, which was tender, juicy, and excellently prepared. The ambience adds to the experience, offering a cozy and inviting atmosphere that’s perfect for a relaxed dining outing. Highly recommended for both the food and the vibe!",
+      name: "Akash Mahendra Basu",
+      companyName: "Google Reviews",
+      rating: 5,
+      imgsrc: "/images/homepage/testimonial/pizza.png",
+      companyLogo: "/images/homepage/testimonial/google.png",
+    },
+    {
+      review:
+        "The ambiance is really good. The drinks and beverages were nicely explained to us by the waiters. All the staff were very well mannered and hospitable. The food and drinks were absolutely fantastic. Really recommended to visit.",
+      name: "Dhruba Chakraborty",
+      companyName: "Google Reviews",
+      rating: 5,
+      imgsrc: "/images/homepage/testimonial/pizza.png",
+      companyLogo: "/images/homepage/testimonial/google.png",
+    },
+    {
+      review:
+        "Had the hazelnut coffee and Alfredo pizza at Pico—absolutely delightful! The coffee was smooth with a perfect nutty kick, and the pizza had a creamy, cheesy richness that hit all the right notes. A must-visit!",
+      name: "Neeyantri Banerjee",
+      companyName: "Google Reviews",
+      rating: 5,
+      imgsrc: "/images/homepage/testimonial/pizza.png",
+      companyLogo: "/images/homepage/testimonial/google.png",
+    },
+    {
+      review:
+        "South Kolkata's newest hotspot Pico, is a visual dream! With stunning aesthetics and Instagram-worthy interiors, every corner is a photo op. Beyond the looks, their coffee is top-notch, especially the Hazelnut one. Don't miss their Bhetki dish either. A must-visit for coffee lovers and social media enthusiasts alike.",
+      name: "Surojit Das",
+      companyName: "Google Reviews",
+      rating: 5,
+      imgsrc: "/images/homepage/testimonial/pizza.png",
+      companyLogo: "/images/homepage/testimonial/google.png",
+    },
+    {
+      review:
+        "My seventh time coming in a course of 2 months? Absolutely love the food and my favourite Biscoff coffee. Extremely hospitable staff and great playlist. 10/10 recommend.",
+      name: "Rumi Das",
+      companyName: "Zomato",
+      rating: 5,
+      imgsrc: "/images/homepage/testimonial/pizza.png",
+      companyLogo: "/images/homepage/testimonial/zomato.png",
+    },
+    {
+      review:
+        "Super service by the team and great recommendations. Had a variety of food and beverages and loved them all. Have already recommended Pico to a few of my connections. This would be a must visit for me every time I am in town.",
+      name: "Akash Agrawal",
+      companyName: "Zomato",
+      rating: 5,
+      imgsrc: "/images/homepage/testimonial/pizza.png",
+      companyLogo: "/images/homepage/testimonial/zomato.png",
+    },
+    {
+      review:
+        "I like coming to this cafe for its great coffees and tasty Neapolitan pizzas. I tried the Biscoff Latte, which is a must have, and the Alfredo Chicken Pizza was delicious too.",
+      name: "Kasturi Paul",
+      companyName: "Zomato",
+      rating: 5,
+      imgsrc: "/images/homepage/testimonial/pizza.png",
+      companyLogo: "/images/homepage/testimonial/zomato.png",
+    },
+    {
+      review:
+        "In my recent visit to PICO pizzeria I had an amazing experience. The cozy welcoming atmosphere sets the perfect vibe for a relaxing meal. The pizza was crispy, fresh and delicious. The coffee was flavorful and the churro was perfectly done. The decor is very pretty. Whether you are grabbing a coffee, or a meal, this place is a must visit!",
+      name: "Peeyasa Sarkar",
+      companyName: "Google Reviews",
+      rating: 5,
+      imgsrc: "/images/homepage/testimonial/pizza.png",
+      companyLogo: "/images/homepage/testimonial/google.png",
     },
   ];
 
