@@ -94,7 +94,7 @@ const TestimonialSection = ({
               <h1 className="w-full text-xl text-white md:text-subheader">
                 What They Say:
               </h1>
-              <p className="mx-10 font-light text-white md:text-lg">{review}</p>
+              <p className="mx-10 text-sm font-light text-white">{review}</p>
               <div className="flex w-full items-center justify-center gap-3">
                 {" "}
                 <div className="flex gap-2 text-lg text-white">
