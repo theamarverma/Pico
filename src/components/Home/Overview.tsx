@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import PicoButton from "../Global/PicoButton";
+import Link from "next/link";
 
 const Overview = () => {
   return (
@@ -25,7 +26,9 @@ const Overview = () => {
             those..............
           </p>
 
-          <PicoButton title="Learn More" />
+          <Link href={"/about-us"} className="mt-4 flex gap-2">
+            <PicoButton title="Learn More" />
+          </Link>
           <h1 className="hidden h-12 items-center justify-center border-l-[10px] border-picoTeal bg-picoJuteBrown text-center text-white md:flex md:w-2/3">
             Pizza. Coffee Happiness. Repeat
           </h1>
