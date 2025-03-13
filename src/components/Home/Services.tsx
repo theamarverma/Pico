@@ -31,7 +31,7 @@ const Services = () => {
             width={400}
             height={400}
           />
-          <h1 className="mt-3 text-lg"> With The best Service</h1>
+          <h1 className="mt-3 text-lg"> With The best Team</h1>
         </div>
       </div>
     </div>
