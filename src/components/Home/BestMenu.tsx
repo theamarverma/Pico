@@ -50,7 +50,7 @@ const BestMenu = () => {
               </h1>
             </div>
             <h1 className="text-xl text-black md:text-header">
-              What do you like the Most ?
+              What do you like the Most?
             </h1>
             <p className="text-lg font-light">
               Check the menu that is most liked and ordered by our loyal
