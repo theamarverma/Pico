@@ -4,20 +4,38 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { IoMdClose } from "react-icons/io";
-
-const MobileNavLinks = () => {
+interface Props {
+  handleLinkClick: () => void;
+}
+const MobileNavLinks = ({ handleLinkClick }: Props) => {
   return (
     <div className="flex flex-col space-y-4">
-      <Link href="/" className="block text-lg hover:text-picoTeal">
+      <Link
+        href="/"
+        onClick={handleLinkClick}
+        className="block text-lg hover:text-picoTeal"
+      >
         Home
       </Link>
-      <Link href="/about-us" className="block text-lg hover:text-picoTeal">
+      <Link
+        href="/about-us"
+        onClick={handleLinkClick}
+        className="block text-lg hover:text-picoTeal"
+      >
         About Us
       </Link>
-      <Link href="/gallery" className="block text-lg hover:text-picoTeal">
+      <Link
+        href="/gallery"
+        onClick={handleLinkClick}
+        className="block text-lg hover:text-picoTeal"
+      >
         Gallery
       </Link>
-      <Link href="/contact-us" className="block text-lg hover:text-picoTeal">
+      <Link
+        href="/contact-us"
+        onClick={handleLinkClick}
+        className="block text-lg hover:text-picoTeal"
+      >
         Contact Us
       </Link>
     </div>
@@ -110,7 +128,8 @@ const Header = () => {
             <IoMdClose className="h-8 w-8" />
             <span className="sr-only">Close navigation menu</span>
           </button>
-          <MobileNavLinks />
+          {/* Pass the callback to MobileNavLinks */}
+          <MobileNavLinks handleLinkClick={() => setMobileNavOpen(false)} />
         </div>
       </div>
     </div>
