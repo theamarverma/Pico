@@ -9,10 +9,10 @@ type MediaCardProps = {
 const MediaCard = ({ title, date, imageSrc, link }: MediaCardProps) => {
   return (
     <Link href={link} target="_blank">
-      <div className="h-[450px] rounded-2xl bg-bgCreamDark p-2">
-        <div className="relative h-[400px]">
+      <div className="h-[420px] rounded-2xl bg-bgCreamDark p-2">
+        <div className="relative">
           <Image
-            className="h-[300px]"
+            className="h-[320px]"
             src={imageSrc}
             alt="media"
             width={1000}
