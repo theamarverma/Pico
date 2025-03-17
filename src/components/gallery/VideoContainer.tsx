@@ -4,17 +4,83 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { useCallback, useState, useEffect } from "react";
 
-import {
-  GrFormNextLink,
-  GrFormPreviousLink,
-  GrNext,
-  GrPrevious,
-} from "react-icons/gr";
+import { GrNext, GrPrevious } from "react-icons/gr";
 
 import { Autoplay } from "swiper/modules";
 
+interface VideoPlayerProps {
+  videoUrl: string;
+}
+const VideoPlayer = ({ videoUrl }: VideoPlayerProps) => {
+  return (
+    <div
+      style={{
+        position: "relative",
+        width: "100%",
+      }}
+      className="h-[20rem] w-full"
+    >
+      <video
+        src={videoUrl}
+        controls
+        autoPlay={false}
+        style={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+
+          width: "100%",
+          height: "100%",
+        }}
+      />
+    </div>
+  );
+};
+
 const VideoContainer = () => {
-  const mediaItems = [1, 2, 3, 4, 5];
+  const mediaItems = [
+    {
+      videourl:
+        "https://res.cloudinary.com/dzpuwffzh/video/upload/v1742217050/ledosqb3kbich0efpo3o.mp4?autoplay=false",
+    },
+    {
+      videourl:
+        "https://res.cloudinary.com/dzpuwffzh/video/upload/v1742217080/lf78ky8lthi2hijjwlca.mp4?autoplay=false",
+    },
+    {
+      videourl:
+        "https://res.cloudinary.com/dzpuwffzh/video/upload/v1742217050/ledosqb3kbich0efpo3o.mp4?autoplay=false",
+    },
+    {
+      videourl:
+        "https://res.cloudinary.com/dzpuwffzh/video/upload/v1742217890/Pico_Neapolitan_Pizza_Making_Reel_b1gpkh.mp4?autoplay=false",
+    },
+    {
+      videourl:
+        "https://res.cloudinary.com/dzpuwffzh/video/upload/v1742217875/Reel_7_Pizza_Making_thvnue.mp4?autoplay=false",
+    },
+    {
+      videourl:
+        "https://res.cloudinary.com/dzpuwffzh/video/upload/v1742217142/lzzacxdijdj8xb35vrsr.mp4?autoplay=false",
+    },
+    {
+      videourl:
+        "https://res.cloudinary.com/dzpuwffzh/video/upload/v1742217132/ru8m5jcmujzztxkksp5q.mp4?autoplay=false",
+    },
+    {
+      videourl:
+        "https://res.cloudinary.com/dzpuwffzh/video/upload/v1742217106/qzjkjeut0z7nfe745f2b.mp4?autoplay=false",
+    },
+    {
+      videourl:
+        "https://res.cloudinary.com/dzpuwffzh/video/upload/v1742217050/ledosqb3kbich0efpo3o.mp4?autoplay=false",
+    },
+    {
+      videourl:
+        "https://res.cloudinary.com/dzpuwffzh/video/upload/v1742216996/duyfytpptl62aazggdmz.mp4?autoplay=false",
+    },
+  ];
+
   const [swiperRef, setSwiperRef] = useState<SwiperClass | null>(null);
   const [isMobile, setIsMobile] = useState(false);
 
@@ -70,18 +136,7 @@ const VideoContainer = () => {
       >
         {mediaItems.map((item, index) => (
           <SwiperSlide key={index}>
-            {/* <HeroVideoDialogDemo /> */}
-            <div className="min-h-[300px] border border-picoTextGray md:min-h-[500px]">
-              <video
-                className="h-full min-h-[300px] md:min-h-[500px]"
-                height="400"
-                controls
-                preload="none"
-              >
-                <source src="/videos/video.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-            </div>
+            <VideoPlayer videoUrl={item.videourl} />
           </SwiperSlide>
         ))}
       </Swiper>
