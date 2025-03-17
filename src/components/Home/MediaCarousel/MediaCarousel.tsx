@@ -27,7 +27,7 @@ const MediaCarousel = () => {
     {
       title: "t2 online",
       date: "29 May 2024",
-      imageSrc: "/images/homepage/media/t2Online.jpeg",
+      imageSrc: "/images/homepage/media/t2online.jpeg",
       link: "https://t2online.in/goodlife/food-beverage/pico-is-the-ideal-place-for-the-ultimate-pizza-and-coffee-experience.-t2-gets-you-the-first-look/957815?fbclid=IwZXh0bgNhZW0CMTEAAR0UlyOcD8ZyCq6asB9GD-HHRXGtmlI0sZ_KeWqlOqDzY2YdQC55uiKtmQM_aem_AbVI3TLI--GduLq9pKCQQzsKjMA6ezTEYdfbfFyCnnPgn4qpT55HL6FDUg2hJcyYVxUipnCatsFWBMaZfNHxN0cc",
     },
     {
