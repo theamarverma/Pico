@@ -9,9 +9,15 @@ type MediaCardProps = {
 const MediaCard = ({ title, date, imageSrc, link }: MediaCardProps) => {
   return (
     <Link href={link} target="_blank">
-      <div className="rounded-2xl bg-bgCreamDark p-2">
-        <div className="relative">
-          <Image src={imageSrc} alt="media" width={1000} height={500} />
+      <div className="h-[450px] rounded-2xl bg-bgCreamDark p-2">
+        <div className="relative h-[400px]">
+          <Image
+            className="h-[300px]"
+            src={imageSrc}
+            alt="media"
+            width={1000}
+            height={500}
+          />
           <h1 className="text-xl md:text-4xl">{title}</h1>
           <p>{date}</p>
           {/* Popup arrow */}
