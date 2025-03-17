@@ -49,7 +49,7 @@ const VideoContainer = () => {
     },
     {
       videourl:
-        "https://res.cloudinary.com/dzpuwffzh/video/upload/v1742217050/ledosqb3kbich0efpo3o.mp4?autoplay=false",
+        "https://res.cloudinary.com/dzpuwffzh/video/upload/v1742216996/duyfytpptl62aazggdmz.mp4?autoplay=false",
     },
     {
       videourl:
@@ -73,11 +73,7 @@ const VideoContainer = () => {
     },
     {
       videourl:
-        "https://res.cloudinary.com/dzpuwffzh/video/upload/v1742217050/ledosqb3kbich0efpo3o.mp4?autoplay=false",
-    },
-    {
-      videourl:
-        "https://res.cloudinary.com/dzpuwffzh/video/upload/v1742216996/duyfytpptl62aazggdmz.mp4?autoplay=false",
+        "https://res.cloudinary.com/dzpuwffzh/video/upload/v1742217127/abrmgpi8btj9n7kopork.mp4?autoplay=false",
     },
   ];
 
