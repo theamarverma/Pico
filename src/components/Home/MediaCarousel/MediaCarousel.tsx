@@ -49,7 +49,7 @@ const MediaCarousel = () => {
       link: "https://epaper.telegraphindia.com/t2/2024-11-11/79/Page-7.html",
     },
     {
-      title: "T2 article online",
+      title: "t2 article online",
       date: "11 Nov 2024",
       imageSrc: "/images/homepage/media/t2ArticleOnline.jpeg",
       link: "https://t2online.in/goodlife/food-beverage/t2-checked-out-pico-s-new-decadent-dessert-and-coffee-menu/1213143?sfnsn=wiwspwa",
