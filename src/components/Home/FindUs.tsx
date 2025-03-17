@@ -8,7 +8,7 @@ const FindUs = () => {
       <h1 className="text-xl md:text-header">Find us at</h1>
       <div className="mx-4 flex gap-3 md:mx-0 md:h-[154px] md:gap-6">
         <Link
-          href="https://www.google.com"
+          href="https://www.google.com/search?kgmid=/g/11vwyjrp3w&hl=en-IN&q=Pico+-+Pizzeria+%26+Coffee+Bar&shndl=30&shem=lcuae&source=sh/x/loc/osrp/m5/2&kgs=facea45e0b2316b4"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -22,7 +22,7 @@ const FindUs = () => {
         </Link>
 
         <Link
-          href="https://www.swiggy.com"
+          href="https://www.swiggy.com/restaurants/pico-pizzeria-and-coffee-bar-ballygunge-kolkata-903624/dineout/menu"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -36,7 +36,7 @@ const FindUs = () => {
         </Link>
 
         <Link
-          href="https://www.zomato.com"
+          href="https://www.zomato.com/kolkata/pico-pizzeria-coffee-bar-southern-avenue/menu"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -50,7 +50,7 @@ const FindUs = () => {
         </Link>
 
         <Link
-          href="https://www.tripadvisor.com"
+          href="https://www.tripadvisor.in/Restaurant_Review-g304558-d27826578-Reviews-Pico_Pizzeria_Coffee_Bar-Kolkata_Calcutta_Kolkata_District_West_Bengal.html"
           target="_blank"
           rel="noopener noreferrer"
         >
