@@ -11,18 +11,28 @@ import React from "react";
 
 const CoffeeGallery = () => {
   const coffeItems = [
-    { name: "Coffee 1", path: "/images/gallery/coffees/1.png" },
-    { name: "Coffee 2", path: "/images/gallery/coffees/1.png" },
-    { name: "Coffee 3", path: "/images/gallery/coffees/1.png" },
-    { name: "Coffee 4", path: "/images/gallery/coffees/1.png" },
-    { name: "Coffee 5", path: "/images/gallery/coffees/1.png" },
-    { name: "Coffee 6", path: "/images/gallery/coffees/1.png" },
-    { name: "Coffee 7", path: "/images/gallery/coffees/1.png" },
-    { name: "Coffee 8", path: "/images/gallery/coffees/1.png" },
-    { name: "Coffee 9", path: "/images/gallery/coffees/1.png" },
-    { name: "Coffee 10", path: "/images/gallery/coffees/1.png" },
-    { name: "Coffee 11", path: "/images/gallery/coffees/1.png" },
-    { name: "Coffee 12", path: "/images/gallery/coffees/1.png" },
+    {
+      name: "Basil Coffee Concoction",
+      path: "/images/gallery/coffees/basilCoffee.jpg",
+    },
+    {
+      name: "Coffee Lemonade",
+      path: "/images/gallery/coffees/cinnamonCoffee.png",
+    },
+    { name: "Latte", path: "/images/gallery/coffees/latte.png" },
+    {
+      name: "Orange Coffee Concoction",
+      path: "/images/gallery/coffees/orangeCoffee.png",
+    },
+    { name: "Pourover V-60", path: "/images/gallery/coffees/pourover.jpg" },
+    {
+      name: "Tart Coffee Concoction",
+      path: "/images/gallery/coffees/tartCoffee.jpg",
+    },
+    {
+      name: "Viatnamese Coffee",
+      path: "/images/gallery/coffees/viatnamese.jpg",
+    },
   ];
   const [swiperRef, setSwiperRef] = useState<SwiperClass | null>(null);
   const [isMobile, setIsMobile] = useState(false);
