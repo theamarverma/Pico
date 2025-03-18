@@ -15,18 +15,25 @@ import PicoImage from "../Global/PicoImage";
 
 const FoodGallery = () => {
   const foodItems = [
-    { name: "Coffee 1", path: "/images/gallery/coffees/1.png" },
-    { name: "Coffee 2", path: "/images/gallery/coffees/1.png" },
-    { name: "Coffee 3", path: "/images/gallery/coffees/1.png" },
-    { name: "Coffee 4", path: "/images/gallery/coffees/1.png" },
-    { name: "Coffee 5", path: "/images/gallery/coffees/1.png" },
-    { name: "Coffee 6", path: "/images/gallery/coffees/1.png" },
-    { name: "Coffee 7", path: "/images/gallery/coffees/1.png" },
-    { name: "Coffee 8", path: "/images/gallery/coffees/1.png" },
-    { name: "Coffee 9", path: "/images/gallery/coffees/1.png" },
-    { name: "Coffee 10", path: "/images/gallery/coffees/1.png" },
-    { name: "Coffee 11", path: "/images/gallery/coffees/1.png" },
-    { name: "Coffee 12", path: "/images/gallery/coffees/1.png" },
+    {
+      name: "Pumpkin Ravioli ",
+      path: "/images/gallery/food/pumpkinRavioli.jpg",
+    },
+    { name: "Pesto Burrata ", path: "/images/gallery/food/pestoBurrata.jpg" },
+    {
+      name: "Pepporoni Pizza ",
+      path: "/images/gallery/food/pepperoniPizza.jpg",
+    },
+    {
+      name: "Margerita Pizza Veg ",
+      path: "/images/gallery/food/mageritaPizza.jpg",
+    },
+    {
+      name: "Fungi Pesto Pizza Veg ",
+      path: "/images/gallery/food/fungiPesto.jpg",
+    },
+    { name: "Fire E Chicken ", path: "/images/gallery/food/fireChicken.jpg" },
+    { name: "Filo Parmesan", path: "/images/gallery/food/filoParmesan.jpg" },
   ];
   const [swiperRef, setSwiperRef] = useState<SwiperClass | null>(null);
   const [isMobile, setIsMobile] = useState(false);
