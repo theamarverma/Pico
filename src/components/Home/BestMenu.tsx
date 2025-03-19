@@ -92,8 +92,12 @@ const BestMenu = () => {
             </p>
             <div className="flex flex-col gap-2">
               {/* {" todo links pdf"} */}
-              <PicoButton title="Food Menu" classname="underline" />
-              <PicoButton title="Beverage Menu" classname="underline" />
+              <Link href={"/Food_Menu_PICO.pdf"} target="_blank">
+                <PicoButton title="Food Menu" classname="underline" />
+              </Link>
+              <Link href={"/Beverage_Menu_PICO.pdf"} target="_blank">
+                <PicoButton title="Beverage Menu" classname="underline" />
+              </Link>
             </div>
           </div>
         </div>
