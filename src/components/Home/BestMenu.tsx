@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import PicoButton from "../Global/PicoButton";
+import Link from "next/link";
 
 const BestMenu = () => {
   return (
@@ -58,8 +59,12 @@ const BestMenu = () => {
             </p>
             <div className="flex gap-2">
               {/* {" todo links pdf"} */}
-              <PicoButton title="Food Menu" classname="underline" />
-              <PicoButton title="Beverage Menu" classname="underline" />
+              <Link href={"/Food_Menu_PICO.pdf"} target="_blank">
+                <PicoButton title="Food Menu" classname="underline" />
+              </Link>
+              <Link href={"/Beverage_Menu_PICO.pdf"} target="_blank">
+                <PicoButton title="Beverage Menu" classname="underline" />
+              </Link>
             </div>
           </div>
         </div>
