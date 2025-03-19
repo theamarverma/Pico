@@ -58,7 +58,6 @@ const BestMenu = () => {
               customers every day
             </p>
             <div className="flex gap-2">
-              {/* {" todo links pdf"} */}
               <Link href={"/Food_Menu_PICO.pdf"} target="_blank">
                 <PicoButton title="Food Menu" classname="underline" />
               </Link>
@@ -91,7 +90,6 @@ const BestMenu = () => {
               customers every day
             </p>
             <div className="flex flex-col gap-2">
-              {/* {" todo links pdf"} */}
               <Link href={"/Food_Menu_PICO.pdf"} target="_blank">
                 <PicoButton title="Food Menu" classname="underline" />
               </Link>
