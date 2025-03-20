@@ -31,7 +31,7 @@ const TestimonialSection = ({
       <div className="hidden w-full bg-bgCream md:block">
         <div className="parent relative flex h-[500px] flex-col bg-picoTeal bg-cover md:w-[80%]">
           <div className="mx-10 flex h-full items-center justify-center md:w-[60%]">
-            <div className="flex flex-col items-start justify-center gap-6 text-center md:justify-start">
+            <div className="flex flex-col gap-6">
               <h1 className="w-full text-xl text-white md:text-subheader">
                 What They Say:
               </h1>
@@ -75,7 +75,7 @@ const TestimonialSection = ({
             </div>
           </div>
           {/* Food Image  */}
-          <div className="absolute md:-bottom-32 md:-right-44">
+          <div className="absolute -bottom-32 -right-56 z-30">
             <Image
               src={imgsrc}
               alt="popup"
@@ -87,13 +87,11 @@ const TestimonialSection = ({
         </div>
       </div>
       {/* Mobile Screen */}
-      <div className="relative block h-[600px] w-full bg-bgCream md:hidden">
-        <div className="parent flex h-[70%] flex-col bg-picoTeal bg-cover md:w-[80%]">
-          <div className="mt-6 flex items-center justify-center">
-            <div className="flex flex-col items-start justify-center gap-3 text-center md:justify-start">
-              <h1 className="w-full text-xl text-white md:text-subheader">
-                What They Say:
-              </h1>
+      <div className="relative block h-[480px] w-full bg-bgCream md:hidden">
+        <div className="parent flex h-full flex-col items-center justify-center bg-picoTeal py-6">
+          <div className="my-6 flex items-center justify-center">
+            <div className="flex flex-col items-start justify-center gap-3 text-center">
+              <h1 className="w-full text-xl text-white">What They Say:</h1>
               <p className="mx-10 text-sm font-light text-white">{review}</p>
               <div className="flex w-full items-center justify-center gap-3">
                 {" "}
@@ -117,7 +115,7 @@ const TestimonialSection = ({
               </div>
 
               <div className="flex w-full flex-col items-center justify-center space-y-4">
-                <h1 className="w-full text-xl tracking-label text-white">
+                <h1 className="w-full text-lg tracking-widest text-white">
                   {name}
                 </h1>
                 {/* Rating Section */}
@@ -134,7 +132,7 @@ const TestimonialSection = ({
             </div>
           </div>
           {/* Food Image  */}
-          <div className="absolute top-[55%] z-30">
+          {/* <div className="absolute top-[55%] z-30 hidden md:block">
             <div className="mx-10 h-full w-full">
               <Image
                 src={imgsrc}
@@ -144,7 +142,7 @@ const TestimonialSection = ({
                 className="w-full"
               />
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </>
@@ -299,7 +297,7 @@ const Testimonial = () => {
         ))}
       </Swiper>
       {/* Below the carousel Buttons  */}
-      <div className="justify-between md:flex md:w-[80%]">
+      <div className="w-[90%] justify-between md:flex">
         {/* Counter */}
         <span className="mt-4 hidden md:block">
           <div className="flex">
