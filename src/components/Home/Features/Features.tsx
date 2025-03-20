@@ -21,14 +21,15 @@ const Features = () => {
             <div className="w-1/6 border-t-2 border-borderGray"></div>{" "}
             <h1 className="text-lg uppercase tracking-label">Features</h1>
           </div>
-          <p className="text-lg font-light leading-[38px]">
+          <p className="text-lg font-light md:leading-[38px]">
             We serve up a mix of tradition & innovation—because great food &
             coffee deserve the best.
           </p>
         </div>
       </div>
-
-      <FeaturesGrid />
+      <div className="mt-4 md:mt-0">
+        <FeaturesGrid />
+      </div>
     </section>
   );
 };
