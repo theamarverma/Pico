@@ -18,7 +18,7 @@ const MediaCard = ({ title, date, imageSrc, link }: MediaCardProps) => {
             width={1000}
             height={500}
           />
-          <h1 className="text-xl md:text-4xl">{title}</h1>
+          <h1 className="text-xl md:text-3xl">{title}</h1>
           <p>{date}</p>
           {/* Popup arrow */}
           <div className="absolute right-2 top-2">
