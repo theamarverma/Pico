@@ -73,7 +73,12 @@ const Footer = () => {
               <h2>Important Links</h2>
               <ul>
                 <li>
-                  <Link href="/service9">Google</Link>
+                  <Link
+                    target="_blank"
+                    href="https://www.google.com/search?kgmid=/g/11vwyjrp3w&hl=en-IN&q=Pico+-+Pizzeria+%26+Coffee+Bar&shndl=30&shem=lcuae&source=sh/x/loc/osrp/m5/2&kgs=facea45e0b2316b4"
+                  >
+                    Google
+                  </Link>
                 </li>
                 <li>
                   <Link
