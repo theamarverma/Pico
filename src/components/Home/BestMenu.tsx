@@ -89,7 +89,7 @@ const BestMenu = () => {
               Check the menu that is most liked and ordered by our loyal
               customers every day
             </p>
-            <div className="flex flex-col gap-2">
+            <div className="mt-4 flex flex-col gap-4">
               <Link href={"/Food_Menu_PICO.pdf"} target="_blank">
                 <PicoButton title="Food Menu" classname="underline" />
               </Link>
