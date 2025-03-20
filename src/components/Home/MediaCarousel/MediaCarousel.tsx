@@ -144,6 +144,27 @@ const MediaCarousel = () => {
           </SwiperSlide>
         ))}
       </Swiper>
+      {/* buttons */}
+      <div className="btns my-4 flex items-center justify-center md:hidden">
+        <div className="flex gap-4">
+          <div>
+            <button
+              className="hover:bg-primary-dark hover:text-charity-primary flex h-10 w-10 items-center justify-center rounded-full border border-picoTextGray text-picoTextGray md:h-16 md:w-16"
+              onClick={handlePrevious}
+            >
+              <GrPrevious size={24} />
+            </button>
+          </div>
+          <div>
+            <button
+              className="hover:bg-primary-dark hover:text-charity-primary flex h-10 w-10 items-center justify-center rounded-full border border-picoJuteBrown text-picoJuteBrown md:h-16 md:w-16"
+              onClick={handleNext}
+            >
+              <GrNext size={24} />
+            </button>
+          </div>
+        </div>
+      </div>
     </>
   );
 };
