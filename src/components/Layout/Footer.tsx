@@ -31,16 +31,14 @@ const Footer = () => {
               <h2>Services</h2>
               <ul className="text-picoTextGray">
                 <li>
-                  <Link href="/service1">Coffee & Food</Link>
+                  <Link href={"/Food_Menu_PICO.pdf"} target="_blank">
+                    Food Menu
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/service2">Merchandise</Link>
-                </li>
-                <li>
-                  <Link href="/service3">Birthday Party</Link>
-                </li>
-                <li>
-                  <Link href="/service4">Working Space</Link>
+                  <Link href={"/Beverage_Menu_PICO.pdf"} target="_blank">
+                    Beverage Menu
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -165,20 +163,18 @@ const Footer = () => {
             </div>
             <div className="grid grid-cols-2 grid-rows-2 gap-4">
               {/* Services */}
-              <div className="services">
+              <div>
                 <h2>Services</h2>
                 <ul className="text-picoTextGray">
                   <li>
-                    <Link href="/service1">Coffee & Food</Link>
+                    <Link href={"/Food_Menu_PICO.pdf"} target="_blank">
+                      Food Menu
+                    </Link>
                   </li>
                   <li>
-                    <Link href="/service2">Merchandise</Link>
-                  </li>
-                  <li>
-                    <Link href="/service3">Birthday Party</Link>
-                  </li>
-                  <li>
-                    <Link href="/service4">Working Space</Link>
+                    <Link href={"/Beverage_Menu_PICO.pdf"} target="_blank">
+                      Beverage Menu
+                    </Link>
                   </li>
                 </ul>
               </div>
