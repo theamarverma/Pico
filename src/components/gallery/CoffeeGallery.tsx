@@ -30,7 +30,7 @@ const CoffeeGallery = () => {
       path: "/images/gallery/coffees/tartCoffee.jpg",
     },
     {
-      name: "Viatnamese Coffee",
+      name: "Vietnamese Coffee",
       path: "/images/gallery/coffees/viatnamese.jpg",
     },
   ];
