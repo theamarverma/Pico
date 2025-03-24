@@ -6,7 +6,7 @@ import Header from "@/components/Layout/Header";
 import Footer from "@/components/Layout/Footer";
 
 export const metadata: Metadata = {
-  title: "Pico Cafe",
+  title: "Pico ",
   description:
     "your cozy corner for speciality coffee and hand-tossedNeapolitan-style pizzas.",
   icons: [{ rel: "icon", url: "/favicon.ico" }],
