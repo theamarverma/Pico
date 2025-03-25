@@ -21,7 +21,7 @@ const HeaderBanner = () => {
         <div className="flex gap-2 p-4">
           <div className="mt-3 w-1/2 border-t-2 border-borderGray md:w-2/4"></div>
           <p className="text-picoTextGray md:text-lg">
-            your cozy corner for speciality coffee and hand-tossed
+            your cozy corner for specialty coffee and hand-tossed
             Neapolitan-style pizzas. Good vibes, great food, —what more could
             you ask for?
           </p>
@@ -77,32 +77,6 @@ const HeaderBanner = () => {
                 </Link>
               </div>
             </div>
-          </div>
-        </div>
-        {/* Image content */}
-        <div className="z-20 mx-20 mb-8 hidden justify-between gap-8 text-white md:flex">
-          <div className="pizza flex gap-4">
-            <Image
-              alt="pizza"
-              src={"/images/homepage/pizza.svg"}
-              width={80}
-              height={60}
-            />
-            <h1 className="text-xl text-white md:text-header">
-              Pizza Sold: 5000+
-            </h1>
-          </div>
-          <div className="rounded-xl border-l-8 border-picoJuteBrown text-picoJuteBrown"></div>
-          <div className="coffee flex gap-4">
-            <h1 className="text-xl text-white md:text-header">
-              Coffee Sold: 6000+
-            </h1>
-            <Image
-              alt="coffee"
-              src={"/images/homepage/cup.svg"}
-              width={80}
-              height={60}
-            />
           </div>
         </div>
       </div>

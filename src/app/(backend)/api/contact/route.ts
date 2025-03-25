@@ -5,12 +5,7 @@ import nodemailer from "nodemailer";
 
 export async function POST(req: NextRequest) {
   const body = await req.json();
-  const { name, email, phone, datetime, seats, specialRequest } = body;
-
-  // Format datetime if provided
-  const formattedDateTime = datetime
-    ? new Date(datetime).toLocaleString()
-    : "Not provided";
+  const { name, email, phone, specialRequest } = body;
 
   const transporter = nodemailer.createTransport({
     host: "smtp.gmail.com",
@@ -33,8 +28,6 @@ export async function POST(req: NextRequest) {
       Name: ${name}
       Email: ${email}
       Phone: ${phone}
-      Reservation Date & Time: ${formattedDateTime}
-      Seats: ${seats}
       Special Request: ${specialRequest}
     `,
   };

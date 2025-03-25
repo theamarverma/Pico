@@ -23,7 +23,7 @@ const features = [
     id: 3,
     icon: "/images/svgs/coffee.svg",
     alt: "coffee",
-    title: "Speciality Coffee",
+    title: "Specialty Coffee",
     description:
       "Freshly brewed, single-origin coffee with rich aroma and bold flavors.",
   },

@@ -36,6 +36,10 @@ li {
   color: #6b6b6b;
 }
 
+textarea {
+  resize: none;
+}
+
 /* Mobile screen */
 @media only screen and (max-width: 600px) {
   html {

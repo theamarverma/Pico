@@ -31,8 +31,7 @@ export default function ReservationForm() {
       name: "",
       email: "",
       phone: "",
-      datetime: undefined,
-      seats: "",
+
       specialRequest: "",
     } as ReservationFormValues,
     onSubmit: async ({ value }) => {
@@ -97,78 +96,80 @@ export default function ReservationForm() {
           </form.Field>
         </div>
 
-        {/* Email Field */}
-        <div className="flex flex-col gap-2">
-          <form.Field
-            name="email"
-            validators={{
-              onChange: ({ value }) => {
-                if (!value) return "Email is required";
-                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                return !emailRegex.test(value)
-                  ? "Invalid email format"
-                  : undefined;
-              },
-            }}
-          >
-            {(field) => (
-              <>
-                <label
-                  className="text-sm text-picoFormText"
-                  htmlFor={field.name}
-                >
-                  Email:
-                </label>
-                <input
-                  className="w-full border border-picoFormBorder bg-white p-2 text-picoFormText placeholder:text-sm placeholder:text-gray-500"
-                  placeholder="Input Your Email"
-                  type="email"
-                  id={field.name}
-                  name={field.name}
-                  value={field.state.value}
-                  onBlur={field.handleBlur}
-                  onChange={(e) => field.handleChange(e.target.value)}
-                />
-                <FieldInfo field={field} />
-              </>
-            )}
-          </form.Field>
+        <div className="grid gap-4 md:grid-cols-2">
+          {/* Email Field */}
+          <div className="flex flex-col gap-2">
+            <form.Field
+              name="email"
+              validators={{
+                onChange: ({ value }) => {
+                  if (!value) return "Email is required";
+                  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                  return !emailRegex.test(value)
+                    ? "Invalid email format"
+                    : undefined;
+                },
+              }}
+            >
+              {(field) => (
+                <>
+                  <label
+                    className="text-sm text-picoFormText"
+                    htmlFor={field.name}
+                  >
+                    Email:
+                  </label>
+                  <input
+                    className="w-full border border-picoFormBorder bg-white p-2 text-picoFormText placeholder:text-sm placeholder:text-gray-500"
+                    placeholder="Input Your Email"
+                    type="email"
+                    id={field.name}
+                    name={field.name}
+                    value={field.state.value}
+                    onBlur={field.handleBlur}
+                    onChange={(e) => field.handleChange(e.target.value)}
+                  />
+                  <FieldInfo field={field} />
+                </>
+              )}
+            </form.Field>
+          </div>
+
+          {/* Phone Field */}
+          <div className="flex flex-col gap-2">
+            <form.Field
+              name="phone"
+              validators={{
+                onChange: ({ value }) =>
+                  !value ? "Phone is required" : undefined,
+              }}
+            >
+              {(field) => (
+                <>
+                  <label
+                    className="text-sm text-picoFormText"
+                    htmlFor={field.name}
+                  >
+                    Phone:
+                  </label>
+                  <input
+                    className="w-full border border-picoFormBorder bg-white p-2 text-picoFormText placeholder:text-sm placeholder:text-gray-500"
+                    placeholder="Input Your Phone Number"
+                    type="tel"
+                    id={field.name}
+                    name={field.name}
+                    value={field.state.value}
+                    onBlur={field.handleBlur}
+                    onChange={(e) => field.handleChange(e.target.value)}
+                  />
+                  <FieldInfo field={field} />
+                </>
+              )}
+            </form.Field>
+          </div>
         </div>
 
-        {/* Phone Field */}
-        <div className="flex flex-col gap-2">
-          <form.Field
-            name="phone"
-            validators={{
-              onChange: ({ value }) =>
-                !value ? "Phone is required" : undefined,
-            }}
-          >
-            {(field) => (
-              <>
-                <label
-                  className="text-sm text-picoFormText"
-                  htmlFor={field.name}
-                >
-                  Phone:
-                </label>
-                <input
-                  className="w-full border border-picoFormBorder bg-white p-2 text-picoFormText placeholder:text-sm placeholder:text-gray-500"
-                  placeholder="Input Your Phone Number"
-                  type="tel"
-                  id={field.name}
-                  name={field.name}
-                  value={field.state.value}
-                  onBlur={field.handleBlur}
-                  onChange={(e) => field.handleChange(e.target.value)}
-                />
-                <FieldInfo field={field} />
-              </>
-            )}
-          </form.Field>
-        </div>
-
-        {/* Reservation Date & Time Field */}
+        {/* Reservation Date & Time Field
         <div className="flex flex-col gap-2">
           <form.Field
             name="datetime"
@@ -196,7 +197,7 @@ export default function ReservationForm() {
         </div>
 
         {/* Seats Dropdown */}
-        <div className="flex flex-col gap-2">
+        {/* <div className="flex flex-col gap-2">
           <form.Field
             name="seats"
             validators={{
@@ -236,7 +237,7 @@ export default function ReservationForm() {
               </>
             )}
           </form.Field>
-        </div>
+        </div>  */}
 
         {/* Special Request Field */}
         <div className="flex flex-col gap-2">
@@ -250,7 +251,7 @@ export default function ReservationForm() {
                   Special Request:
                 </label>
                 <textarea
-                  className="w-full border border-picoFormBorder bg-white p-2 text-picoFormText placeholder:text-sm placeholder:text-gray-500"
+                  className="h-[10rem] w-full border border-picoFormBorder bg-white p-2 text-picoFormText placeholder:text-sm placeholder:text-gray-500"
                   placeholder="Input Your Special Request"
                   id={field.name}
                   name={field.name}

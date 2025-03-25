@@ -21,7 +21,7 @@ const BestMenu = () => {
               />
               <h1 className="mt-2 flex items-center justify-center text-xl">
                 {" "}
-                Crange Coffee Concoction
+                Orange Coffee Concoction
               </h1>
             </div>
             <div>

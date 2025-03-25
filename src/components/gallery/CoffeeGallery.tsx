@@ -16,7 +16,7 @@ const CoffeeGallery = () => {
       path: "/images/gallery/coffees/basilCoffee.jpg",
     },
     {
-      name: "Coffee Lemonade",
+      name: "Cinnamon Coffee Concoction",
       path: "/images/gallery/coffees/cinnamonCoffee.png",
     },
     { name: "Latte", path: "/images/gallery/coffees/latte.png" },
