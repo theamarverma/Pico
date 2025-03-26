@@ -38,7 +38,7 @@ export default function ReservationForm() {
       try {
         const response = await axios.post("/api/contact", value);
         if (response.status === 200) {
-          alert("Reservation submitted successfully!");
+          alert("Request submitted successfully!");
           // Optionally, reset the form or provide additional feedback here.
         } else {
           alert(`Submission failed: ${response.data.error}`);
