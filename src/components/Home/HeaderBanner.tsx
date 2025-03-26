@@ -94,8 +94,8 @@ const HeaderBanner = () => {
             <div className="mx-4 my-4 flex flex-col gap-2">
               <h1 className="text-sm text-white">PRODUCTS</h1>
               <p className="text-sm text-white">
-                Overall we provide food and drinks as well as a comfortable
-                place for you to relax
+                we provide food and drinks as well as a comfortable place for
+                you to relax
               </p>
               <div className="w-full border-t border-borderGray"></div>
               <div className="mt-2 space-y-4 text-white">
