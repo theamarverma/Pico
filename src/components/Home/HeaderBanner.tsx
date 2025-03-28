@@ -82,7 +82,7 @@ const HeaderBanner = () => {
       </div>
       {/* Mobile screen */}
 
-      <div className="relative h-[350px] md:hidden">
+      <div className="relative h-[300px] md:hidden">
         <Image
           src={"/images/homepage/header.png"}
           alt="header"
@@ -92,7 +92,6 @@ const HeaderBanner = () => {
         <div className="absolute top-1/4 mx-8">
           <div className="flex flex-col justify-start bg-picoTeal">
             <div className="mx-4 my-4 flex flex-col gap-2">
-              <h1 className="text-sm text-white">PRODUCTS</h1>
               <p className="text-sm text-white">
                 we provide food and drinks as well as a comfortable place for
                 you to relax

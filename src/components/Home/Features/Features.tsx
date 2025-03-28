@@ -16,11 +16,11 @@ const Features = () => {
           </div>
         </div>
 
-        <div className="right mx-4 space-y-6 md:mx-0">
-          <div className="flex items-center justify-start gap-4">
+        <div className="right mx-4 flex items-center justify-center space-y-6 md:mx-0">
+          {/* <div className="flex items-center justify-start gap-4">
             <div className="w-1/6 border-t-2 border-borderGray"></div>{" "}
             <h1 className="text-lg uppercase tracking-label">Features</h1>
-          </div>
+          </div> */}
           <p className="text-lg font-light md:leading-[38px]">
             We serve up a mix of tradition & innovation—because great food &
             coffee deserve the best.
