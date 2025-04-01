@@ -3,9 +3,9 @@ import React from "react";
 
 const AboutBanner = () => {
   return (
-    <div className="relative mt-12 h-[300px] px-6 md:h-full md:px-20">
+    <div className="relative mt-12 h-[300px] md:h-full md:px-20">
       <Image
-        className="h-[180px] w-full md:h-full"
+        className="h-[180px] w-full px-6 md:h-full"
         src={"/images/about/aboutBanner.png"}
         alt="banner"
         width={1000}

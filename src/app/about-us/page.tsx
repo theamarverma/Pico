@@ -12,7 +12,7 @@ const page = () => {
       <section className="bg-bgCream px-4 pb-14 md:py-24 md:pl-20">
         <Overview />
       </section>
-      <section className="bg-bgCream pb-24">
+      <section className="bg-bgCream pb-14 md:pb-24">
         <Specialities />
       </section>
     </div>

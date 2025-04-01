@@ -24,16 +24,16 @@ const ContactBanner = () => {
         </div>
       </div>
 
-      <div className="relative h-[300px] w-full px-4 md:mx-0 md:h-full">
+      <div className="relative h-[320px] w-full md:mx-0 md:h-full">
         <Image
-          className="h-[180px] w-full md:h-full"
+          className="h-[180px] w-full px-4 md:h-full"
           src={"/images/contact/banner.png"}
           alt="map"
           width={1400}
           height={400}
         />
         {/* popup image */}
-        <div className="absolute bottom-8 z-[10] md:-top-48 md:right-32">
+        <div className="absolute bottom-4 z-[10] md:-top-48 md:right-32">
           <div className="mx-10 bg-[url(/images/about/popupCard.png)] bg-cover bg-center md:mx-0 md:h-[470px] md:w-[380px]">
             <div className="flex flex-col items-center justify-center p-4 md:p-8">
               <div className="hidden w-full items-center gap-2 md:flex">

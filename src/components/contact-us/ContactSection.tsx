@@ -20,7 +20,7 @@ import Link from "next/link";
 const ContactSection = () => {
   return (
     <div>
-      <div className="mx-4 flex flex-col md:mx-20 md:flex-row md:gap-20">
+      <div className="mx-4 flex flex-col gap-8 md:mx-20 md:flex-row md:gap-20">
         <div className="flex flex-col gap-4 md:justify-around">
           <div>
             {" "}

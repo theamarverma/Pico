@@ -12,7 +12,7 @@ const page = () => {
       <section className="bg-bgCream">
         <FormSection />
       </section>
-      <section className="bg-bgCream py-12 md:py-24">
+      <section className="bg-bgCream py-14 md:py-24">
         <ContactSection />
       </section>
     </div>

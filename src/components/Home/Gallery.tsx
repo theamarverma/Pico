@@ -57,10 +57,7 @@ const Gallery = () => {
           />
         </div>
       </div>
-      <Link
-        href="/gallery"
-        className="mt-10 hidden items-center justify-center md:flex"
-      >
+      <Link href="/gallery" className="mt-10 flex items-center justify-center">
         <PicoButton title="Our Gallery " />
       </Link>
     </div>

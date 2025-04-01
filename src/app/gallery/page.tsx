@@ -12,13 +12,13 @@ const page = () => {
       <section className="bg-bgCream pt-20 md:pt-28">
         <GalleryBanner />
       </section>
-      <section className="bg-bgCream px-4 py-24 md:px-20">
+      <section className="bg-bgCream px-4 py-14 md:px-20 md:py-24">
         <VideoContainer />
       </section>
-      <section className="bg-bgCream px-4 pb-24 md:px-20">
+      <section className="bg-bgCream px-4 pb-14 md:px-20 md:pb-24">
         <CoffeeGallery />
       </section>
-      <section className="bg-bgCream px-4 pb-24 md:px-20">
+      <section className="bg-bgCream px-4 pb-14 md:px-20 md:pb-24">
         <FoodGallery />
       </section>
     </div>
