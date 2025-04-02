@@ -222,7 +222,11 @@ const Footer = () => {
                 <h2>Services</h2>
                 <ul className="text-picoTextGray">
                   <li>
-                    <Link href={"/Food_Menu_PICO.pdf"} target="_blank">
+                    <Link
+                      href={"/Food_Menu_PICO.pdf"}
+                      target="_blank"
+                      className="flex gap-1"
+                    >
                       <Image
                         src={"/images/footer/restro.png"}
                         alt="Food Menu"
@@ -233,7 +237,11 @@ const Footer = () => {
                     </Link>
                   </li>
                   <li>
-                    <Link href={"/Beverage_Menu_PICO.pdf"} target="_blank">
+                    <Link
+                      href={"/Beverage_Menu_PICO.pdf"}
+                      className="flex gap-1"
+                      target="_blank"
+                    >
                       <Image
                         src={"/images/footer/drinks.png"}
                         alt="Beverage Menu"
