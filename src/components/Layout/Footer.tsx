@@ -347,8 +347,8 @@ const Footer = () => {
                       <Image
                         src={"/images/footer/trip.png"}
                         alt="Zomato"
-                        width={80}
-                        height={80}
+                        width={90}
+                        height={90}
                       />
                     </Link>
                   </li>
