@@ -255,13 +255,15 @@ const Footer = () => {
                         "https://www.instagram.com/picokolkata?utm_source=qr"
                       }
                       target="_blank"
+                      className="flex gap-2"
                     >
                       <Image
                         src={"/images/footer/insta.png"}
                         alt="Instagram"
-                        width={20}
+                        width={25}
                         height={20}
                       />
+                      Instagram
                     </Link>
                   </li>
                   <li>
@@ -270,13 +272,15 @@ const Footer = () => {
                         "https://www.facebook.com/picokolkata?rdid=u3TXcx2doZstFLZm&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1E8eWu1vKy%2F"
                       }
                       target="_blank"
+                      className="flex gap-2"
                     >
                       <Image
                         src={"/images/footer/fb.png"}
                         alt="Facebook"
-                        width={20}
+                        width={25}
                         height={20}
                       />
+                      Facebook
                     </Link>
                   </li>
                 </ul>
