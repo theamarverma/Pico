@@ -300,32 +300,6 @@ const Footer = () => {
                 <ul>
                   <li>
                     <Link
-                      target="_blank"
-                      href="https://www.google.com/search?kgmid=/g/11vwyjrp3w&hl=en-IN&q=Pico+-+Pizzeria+%26+Coffee+Bar&shndl=30&shem=lcuae&source=sh/x/loc/osrp/m5/2&kgs=facea45e0b2316b4"
-                    >
-                      <Image
-                        src={"/images/footer/google.png"}
-                        alt="Google"
-                        width={50}
-                        height={50}
-                      />
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="https://zomato.onelink.me/xqzv/xk1kk43l"
-                      target="_blank"
-                    >
-                      <Image
-                        src={"/images/footer/zomato.png"}
-                        alt="Zomato"
-                        width={50}
-                        height={50}
-                      />
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
                       href={
                         "https://swiggy.onelink.me/BVRZ?af_dp=swiggydiners%3A%2F%2Fdetails%2F903624%3Fsource%3Dsharing"
                       }
@@ -339,6 +313,33 @@ const Footer = () => {
                       />
                     </Link>
                   </li>
+
+                  <li>
+                    <Link
+                      href="https://zomato.onelink.me/xqzv/xk1kk43l"
+                      target="_blank"
+                    >
+                      <Image
+                        src={"/images/footer/zomato.png"}
+                        alt="Zomato"
+                        width={80}
+                        height={80}
+                      />
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      target="_blank"
+                      href="https://www.google.com/search?kgmid=/g/11vwyjrp3w&hl=en-IN&q=Pico+-+Pizzeria+%26+Coffee+Bar&shndl=30&shem=lcuae&source=sh/x/loc/osrp/m5/2&kgs=facea45e0b2316b4"
+                    >
+                      <Image
+                        src={"/images/footer/google.png"}
+                        alt="Google"
+                        width={80}
+                        height={80}
+                      />
+                    </Link>
+                  </li>
                   <li>
                     <Link
                       href="https://www.tripadvisor.com/Restaurant_Review-g304558-d28051666-Reviews-Pico_Pizzeria_Coffee_Bar-Kolkata_Calcutta_Kolkata_District_West_Bengal.html"
@@ -346,9 +347,9 @@ const Footer = () => {
                     >
                       <Image
                         src={"/images/footer/trip.png"}
-                        alt="Zomato"
-                        width={90}
-                        height={90}
+                        alt="tripadvisor"
+                        width={80}
+                        height={80}
                       />
                     </Link>
                   </li>
