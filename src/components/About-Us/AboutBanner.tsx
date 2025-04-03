@@ -6,7 +6,7 @@ const AboutBanner = () => {
     <div className="relative mt-12 h-[300px] md:h-full md:px-20">
       <Image
         className="h-[180px] w-full px-6 md:h-full"
-        src={"/images/about/aboutBanner.png"}
+        src={"/images/about/aboutBanner.webp"}
         alt="banner"
         width={1000}
         height={500}
