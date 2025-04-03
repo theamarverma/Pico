@@ -29,7 +29,7 @@ const HeaderBanner = () => {
       </div>
 
       {/* Laptop screen */}
-      <div className="parent relative hidden w-full flex-col justify-end bg-[url('/images/homepage/header.png')] bg-cover bg-center md:flex md:h-[540px]">
+      <div className="parent relative hidden w-full flex-col justify-end bg-[url('/images/homepage/header.webp')] bg-cover bg-center md:flex md:h-[540px]">
         {/* gradient */}
         <div className="absolute inset-x-0 h-36 bg-gradient-to-b from-black/10 via-black/40 to-black/70" />
 

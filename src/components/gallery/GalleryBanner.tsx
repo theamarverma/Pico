@@ -6,7 +6,7 @@ const GalleryBanner = () => {
     <div className="relative mt-12 px-4 md:px-20">
       <Image
         className="w-full"
-        src={"/images/gallery/banner.png"}
+        src={"/images/gallery/banner.webp"}
         alt="banner"
         width={1000}
         height={500}

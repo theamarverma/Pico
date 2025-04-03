@@ -27,8 +27,8 @@ const ContactBanner = () => {
       <div className="relative h-[320px] w-full md:mx-0 md:h-full">
         <Image
           className="h-[180px] w-full px-4 md:h-full"
-          src={"/images/contact/banner.png"}
-          alt="map"
+          src={"/images/contact/banner.webp"}
+          alt="banner"
           width={1400}
           height={400}
         />
