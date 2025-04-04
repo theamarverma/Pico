@@ -112,7 +112,7 @@ const Footer = () => {
                 <li>
                   {" "}
                   <Link
-                    href={"https://wa.me/+918240912328"}
+                    href={"https://wa.me/918240912328"}
                     target="_blank"
                     className="flex gap-2"
                   >
@@ -350,7 +350,7 @@ const Footer = () => {
                   <li>
                     {" "}
                     <Link
-                      href={"https://wa.me/+918240912328"}
+                      href={"https://wa.me/918240912328"}
                       target="_blank"
                       className="flex gap-2"
                     >
