@@ -1,13 +1,14 @@
 import Image from "next/image";
 import Link from "next/link"; // Import Link
 import React from "react";
-
+import { FaWhatsapp } from "react-icons/fa";
+import { FaTripadvisor } from "react-icons/fa";
 const Footer = () => {
   return (
     <>
       {/* Desktop */}
       <footer className="hidden bg-bgGray md:block">
-        <div className="grid grid-cols-6 items-center justify-center gap-10 px-4 pt-10 md:items-start md:px-20">
+        <div className="grid grid-cols-6 items-center justify-center gap-10 px-4 pt-10 md:items-start md:px-10">
           <div className="col-span-1">
             <Image
               className="h-[160px] w-[160px]"
@@ -37,7 +38,7 @@ const Footer = () => {
                     target="_blank"
                   >
                     <Image
-                      src={"/images/footer/restro.png"}
+                      src={"/images/footer/pizza.png"}
                       alt="Food Menu"
                       width={20}
                       height={20}
@@ -52,7 +53,7 @@ const Footer = () => {
                     target="_blank"
                   >
                     <Image
-                      src={"/images/footer/drinks.png"}
+                      src={"/images/footer/drink.png"}
                       alt="Beverage Menu"
                       width={20}
                       height={20}
@@ -98,6 +99,27 @@ const Footer = () => {
                     Facebook
                   </Link>
                 </li>
+                <li>
+                  <Link
+                    href="https://www.tripadvisor.com/Restaurant_Review-g304558-d28051666-Reviews-Pico_Pizzeria_Coffee_Bar-Kolkata_Calcutta_Kolkata_District_West_Bengal.html"
+                    target="_blank"
+                    className="flex gap-2"
+                  >
+                    <FaTripadvisor size={24} className="text-black" />{" "}
+                    Tripadvisor
+                  </Link>
+                </li>
+                <li>
+                  {" "}
+                  <Link
+                    href={"https://wa.me/+918240912328"}
+                    target="_blank"
+                    className="flex gap-2"
+                  >
+                    <FaWhatsapp size={24} className="text-black" />
+                    Whatsapp
+                  </Link>
+                </li>
               </ul>
             </div>
             {/* Important Links */}
@@ -106,17 +128,34 @@ const Footer = () => {
               <ul>
                 <li>
                   <Link
+                    target="_blank"
+                    href="https://www.google.com/search?kgmid=/g/11vwyjrp3w&hl=en-IN&q=Pico+-+Pizzeria+%26+Coffee+Bar&shndl=30&shem=lcuae&source=sh/x/loc/osrp/m5/2&kgs=facea45e0b2316b4"
+                    className="flex gap-2"
+                  >
+                    <Image
+                      src={"/images/footer/google.png"}
+                      alt="Google"
+                      width={25}
+                      height={20}
+                    />
+                    Google
+                  </Link>
+                </li>
+                <li>
+                  <Link
                     href={
                       "https://swiggy.onelink.me/BVRZ?af_dp=swiggydiners%3A%2F%2Fdetails%2F903624%3Fsource%3Dsharing"
                     }
                     target="_blank"
+                    className="flex gap-2"
                   >
                     <Image
-                      src={"/images/footer/swiggy.png"}
+                      src={"/images/footer/dineout.png"}
                       alt="Zomato"
-                      width={100}
-                      height={100}
+                      width={25}
+                      height={20}
                     />
+                    Swiggy Dineout
                   </Link>
                 </li>
 
@@ -124,39 +163,46 @@ const Footer = () => {
                   <Link
                     href="https://zomato.onelink.me/xqzv/xk1kk43l"
                     target="_blank"
+                    className="flex gap-2"
                   >
                     <Image
-                      src={"/images/footer/zomato.png"}
+                      src={"/images/footer/dineout.png"}
                       alt="Zomato"
-                      width={100}
-                      height={100}
+                      width={25}
+                      height={20}
                     />
+                    Zomato Dine in
                   </Link>
                 </li>
                 <li>
                   <Link
+                    href="https://www.swiggy.com/menu/962185?source=sharing
+"
                     target="_blank"
-                    href="https://www.google.com/search?kgmid=/g/11vwyjrp3w&hl=en-IN&q=Pico+-+Pizzeria+%26+Coffee+Bar&shndl=30&shem=lcuae&source=sh/x/loc/osrp/m5/2&kgs=facea45e0b2316b4"
+                    className="flex gap-2"
                   >
                     <Image
-                      src={"/images/footer/google.png"}
-                      alt="Google"
-                      width={100}
-                      height={100}
+                      src={"/images/footer/motorbike.png"}
+                      alt="swiggy"
+                      width={25}
+                      height={20}
                     />
+                    Swiggy Delivery
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="https://www.tripadvisor.com/Restaurant_Review-g304558-d28051666-Reviews-Pico_Pizzeria_Coffee_Bar-Kolkata_Calcutta_Kolkata_District_West_Bengal.html"
+                    href="https://link.zomato.com/xqzv/rshare?id=82122273633b9531 "
                     target="_blank"
+                    className="flex gap-2"
                   >
                     <Image
-                      src={"/images/footer/trip.png"}
-                      alt="tripadvisor"
-                      width={120}
-                      height={120}
+                      src={"/images/footer/motorbike.png"}
+                      alt="Zomato"
+                      width={25}
+                      height={20}
                     />
+                    Zomato Delivery
                   </Link>
                 </li>
               </ul>
@@ -164,7 +210,7 @@ const Footer = () => {
           </div>
         </div>
         {/* Order Online */}
-        <div className="inline-flex w-full justify-end gap-4 pb-8 pr-20">
+        <div className="mt-6 inline-flex w-full justify-end gap-4 pb-8 pr-20">
           <h2 className="self-end text-xl font-semibold">Order Online</h2>
           <Link
             href={"https://zomato.onelink.me/xqzv/xk1kk43l"}
@@ -192,7 +238,7 @@ const Footer = () => {
           </Link>
         </div>
         {/* copyright label */}
-        <div className="flex h-16 items-center justify-center gap-2 bg-picoTeal font-light text-white">
+        <div className="mt-6 flex h-16 items-center justify-center gap-2 bg-picoTeal font-light text-white">
           <span className="text-picoOrange">© PICO</span> all rights reserved
         </div>
       </footer>
@@ -216,7 +262,7 @@ const Footer = () => {
               our space is designed for those who appreciate great flavors, cozy
               bes, and meaningful conversations.
             </div>
-            <div className="grid grid-cols-2 grid-rows-2 gap-4">
+            <div className="grid grid-cols-2 gap-4">
               {/* Services */}
               <div>
                 <h2>Services</h2>
@@ -228,7 +274,7 @@ const Footer = () => {
                       className="flex gap-1"
                     >
                       <Image
-                        src={"/images/footer/restro.png"}
+                        src={"/images/footer/pizza.png"}
                         alt="Food Menu"
                         width={20}
                         height={20}
@@ -243,7 +289,7 @@ const Footer = () => {
                       target="_blank"
                     >
                       <Image
-                        src={"/images/footer/drinks.png"}
+                        src={"/images/footer/drink.png"}
                         alt="Beverage Menu"
                         width={20}
                         height={20}
@@ -269,7 +315,7 @@ const Footer = () => {
                         src={"/images/footer/insta.png"}
                         alt="Instagram"
                         width={25}
-                        height={20}
+                        height={25}
                       />
                       Instagram
                     </Link>
@@ -286,31 +332,71 @@ const Footer = () => {
                         src={"/images/footer/fb.png"}
                         alt="Facebook"
                         width={25}
-                        height={20}
+                        height={25}
                       />
                       Facebook
                     </Link>
                   </li>
+                  <li>
+                    <Link
+                      href="https://www.tripadvisor.com/Restaurant_Review-g304558-d28051666-Reviews-Pico_Pizzeria_Coffee_Bar-Kolkata_Calcutta_Kolkata_District_West_Bengal.html"
+                      target="_blank"
+                      className="flex gap-2"
+                    >
+                      <FaTripadvisor size={24} className="text-black" />{" "}
+                      Tripadvisor
+                    </Link>
+                  </li>
+                  <li>
+                    {" "}
+                    <Link
+                      href={"https://wa.me/+918240912328"}
+                      target="_blank"
+                      className="flex gap-2"
+                    >
+                      <FaWhatsapp size={24} className="text-black" />
+                      Whatsapp
+                    </Link>
+                  </li>
                 </ul>
               </div>
-
+            </div>
+            <div className="mt-4 flex">
+              {" "}
               {/* Important Links */}
-              <div>
+              <div className="w-[80%]">
                 <h2>Important Links</h2>
                 <ul>
+                  <li>
+                    <Link
+                      target="_blank"
+                      href="https://www.google.com/search?kgmid=/g/11vwyjrp3w&hl=en-IN&q=Pico+-+Pizzeria+%26+Coffee+Bar&shndl=30&shem=lcuae&source=sh/x/loc/osrp/m5/2&kgs=facea45e0b2316b4"
+                      className="flex gap-2"
+                    >
+                      <Image
+                        src={"/images/footer/google.png"}
+                        alt="Google"
+                        width={25}
+                        height={20}
+                      />
+                      Google
+                    </Link>
+                  </li>
                   <li>
                     <Link
                       href={
                         "https://swiggy.onelink.me/BVRZ?af_dp=swiggydiners%3A%2F%2Fdetails%2F903624%3Fsource%3Dsharing"
                       }
                       target="_blank"
+                      className="flex gap-2"
                     >
                       <Image
-                        src={"/images/footer/swiggy.png"}
+                        src={"/images/footer/dineout.png"}
                         alt="Zomato"
-                        width={80}
-                        height={80}
+                        width={25}
+                        height={20}
                       />
+                      Swiggy Dineout
                     </Link>
                   </li>
 
@@ -318,39 +404,46 @@ const Footer = () => {
                     <Link
                       href="https://zomato.onelink.me/xqzv/xk1kk43l"
                       target="_blank"
+                      className="flex gap-2"
                     >
                       <Image
-                        src={"/images/footer/zomato.png"}
+                        src={"/images/footer/dineout.png"}
                         alt="Zomato"
-                        width={80}
-                        height={80}
+                        width={25}
+                        height={20}
                       />
+                      Zomato Dine in
                     </Link>
                   </li>
                   <li>
                     <Link
+                      href="https://www.swiggy.com/menu/962185?source=sharing
+"
                       target="_blank"
-                      href="https://www.google.com/search?kgmid=/g/11vwyjrp3w&hl=en-IN&q=Pico+-+Pizzeria+%26+Coffee+Bar&shndl=30&shem=lcuae&source=sh/x/loc/osrp/m5/2&kgs=facea45e0b2316b4"
+                      className="flex gap-2"
                     >
                       <Image
-                        src={"/images/footer/google.png"}
-                        alt="Google"
-                        width={80}
-                        height={80}
+                        src={"/images/footer/motorbike.png"}
+                        alt="swiggy"
+                        width={25}
+                        height={20}
                       />
+                      Swiggy Delivery
                     </Link>
                   </li>
                   <li>
                     <Link
-                      href="https://www.tripadvisor.com/Restaurant_Review-g304558-d28051666-Reviews-Pico_Pizzeria_Coffee_Bar-Kolkata_Calcutta_Kolkata_District_West_Bengal.html"
+                      href="https://link.zomato.com/xqzv/rshare?id=82122273633b9531 "
                       target="_blank"
+                      className="flex gap-2"
                     >
                       <Image
-                        src={"/images/footer/trip.png"}
-                        alt="tripadvisor"
-                        width={80}
-                        height={80}
+                        src={"/images/footer/motorbike.png"}
+                        alt="Zomato"
+                        width={25}
+                        height={20}
                       />
+                      Zomato Delivery
                     </Link>
                   </li>
                 </ul>
