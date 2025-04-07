@@ -4,6 +4,8 @@ import { Poppins, Prata, Mulish } from "next/font/google";
 import { type Metadata } from "next";
 import Header from "@/components/Layout/Header";
 import Footer from "@/components/Layout/Footer";
+import Link from "next/link";
+import { FaSquareWhatsapp } from "react-icons/fa6";
 
 export const metadata: Metadata = {
   title: "Pico ",
@@ -45,6 +47,17 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
+        {/* Whatsapp Popup */}
+        <div className="fixed bottom-4 right-4 z-50 flex w-fit gap-2 rounded-2xl bg-green-500 p-4">
+          <Link
+            href="https://wa.me/918240912328"
+            target="_blank"
+            className="flex items-center justify-center gap-2"
+          >
+            <FaSquareWhatsapp size={24} className="text-white" />
+            <h2 className="hidden text-md font-bold text-white">Contact Us</h2>
+          </Link>
+        </div>
       </body>
     </html>
   );

@@ -3,6 +3,7 @@ import Link from "next/link"; // Import Link
 import React from "react";
 import { FaWhatsapp } from "react-icons/fa";
 import { FaTripadvisor } from "react-icons/fa";
+import { FaSquareWhatsapp } from "react-icons/fa6";
 const Footer = () => {
   return (
     <>
@@ -237,6 +238,7 @@ const Footer = () => {
             />
           </Link>
         </div>
+
         {/* copyright label */}
         <div className="mt-6 flex h-16 items-center justify-center gap-2 bg-picoTeal font-light text-white">
           <span className="text-picoOrange">© PICO</span> all rights reserved
