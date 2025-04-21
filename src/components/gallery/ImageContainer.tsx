@@ -34,11 +34,7 @@ const ImageContainer = () => {
         "https://res.cloudinary.com/dzpuwffzh/image/upload/v1745212016/Nucleus_2_obkrkh.jpg",
       alt: "Image 1",
     },
-    {
-      imageUrl:
-        "https://res.cloudinary.com/dzpuwffzh/image/upload/v1745212012/Woodfire_hey4ee.jpg",
-      alt: "Sample 2",
-    },
+
     {
       imageUrl:
         "https://res.cloudinary.com/dzpuwffzh/image/upload/v1745212012/Barista_Group_1_jbli3b.jpg",
@@ -84,9 +80,45 @@ const ImageContainer = () => {
         "https://res.cloudinary.com/dzpuwffzh/image/upload/v1745212012/Woodfire_hey4ee.jpg",
       alt: "Sample 2",
     },
+
     {
       imageUrl:
-        "https://res.cloudinary.com/dzpuwffzh/image/upload/v1745212012/Barista_Group_1_jbli3b.jpg",
+        "https://res.cloudinary.com/dzpuwffzh/image/upload/v1745217841/Basil_Concoction_h6wmk8.jpg",
+      alt: "Sample 3",
+    },
+    {
+      imageUrl:
+        "https://res.cloudinary.com/dzpuwffzh/image/upload/v1745217840/Kitchen_Pizza_xdgnb8.jpg",
+      alt: "Sample 3",
+    },
+    {
+      imageUrl:
+        "https://res.cloudinary.com/dzpuwffzh/image/upload/v1745217832/Idk_what_this_is_b0nsfs.jpg",
+      alt: "Sample 3",
+    },
+    {
+      imageUrl:
+        "https://res.cloudinary.com/dzpuwffzh/image/upload/v1745217829/Cold_Brew_rewq9j.jpg",
+      alt: "Sample 3",
+    },
+    {
+      imageUrl:
+        "https://res.cloudinary.com/dzpuwffzh/image/upload/v1745217828/Nucleus_Ball_dmczcp.jpg",
+      alt: "Sample 3",
+    },
+    {
+      imageUrl:
+        "https://res.cloudinary.com/dzpuwffzh/image/upload/v1745217826/Chef_Shot_vcp3ei.jpg",
+      alt: "Sample 3",
+    },
+    {
+      imageUrl:
+        "https://res.cloudinary.com/dzpuwffzh/image/upload/v1745217825/Orange_Concoction_qj4xpa.jpg",
+      alt: "Sample 3",
+    },
+    {
+      imageUrl:
+        "https://res.cloudinary.com/dzpuwffzh/image/upload/v1745217816/Nucleus__Dripper_ew9tq8.jpg",
       alt: "Sample 3",
     },
   ];
