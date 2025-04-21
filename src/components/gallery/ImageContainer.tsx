@@ -121,6 +121,26 @@ const ImageContainer = () => {
         "https://res.cloudinary.com/dzpuwffzh/image/upload/v1745217816/Nucleus__Dripper_ew9tq8.jpg",
       alt: "Sample 3",
     },
+    {
+      imageUrl:
+        "https://res.cloudinary.com/dzpuwffzh/image/upload/v1745217826/Hario_Cold_Drip_gmucku.jpg",
+      alt: "Sample 3",
+    },
+    {
+      imageUrl:
+        "https://res.cloudinary.com/dzpuwffzh/image/upload/v1745212009/Barista_Group_2_my0ry6.jpg",
+      alt: "Sample 3",
+    },
+    {
+      imageUrl:
+        "https://res.cloudinary.com/dzpuwffzh/image/upload/v1745211994/Syphon_pnquh5.jpg",
+      alt: "Sample 3",
+    },
+    {
+      imageUrl:
+        "https://res.cloudinary.com/dzpuwffzh/image/upload/v1745211988/Espresso_mzgzor.jpg",
+      alt: "Sample 3",
+    },
   ];
 
   const [swiperRef, setSwiperRef] = useState<SwiperClass | null>(null);
@@ -159,7 +179,7 @@ const ImageContainer = () => {
           768: { slidesPerView: 3 },
         }}
         loop={false}
-        autoplay={true}
+        // autoplay={true}
         // autoplay={
         //   isMobile ? { delay: 3000, disableOnInteraction: false } : false
         // }
