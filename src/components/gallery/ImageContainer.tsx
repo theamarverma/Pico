@@ -15,10 +15,10 @@ interface ImagePlayerProps {
 const ImagePlayer = ({ imageUrl, alt = "" }: ImagePlayerProps) => (
   <div
     style={{ position: "relative", width: "100%" }}
-    className="h-[20rem] w-full md:h-[40rem]"
+    className="h-[20rem] w-full md:h-[70vh]"
   >
     <Image
-      className="object-contain md:object-cover"
+      className="object-contain md:object-center"
       src={imageUrl}
       alt={alt}
       fill
@@ -159,9 +159,10 @@ const ImageContainer = () => {
           768: { slidesPerView: 3 },
         }}
         loop={false}
-        autoplay={
-          isMobile ? { delay: 3000, disableOnInteraction: false } : false
-        }
+        autoplay={true}
+        // autoplay={
+        //   isMobile ? { delay: 3000, disableOnInteraction: false } : false
+        // }
         modules={[Autoplay]}
       >
         {mediaItems.map((item, idx) => (
