@@ -41,6 +41,19 @@ const VideoContainer = () => {
   const mediaItems = [
     {
       videourl:
+        "https://res.cloudinary.com/dzpuwffzh/video/upload/v1746632314/pour_over_at_home_jbocva.mp4?autoplay=false",
+    },
+    {
+      videourl:
+        "https://res.cloudinary.com/dzpuwffzh/video/upload/v1746632311/being_cafe_owner_is_weird_mmlha6.mp4?autoplay=false",
+    },
+    {
+      videourl:
+        "https://res.cloudinary.com/dzpuwffzh/video/upload/v1746632285/why_coffee_is_good_for_you_j51gap.mp4?autoplay=false",
+    },
+
+    {
+      videourl:
         "https://res.cloudinary.com/dzpuwffzh/video/upload/v1742217050/ledosqb3kbich0efpo3o.mp4?autoplay=false",
     },
     {
