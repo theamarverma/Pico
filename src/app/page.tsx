@@ -6,6 +6,7 @@ import Gallery from "@/components/Home/Gallery";
 import HeaderBanner from "@/components/Home/HeaderBanner";
 import MediaCarousel from "@/components/Home/MediaCarousel/MediaCarousel";
 import Overview from "@/components/Home/Overview";
+import PicoStory from "@/components/Home/PicoStory";
 import Services from "@/components/Home/Services";
 import Testimonial from "@/components/Home/TestimonialCarousel/Testimonial";
 
@@ -27,6 +28,10 @@ export default function HomePage() {
       <section className="bg-bgCream pb-10 md:pb-24">
         {" "}
         <BestMenu />
+      </section>
+      <section className="bg-bgCream px-4 pb-24 md:px-20">
+        {" "}
+        <PicoStory />
       </section>
       <section className="bg-bgCream pb-10 md:pb-24">
         {" "}
