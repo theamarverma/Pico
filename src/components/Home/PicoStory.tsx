@@ -62,11 +62,12 @@ const PicoStory = () => {
             <div className="flex items-center justify-start gap-3">
               {" "}
               <h1 className="text-sm uppercase tracking-label text-white">
-                About the founder
+                Brewed with Heart: The PICO Story
               </h1>
             </div>
             <h1 className="text-xl text-white">
-              <span className="text-picoOrange">Meet</span> Prateek Didwania
+              <span className="text-picoOrange">A Coffee</span> Haven Crafted by
+              an Introvert
             </h1>
             <p className="w-[80%] text-sm font-light leading-[25px] text-picoText md:text-base md:leading-[38px]">
               The man behind the beans and dough.{" "}
@@ -74,13 +75,15 @@ const PicoStory = () => {
                 {" "}
                 Prateek, an IIM Kozhikode graduate,
               </i>{" "}
-              left the corporate world to follow his passion. After the success
-              of Snacking Café, he created PICO to marry his love for coffee and
-              pizza. The result? A space where creativity and quality meet.
+              PICO, led by Prateek Didwania, is redefining the coffee experience
+              by creating a space where coffee lovers feel at home. As an
+              introvert, Prateek simplifies coffee lingo and focuses on
+              authenticity, comfort, and learning. PICO is all about enjoying
+              great coffee without the intimidation.
             </p>
           </div>
           {/* Popup-Image */}
-          <div className="absolute -right-20 top-24">
+          <div className="absolute -right-20 top-32">
             <div className="w-40">
               {" "}
               <Image
