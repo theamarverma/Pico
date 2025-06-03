@@ -41,6 +41,10 @@ const VideoContainer = () => {
   const mediaItems = [
     {
       videourl:
+        "https://res.cloudinary.com/dzpuwffzh/video/upload/v1748927284/coffee_war_1_efhdtr.mp4?autoplay=false",
+    },
+    {
+      videourl:
         "https://res.cloudinary.com/dzpuwffzh/video/upload/v1746632314/pour_over_at_home_jbocva.mp4?autoplay=false",
     },
     {
