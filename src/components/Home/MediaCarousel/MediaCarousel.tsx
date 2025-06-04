@@ -66,6 +66,12 @@ const MediaCarousel = () => {
       imageSrc: "/images/homepage/media/2article.jpeg",
       link: "https://epaper.telegraphindia.com/imageview/494689/52343533/undefined.html",
     },
+    {
+      title: "Serving the Best Coffee",
+      date: "4 June 2025",
+      imageSrc: "/images/homepage/media/pioneer.jpg",
+      link: "https://www.dailypioneer.com/2025/state-editions/from-iim-to-kashmir-to-serving-the-best-coffee--one-man-who-dared-to-dream-----the-story-of-prateek-didwania.html",
+    },
   ];
 
   useEffect(() => {
