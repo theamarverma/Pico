@@ -6,12 +6,19 @@ import { useCallback, useState, useEffect } from "react";
 import { GrNext, GrPrevious } from "react-icons/gr";
 import { Autoplay } from "swiper/modules";
 import MediaCard from "./MediaCard";
+import { title } from "process";
 
 const MediaCarousel = () => {
   const [swiperRef, setSwiperRef] = useState<SwiperClass | null>(null);
   const [isMobile, setIsMobile] = useState(false);
 
   const cards = [
+    {
+      title: "From Pi to Co",
+      date: "11 June 2025",
+      imageSrc: "/images/homepage/media/epapertele.jpg",
+      link: "https://epaper.telegraphindia.com/calcutta-edition/29/2025-06-11/page-24/article-1107447235.html",
+    },
     {
       title: "Serving the Best Coffee",
       date: "4 June 2025",
