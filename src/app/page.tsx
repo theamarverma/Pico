@@ -1,5 +1,6 @@
 import BestMenu from "@/components/Home/BestMenu";
 import Features from "@/components/Home/Features/Features";
+import PizzaExperience from "@/components/Home/Features/NewFeatures";
 import FindUs from "@/components/Home/FindUs";
 import FounderBanner from "@/components/Home/FounderBanner";
 import Gallery from "@/components/Home/Gallery";
@@ -23,12 +24,10 @@ export default function HomePage() {
       </section>
       <section className="bg-bgCream pb-10 md:pb-24">
         {" "}
-        <Features />
+        {/* <Features /> */}
+        <PizzaExperience />
       </section>
-      <section className="bg-bgCream pb-10 md:pb-24">
-        {" "}
-        <BestMenu />
-      </section>
+
       <section className="bg-bgCream px-4 pb-24 md:px-20">
         {" "}
         <PicoStory />

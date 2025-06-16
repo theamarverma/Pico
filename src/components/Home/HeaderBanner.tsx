@@ -29,12 +29,12 @@ const HeaderBanner = () => {
       </div>
 
       {/* Laptop screen */}
-      <div className="parent relative hidden w-full flex-col justify-end bg-[url('/images/homepage/header.webp')] bg-cover bg-center md:flex md:h-[540px]">
+      <div className="parent relative hidden w-full flex-col justify-end bg-[url('/images/homepage/header.png')] bg-cover bg-center md:flex md:h-[1040px]">
         {/* gradient */}
         <div className="absolute inset-x-0 h-36 bg-gradient-to-b from-black/10 via-black/40 to-black/70" />
 
         {/* /----------------popup card---------------- */}
-        <div className="absolute -top-1/3 right-16">
+        <div className="absolute -top-[20%] right-16">
           <div className="parent flex h-[400px] w-[340px] flex-col justify-start bg-[url('/images/homepage/card.png')] bg-cover bg-center">
             <div className="mt-10 flex flex-col items-center justify-center">
               <h1 className="text-2xl text-white">Cafe Timings:</h1>
