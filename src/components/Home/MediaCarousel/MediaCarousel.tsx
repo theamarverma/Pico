@@ -126,7 +126,7 @@ const MediaCarousel = () => {
       <Swiper
         onSwiper={setSwiperRef}
         slidesPerView={1}
-        spaceBetween={16}
+        spaceBetween={32}
         breakpoints={{
           576: {
             slidesPerView: 2,

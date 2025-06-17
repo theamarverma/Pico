@@ -29,12 +29,19 @@ const HeaderBanner = () => {
       </div>
 
       {/* Laptop screen */}
-      <div className="parent relative hidden w-full flex-col justify-end bg-[url('/images/homepage/header.png')] bg-cover bg-center md:flex md:h-[1040px]">
-        {/* gradient */}
-        <div className="absolute inset-x-0 h-36 bg-gradient-to-b from-black/10 via-black/40 to-black/70" />
-
+      <div className="parent relative hidden w-full flex-col justify-end md:flex md:h-[1040px]">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute left-1/2 top-1/2 h-full w-full -translate-x-1/2 -translate-y-1/2 object-cover"
+        >
+          <source src="/videos/header.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
         {/* /----------------popup card---------------- */}
-        <div className="absolute -top-[20%] right-16">
+        <div className="absolute -top-[20%] right-16 z-10">
           <div className="parent flex h-[400px] w-[340px] flex-col justify-start bg-[url('/images/homepage/card.png')] bg-cover bg-center">
             <div className="mt-10 flex flex-col items-center justify-center">
               <h1 className="text-2xl text-white">Cafe Timings:</h1>

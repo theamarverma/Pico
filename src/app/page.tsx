@@ -1,4 +1,5 @@
 import BestMenu from "@/components/Home/BestMenu";
+import CurrentlyBrewing from "@/components/Home/CurrentlyBrewing/CurrentlyBrewing";
 import Features from "@/components/Home/Features/Features";
 import PizzaExperience from "@/components/Home/Features/NewFeatures";
 import FindUs from "@/components/Home/FindUs";
@@ -6,6 +7,7 @@ import FounderBanner from "@/components/Home/FounderBanner";
 import Gallery from "@/components/Home/Gallery";
 import HeaderBanner from "@/components/Home/HeaderBanner";
 import MediaCarousel from "@/components/Home/MediaCarousel/MediaCarousel";
+import NewsLetter from "@/components/Home/NewsLetter";
 import Overview from "@/components/Home/Overview";
 import PicoStory from "@/components/Home/PicoStory";
 import Services from "@/components/Home/Services";
@@ -27,34 +29,39 @@ export default function HomePage() {
         {/* <Features /> */}
         <PizzaExperience />
       </section>
-
       <section className="bg-bgCream px-4 pb-24 md:px-20">
         {" "}
-        <PicoStory />
+        <FounderBanner />
+      </section>
+      <section className="bg-bgCream px-4 pb-24 md:px-20">
+        {" "}
+        <Services />
+      </section>
+
+      <section className="bg-bgCream px-4 pb-10 md:px-20 md:pb-24">
+        {" "}
+        <MediaCarousel />
       </section>
       <section className="bg-bgCream pb-10 md:pb-24">
         {" "}
         <FindUs />
       </section>
-      <section className="bg-bgCream px-4 pb-10 md:px-20 md:pb-24">
-        {" "}
-        <MediaCarousel />
-      </section>
       <section className="bg-bgCream pb-14 md:px-20 md:pb-24">
         {" "}
         <Testimonial />
       </section>
-      <section className="bg-bgCream px-4 pb-24 md:px-20">
-        {" "}
-        <FounderBanner />
-      </section>
+
       <section className="bg-bgCream px-4 pb-10 md:px-20 md:pb-24">
         {" "}
-        <Services />
+        <CurrentlyBrewing />
       </section>
       <section className="bg-bgCream px-4 pb-10 md:px-20 md:pb-24">
         {" "}
         <Gallery />
+      </section>
+      <section className="bg-bgCream px-4 pb-10 md:px-20 md:pb-24">
+        {" "}
+        <NewsLetter />
       </section>
     </>
   );

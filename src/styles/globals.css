@@ -23,6 +23,10 @@ h1 {
 h2 {
   font-family: var(--font-mulish);
 }
+/* Tinos */
+h3 {
+  font-family: var(--font-tinos);
+}
 
 ul {
   display: flex;

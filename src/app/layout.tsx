@@ -1,6 +1,6 @@
 import "@/styles/globals.css";
 
-import { Poppins, Prata, Mulish } from "next/font/google";
+import { Poppins, Prata, Mulish, Tinos } from "next/font/google";
 import { type Metadata } from "next";
 import Header from "@/components/Layout/Header";
 import Footer from "@/components/Layout/Footer";
@@ -35,13 +35,20 @@ const mulish = Mulish({
   display: "swap",
 });
 
+const timesNewRoman = Tinos({
+  subsets: ["latin"],
+  variable: "--font-tinos",
+  weight: ["400"],
+  display: "swap",
+  style: ["italic", "normal"],
+});
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html
       lang="en"
-      className={`${poppins.variable} ${prata.variable} ${mulish.variable} `}
+      className={`${poppins.variable} ${prata.variable} ${mulish.variable} ${timesNewRoman.variable}`}
     >
       <body>
         <Header />
