@@ -35,9 +35,14 @@ const HeaderBanner = () => {
           loop
           muted
           playsInline
+          // controls
+          poster="images/homepage/header.png"
           className="absolute left-1/2 top-1/2 h-full w-full -translate-x-1/2 -translate-y-1/2 object-cover"
         >
-          <source src="/videos/header.mp4" type="video/mp4" />
+          <source
+            src="https://res.cloudinary.com/dzpuwffzh/video/upload/v1750159869/header_dprsgp.mp4"
+            type="video/mp4"
+          />
           Your browser does not support the video tag.
         </video>
         {/* /----------------popup card---------------- */}

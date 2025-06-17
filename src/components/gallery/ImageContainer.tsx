@@ -5,7 +5,7 @@ import "swiper/css";
 import { useCallback, useState, useEffect } from "react";
 
 import { GrNext, GrPrevious } from "react-icons/gr";
-import { Autoplay } from "swiper/modules";
+import { Autoplay, Grid } from "swiper/modules";
 import Image from "next/image";
 
 interface ImagePlayerProps {
@@ -179,11 +179,12 @@ const ImageContainer = () => {
           768: { slidesPerView: 3 },
         }}
         loop={false}
+        grid={{ rows: 2, fill: "row" }}
         // autoplay={true}
         // autoplay={
         //   isMobile ? { delay: 3000, disableOnInteraction: false } : false
         // }
-        modules={[Autoplay]}
+        modules={[Autoplay, Grid]}
       >
         {mediaItems.map((item, idx) => (
           <SwiperSlide key={idx}>
