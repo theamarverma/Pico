@@ -51,11 +51,11 @@ export default function HomePage() {
         <Testimonial />
       </section>
 
-      <section className="bg-bgCream px-4 pb-10 md:px-20 md:pb-24">
+      <section className="border border-picoJuteBrown bg-[#FCEFE0] px-4 pb-10 md:px-20 md:pb-24">
         {" "}
         <CurrentlyBrewing />
       </section>
-      <section className="bg-bgCream px-4 pb-10 md:px-20 md:pb-24">
+      <section className="bg-bgCream px-4 pb-10 md:px-20 md:py-24">
         {" "}
         <Gallery />
       </section>

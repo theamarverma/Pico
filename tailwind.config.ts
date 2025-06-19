@@ -28,6 +28,7 @@ export default {
       colors: {
         // -----------------------Custom Colors-------------------------------
         picoOrange: "#E0B354",
+        picoChocolate: "#C3A180",
         picoTeal: "#008083",
         picoText: "#e6e6e6",
         picoTextGray: "#6B6B6B",

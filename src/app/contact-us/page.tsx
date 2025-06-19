@@ -1,3 +1,4 @@
+import CancellationForm from "@/components/contact-us/CancellationForm";
 import ContactBanner from "@/components/contact-us/ContactBanner";
 import ContactSection from "@/components/contact-us/ContactSection";
 import FormSection from "@/components/contact-us/FormSection";
@@ -11,6 +12,9 @@ const page = () => {
       </section>
       <section className="bg-bgCream">
         <FormSection />
+      </section>
+      <section className="bg-bgCream">
+        <CancellationForm />
       </section>
       <section className="bg-bgCream py-14 md:py-24">
         <ContactSection />
