@@ -100,8 +100,18 @@ const MediaCarousel = () => {
 
   return (
     <>
-      <div className="mb-10 flex items-center justify-center md:justify-between">
-        <h1 className="text-xl md:text-header">Media Coverage</h1>
+      <div className="flex justify-between">
+        <div>
+          <div className="flex items-center justify-start gap-8 uppercase tracking-[4px]">
+            <span className="mt-2 h-2 w-20 border-t border-black"></span>
+            featured
+          </div>
+          <div className="flex gap-2 text-xl md:text-header">
+            <h1 className="text-xl md:text-header">Media </h1>
+            <h3 className="italic text-picoTeal">Coverage</h3>
+          </div>
+        </div>
+
         <div className="btns">
           <div className="hidden gap-4 md:flex">
             <div>

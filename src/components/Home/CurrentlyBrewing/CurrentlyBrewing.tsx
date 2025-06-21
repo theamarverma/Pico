@@ -7,9 +7,10 @@ import { GrNext, GrPrevious } from "react-icons/gr";
 import { Autoplay, Keyboard, Pagination, Navigation } from "swiper/modules";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import { title } from "process";
+// import { title } from "process"; // This import is not used and can be removed
 import Image from "next/image";
 import "./CurrentlyBrewing.css";
+
 export default function CurrentlyBrewing() {
   const [swiperRef, setSwiperRef] = useState<SwiperClass | null>(null);
   const [isMobile, setIsMobile] = useState(false);
@@ -92,13 +93,8 @@ export default function CurrentlyBrewing() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const handlePrevious = useCallback(() => {
-    swiperRef?.slidePrev();
-  }, [swiperRef]);
-
-  const handleNext = useCallback(() => {
-    swiperRef?.slideNext();
-  }, [swiperRef]);
+  // Removed handlePrevious and handleNext as Swiper's navigation will handle it directly
+  // for both desktop and mobile buttons when navigation.prevEl/nextEl are used.
 
   return (
     <>
@@ -111,6 +107,8 @@ export default function CurrentlyBrewing() {
           <h3>Currently</h3>{" "}
           <h3 className="inline-block italic text-picoTeal">Brewing</h3>
         </div>
+        {/* The btns div here was empty or not used for the Swiper navigation directly,
+            so keeping it only if it serves another purpose. Otherwise, remove it. */}
         <div className="btns">
           <div className="hidden gap-4 md:flex">
             <div></div>
@@ -118,53 +116,77 @@ export default function CurrentlyBrewing() {
           </div>
         </div>
       </div>
-      <Swiper
-        onSwiper={setSwiperRef}
-        slidesPerView={1}
-        spaceBetween={32}
-        // breakpoints={{
-        //   576: {
-        //     slidesPerView: 2,
-        //   },
-        //   768: {
-        //     slidesPerView: 3,
-        //   },
-        // }}
-        keyboard={{
-          enabled: true,
-        }}
-        pagination={{
-          clickable: true,
-        }}
-        navigation={true}
-        loop={false}
-        autoplay={
-          isMobile
-            ? {
-                delay: 300,
-                disableOnInteraction: false,
-              }
-            : false
-        }
-        className="mySwiper"
-        modules={[Keyboard, Pagination, Navigation, Autoplay]}
-      >
-        {cards.map((card, index) => (
-          <SwiperSlide key={index}>
-            <div className="relative h-[400px] w-full rounded-xl">
-              <Image
-                src={card.imageSrc}
-                alt="media"
-                width={1000}
-                height={500}
-                className="w-full rounded-xl"
-              />
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
-      {/* mobile buttons */}
-      <div className="btns my-4 flex items-center justify-center md:hidden">
+
+      <div className="relative w-full">
+        <Swiper
+          onSwiper={setSwiperRef}
+          slidesPerView={1}
+          spaceBetween={32}
+          keyboard={{
+            enabled: true,
+          }}
+          // If you only want navigation, remove the pagination prop entirely
+          pagination={{
+            clickable: true,
+          }}
+          navigation={{
+            prevEl: "#custom-prev-button", // Connect to external prev button
+            nextEl: "#custom-next-button", // Connect to external next button
+          }}
+          loop={false}
+          autoplay={
+            isMobile
+              ? {
+                  delay: 3000,
+                  disableOnInteraction: false,
+                }
+              : false
+          }
+          className="mySwiper h-[500px]"
+          modules={[Keyboard, Navigation, Pagination, Autoplay]}
+        >
+          {cards.map((card, index) => (
+            <SwiperSlide key={index}>
+              <a href={card.link} target="_blank" rel="noopener noreferrer">
+                <div className="mx-auto flex w-[80%] flex-col justify-center">
+                  <div className="relative h-[400px] overflow-hidden rounded-xl">
+                    <Image
+                      src={card.imageSrc}
+                      alt={card.title}
+                      width={1000}
+                      height={500}
+                      className="w-full rounded-xl object-contain"
+                    />
+                  </div>
+                  <h1 className="text-start text-header"> {card.title}</h1>
+                  <h3>{card.date}</h3>
+                </div>
+              </a>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+
+        <div className="absolute top-1/2 z-10 flex w-full -translate-y-1/2 justify-between px-4">
+          <button
+            id="custom-prev-button"
+            className="hover:bg-primary-dark hover:text-charity-primary flex h-10 w-10 items-center justify-center rounded-full border border-picoJuteBrown text-picoJuteBrown shadow-md md:h-16 md:w-16"
+          >
+            <GrPrevious size={24} />
+          </button>
+          <button
+            id="custom-next-button"
+            className="hover:bg-primary-dark hover:text-charity-primary flex h-10 w-10 items-center justify-center rounded-full border border-picoJuteBrown text-picoJuteBrown shadow-md md:h-16 md:w-16"
+          >
+            <GrNext size={24} />
+          </button>
+        </div>
+      </div>
+
+      {/* Removed the 'mobile buttons' div since the main navigation buttons
+          are now linked to Swiper and handle all navigation.
+          If you want different styling/positioning for mobile, you'd adjust
+          the Tailwind classes on the main navigation div. */}
+      {/* <div className="btns my-4 flex items-center justify-center md:hidden">
         <div className="flex gap-4">
           <div>
             <button
@@ -183,7 +205,7 @@ export default function CurrentlyBrewing() {
             </button>
           </div>
         </div>
-      </div>
+      </div> */}
     </>
   );
 }

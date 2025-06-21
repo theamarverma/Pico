@@ -1,5 +1,8 @@
 .swiper-button-prev {
   color: rgba(181, 123, 34, 1);
+  border: 1px solid rgba(181, 123, 34, 1);
+  border-radius: 100%;
+  padding: 24px;
 }
 .swiper-button-next {
   color: rgba(181, 123, 34, 1);
