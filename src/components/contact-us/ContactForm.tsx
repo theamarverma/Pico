@@ -2,8 +2,9 @@
 import * as React from "react";
 import { useForm } from "@tanstack/react-form";
 import type { AnyFieldApi } from "@tanstack/react-form";
-// import { DateTimePicker } from "./DateTimePicker";
+import { DateTimePicker } from "./DateTimePicker";
 import axios from "axios";
+import { http } from "@/services/httpClient";
 
 type ReservationFormValues = {
   name: string;
@@ -11,7 +12,6 @@ type ReservationFormValues = {
   phone: string;
   datetime: Date | undefined;
   seats: string;
-  specialRequest: string;
 };
 
 function FieldInfo({ field }: { field: AnyFieldApi }) {
@@ -31,15 +31,15 @@ export default function ReservationForm() {
       name: "",
       email: "",
       phone: "",
-
-      specialRequest: "",
+      datetime: new Date(),
+      seats: "",
     } as ReservationFormValues,
     onSubmit: async ({ value }) => {
       try {
-        const response = await axios.post("/api/contact", value);
+        const response = await http.post("/api/contact", value);
         if (response.status === 200) {
           alert("Request submitted successfully!");
-          // Optionally, reset the form or provide additional feedback here.
+          form.reset();
         } else {
           alert(`Submission failed: ${response.data.error}`);
         }
@@ -169,7 +169,7 @@ export default function ReservationForm() {
           </div>
         </div>
 
-        {/* Reservation Date & Time Field
+        {/* /* Reservation Date & Time Field */}
         <div className="flex flex-col gap-2">
           <form.Field
             name="datetime"
@@ -197,7 +197,7 @@ export default function ReservationForm() {
         </div>
 
         {/* Seats Dropdown */}
-        {/* <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-2">
           <form.Field
             name="seats"
             validators={{
@@ -221,26 +221,21 @@ export default function ReservationForm() {
                   onBlur={field.handleBlur}
                   onChange={(e) => field.handleChange(e.target.value)}
                 >
-                  <option value="">Select seats</option>
                   <option value="1">1</option>
                   <option value="2">2</option>
                   <option value="3">3</option>
                   <option value="4">4</option>
                   <option value="5">5</option>
                   <option value="6">6</option>
-                  <option value="7">7</option>
-                  <option value="8">8</option>
-                  <option value="9">9</option>
-                  <option value="10">10</option>
                 </select>
                 <FieldInfo field={field} />
               </>
             )}
           </form.Field>
-        </div>  */}
+        </div>
 
         {/* Special Request Field */}
-        <div className="flex flex-col gap-2">
+        {/* <div className="flex flex-col gap-2">
           <form.Field name="specialRequest">
             {(field) => (
               <>
@@ -263,14 +258,14 @@ export default function ReservationForm() {
               </>
             )}
           </form.Field>
-        </div>
+        </div> */}
 
         <form.Subscribe
           selector={(state) => [state.canSubmit, state.isSubmitting]}
         >
           {([canSubmit, isSubmitting]) => (
             <button
-              className="bg-picoChocolate mt-4 w-full p-3 px-4 text-sm text-white md:w-40"
+              className="mt-4 w-full bg-picoChocolate p-3 px-4 text-sm text-white md:w-40"
               type="submit"
               disabled={!canSubmit}
             >
