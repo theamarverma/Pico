@@ -4,6 +4,7 @@ import { useForm } from "@tanstack/react-form";
 import type { AnyFieldApi } from "@tanstack/react-form";
 // import { DateTimePicker } from "./DateTimePicker";
 import axios from "axios";
+import { http } from "@/services/httpClient";
 type CancellationFormValues = {
   bookingId: string;
   email: string;
@@ -26,6 +27,10 @@ const CancellationForm = () => {
     } as CancellationFormValues,
     onSubmit: async ({ value }) => {
       try {
+        // console.log("onsubmit todo", value);
+        const bookingId = value.bookingId;
+        http.delete(`/api/cancel/${bookingId}`);
+        alert("Cancellation Successful");
         console.log("onsubmit todo");
       } catch (error: any) {
         console.error("Error submitting reservation:", error);
@@ -47,7 +52,7 @@ const CancellationForm = () => {
           void form.handleSubmit();
         }}
       >
-        <div className="bg-picoChocolate mx-auto flex max-w-56 items-center justify-center p-2 px-10 text-sm text-white">
+        <div className="mx-auto flex max-w-56 items-center justify-center bg-picoChocolate p-2 px-10 text-sm text-white">
           For Cancellation
         </div>
         <div className="flex gap-2">
@@ -128,7 +133,7 @@ const CancellationForm = () => {
         >
           {([canSubmit, isSubmitting]) => (
             <button
-              className="bg-picoChocolate mx-auto mt-4 flex items-center justify-center p-3 px-10 text-sm text-white"
+              className="mx-auto mt-4 flex items-center justify-center bg-picoChocolate p-3 px-10 text-sm text-white"
               type="submit"
               disabled={!canSubmit}
             >
