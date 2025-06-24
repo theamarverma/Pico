@@ -15,7 +15,10 @@ export async function DELETE(
     const id = await params;
     const bookingId = id.bookingId;
     const email = id.email;
-    console.log(bookingId, email);
+    // console.log(bookingId, email);
+    if (!bookingId || !email) {
+      return NextResponse.json({ error: "Missing required fields" });
+    }
 
     const foundCustomer = await Customer.findOne({
       bookingId: bookingId,
@@ -87,6 +90,7 @@ export async function DELETE(
       `,
     };
 
+    // company cancellation email options-----
     const companyCancellationNotificationOptions = {
       from: process.env.NEXT_EMAIL,
       to: process.env.NEXT_RECEIVER_EMAIL,
@@ -107,20 +111,27 @@ export async function DELETE(
       `,
     };
 
-    await transporter.sendMail(userCancellationMailOptions);
-    await transporter.sendMail(companyCancellationNotificationOptions);
+    await Promise.allSettled([
+      transporter.sendMail(userCancellationMailOptions),
+      transporter.sendMail(companyCancellationNotificationOptions),
+    ]).then((results) => {
+      results.forEach((result, index) => {
+        if (result.status === "rejected") {
+          console.error(
+            `Error sending email ${index === 0 ? "to user" : "to company"}:`,
+            result.reason,
+          );
+        }
+      });
+    });
 
     // Delete Operation
     const deletedCustomer = await Customer.findOneAndDelete({
       bookingId: bookingId,
       email: email,
     }).catch((error) => {
-      console.log(error);
+      console.log("Error deleting customer:", error);
     });
-
-    if (!bookingId || !email) {
-      return NextResponse.json({ error: "Missing required fields" });
-    }
 
     if (!deletedCustomer) {
       // If email and booking ID did not match a record, return an error.
@@ -143,14 +154,18 @@ export async function DELETE(
     }
 
     return NextResponse.json({
-      message: "Email sent successfully!",
       success: true,
-      // data: savedCustomer,
+      message:
+        "Reservation cancelled successfully and confirmation emails sent.",
     });
-  } catch (error) {
-    console.error("Error sending email:", error);
+  } catch (error: any) {
+    console.error("Error during reservation cancellation:", error);
     return NextResponse.json(
-      { error: "Failed to send email" },
+      {
+        success: false,
+        message: "An error occurred during reservation cancellation.",
+        error: error.message, // Provide error message for debugging
+      },
       { status: 500 },
     );
   }

@@ -11,6 +11,12 @@ export async function POST(req: NextRequest) {
     const body = await req.json();
     const { name, email, phone, datetime, seats } = body;
 
+    if (!email || !name || !phone || !datetime || !seats) {
+      return NextResponse.json(
+        { success: false, message: "Missing required fields." },
+        { status: 404 },
+      );
+    }
     // Convert the datetime to IST
     const reservationDateTime = new Date(datetime);
     const options: Intl.DateTimeFormatOptions = {
@@ -27,18 +33,37 @@ export async function POST(req: NextRequest) {
     );
 
     // generate booking ID
-    const generateReadableBookingId = (length: number = 8): string => {
+    const generateReadableBookingId = async (
+      length: number = 8,
+    ): Promise<string> => {
       const characters = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
       let result = "";
-      for (let i = 0; i < length; i++) {
-        result += characters.charAt(
-          Math.floor(Math.random() * characters.length),
-        );
+      let isUnique = false;
+      let attempts = 0;
+      const MAX_ATTEMPTS = 5;
+
+      while (!isUnique && attempts < MAX_ATTEMPTS) {
+        result = "";
+        for (let i = 0; i < length; i++) {
+          result += characters.charAt(
+            Math.floor(Math.random() * characters.length),
+          );
+        }
+        // Check if this bookingId already exists in the database
+        const existingCustomer = await Customer.findOne({ bookingId: result });
+        if (!existingCustomer) {
+          isUnique = true;
+        }
+        attempts++;
+      }
+
+      if (!isUnique) {
+        throw new Error("Could not generate a unique booking ID.");
       }
       return result;
     };
 
-    const bookingId = generateReadableBookingId();
+    const bookingId = await generateReadableBookingId();
 
     const savedCustomer = await new Customer({
       bookingId,
@@ -49,10 +74,6 @@ export async function POST(req: NextRequest) {
       seats,
       istDateTime,
     }).save();
-
-    if (!email || !name || !phone || !datetime || !seats) {
-      return NextResponse.json({ error: "Missing required fields" });
-    }
 
     if (!savedCustomer) {
       return NextResponse.json({ error: "Failed to save customer" });
@@ -120,12 +141,25 @@ export async function POST(req: NextRequest) {
     `,
     };
 
-    await transporter.sendMail(companyMailOptions);
-    await transporter.sendMail(userMailOptions);
+    await Promise.allSettled([
+      transporter.sendMail(companyMailOptions),
+      transporter.sendMail(userMailOptions),
+    ]).then((results) => {
+      results.forEach((result, index) => {
+        if (result.status === "rejected") {
+          console.error(
+            `Error sending email ${index === 0 ? "to company" : "to user"}:`,
+            result.reason,
+          );
+        }
+      });
+    });
+
+    // 5. **Return Success Response**
     return NextResponse.json({
-      message: "Email sent successfully!",
       success: true,
-      data: savedCustomer,
+      message: "Reservation confirmed and emails sent successfully!",
+      bookingId: savedCustomer.bookingId,
     });
   } catch (error) {
     console.error("Error sending email:", error);
