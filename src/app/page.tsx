@@ -1,3 +1,4 @@
+"use client";
 import BestMenu from "@/components/Home/BestMenu";
 import CurrentlyBrewing from "@/components/Home/CurrentlyBrewing/CurrentlyBrewing";
 import Features from "@/components/Home/Features/Features";

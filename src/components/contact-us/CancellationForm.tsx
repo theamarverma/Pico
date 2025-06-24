@@ -5,6 +5,7 @@ import type { AnyFieldApi } from "@tanstack/react-form";
 // import { DateTimePicker } from "./DateTimePicker";
 import axios from "axios";
 import { http } from "@/services/httpClient";
+import { toast } from "react-toastify";
 type CancellationFormValues = {
   bookingId: string;
   email: string;
@@ -29,10 +30,13 @@ const CancellationForm = () => {
       try {
         // console.log("onsubmit todo", value);
         const bookingId = value.bookingId;
-        http.delete(`/api/cancel/${bookingId}`);
-        alert("Cancellation Successful");
-        console.log("onsubmit todo");
+        const email = value.email;
+        console.log(bookingId, email);
+        await http.delete(`/api/cancel/${bookingId}/${email}`);
+        form.reset();
+        await toast.success("Cancellation Successful");
       } catch (error: any) {
+        toast.error("Error submitting reservation:", error);
         console.error("Error submitting reservation:", error);
         if (error.response && error.response.data) {
           alert(`Submission failed: ${error.response.data.error}`);

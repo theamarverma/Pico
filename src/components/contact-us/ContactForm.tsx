@@ -5,7 +5,8 @@ import type { AnyFieldApi } from "@tanstack/react-form";
 import { DateTimePicker } from "./DateTimePicker";
 import axios from "axios";
 import { http } from "@/services/httpClient";
-
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/ReactToastify.css";
 type ReservationFormValues = {
   name: string;
   email: string;
@@ -38,10 +39,10 @@ export default function ReservationForm() {
       try {
         const response = await http.post("/api/contact", value);
         if (response.status === 200) {
-          alert("Request submitted successfully!");
+          toast.success("Reservation Successful");
           form.reset();
         } else {
-          alert(`Submission failed: ${response.data.error}`);
+          toast.error(`Submission failed: ${response.data.error}`);
         }
       } catch (error: any) {
         console.error("Error submitting reservation:", error);
@@ -221,6 +222,7 @@ export default function ReservationForm() {
                   onBlur={field.handleBlur}
                   onChange={(e) => field.handleChange(e.target.value)}
                 >
+                  <option value="">Select Your Seat</option>
                   <option value="1">1</option>
                   <option value="2">2</option>
                   <option value="3">3</option>
@@ -274,6 +276,7 @@ export default function ReservationForm() {
           )}
         </form.Subscribe>
       </form>
+      <ToastContainer position="bottom-right" theme="colored" />
     </div>
   );
 }
