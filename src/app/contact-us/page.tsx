@@ -10,12 +10,11 @@ const page = () => {
       <section className="bg-bgCream pt-28">
         <ContactBanner />
       </section>
+      {/* contact form and cancellation form */}
       <section className="bg-bgCream">
         <FormSection />
       </section>
-      <section className="bg-bgCream">
-        <CancellationForm />
-      </section>
+
       <section className="bg-bgCream py-14 md:py-24">
         <ContactSection />
       </section>

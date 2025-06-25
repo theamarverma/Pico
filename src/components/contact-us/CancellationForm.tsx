@@ -47,9 +47,9 @@ const CancellationForm = () => {
     },
   });
   return (
-    <div className="mr-20 flex justify-end">
+    <div className="">
       <form
-        className="space-y-10 bg-white px-10 pb-10"
+        className="w-full space-y-10 bg-white pb-10"
         onSubmit={(e) => {
           e.preventDefault();
           e.stopPropagation();
@@ -59,7 +59,7 @@ const CancellationForm = () => {
         <div className="mx-auto flex max-w-56 items-center justify-center bg-picoChocolate p-2 px-10 text-sm text-white">
           For Cancellation
         </div>
-        <div className="flex gap-2">
+        <div className="mx-auto flex w-[500px] justify-center gap-4">
           {/* Email Field */}
           <div className="flex flex-col gap-2">
             <form.Field

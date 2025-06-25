@@ -1,5 +1,3 @@
-"use client";
-
 import * as React from "react";
 import { CalendarIcon } from "@radix-ui/react-icons";
 import { format } from "date-fns";
@@ -26,7 +24,7 @@ export function DateTimePicker({ value, onChange }: DateTimePickerProps) {
   const date = value ?? internalDate;
   const [isOpen, setIsOpen] = React.useState(false);
 
-  const hours = Array.from({ length: 12 }, (_, i) => i + 1);
+  const hours = Array.from({ length: 13 }, (_, i) => 11 + i);
 
   const updateDate = (newDate: Date) => {
     if (onChange) {
@@ -125,21 +123,31 @@ export function DateTimePicker({ value, onChange }: DateTimePickerProps) {
             {/* Minute Selector */}
             <ScrollArea className="w-64 sm:w-auto">
               <div className="flex p-2 sm:flex-col">
-                {Array.from({ length: 12 }, (_, i) => i * 5).map((minute) => (
-                  <Button
-                    key={minute}
-                    size="icon"
-                    variant={
-                      date && date.getMinutes() === minute ? "default" : "ghost"
-                    }
-                    className="aspect-square shrink-0 sm:w-full"
-                    onClick={() =>
-                      handleTimeChange("minute", minute.toString())
-                    }
-                  >
-                    {minute}
-                  </Button>
-                ))}
+                {/* Change this line: */}
+                {/* Original: Array.from({ length: 12 }, (_, i) => i * 5) */}
+                {/* Modified to generate 0 and 30 */}
+                {[0, 30].map(
+                  (
+                    minute, // <--- CHANGE THIS LINE
+                  ) => (
+                    <Button
+                      key={minute}
+                      size="icon"
+                      variant={
+                        date && date.getMinutes() === minute
+                          ? "default"
+                          : "ghost"
+                      }
+                      className="aspect-square shrink-0 sm:w-full"
+                      onClick={() =>
+                        handleTimeChange("minute", minute.toString())
+                      }
+                    >
+                      {minute < 10 ? `0${minute}` : minute}{" "}
+                      {/* To display "00" for 0 minutes */}
+                    </Button>
+                  ),
+                )}
               </div>
               <ScrollBar orientation="horizontal" className="sm:hidden" />
             </ScrollArea>

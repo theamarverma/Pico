@@ -1,6 +1,7 @@
 import React from "react";
 import ContactForm from "./ContactForm";
 import Link from "next/link";
+import CancellationForm from "./CancellationForm";
 
 const FormSection = () => {
   const listStyle = {
@@ -44,6 +45,14 @@ const FormSection = () => {
         </div>
         <div className="right mx-4 flex-grow">
           <ContactForm />
+        </div>
+      </div>
+
+      {/* Cancellation Form */}
+      <div className="flex flex-col gap-10 md:mx-20 md:flex-row md:py-12">
+        <div className="left text-center md:w-[40%] md:text-start"></div>
+        <div className="right mx-4 flex-grow">
+          <CancellationForm />
         </div>
       </div>
     </div>
