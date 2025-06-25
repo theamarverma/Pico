@@ -58,7 +58,7 @@ const CoffeeGallery = () => {
   return (
     <>
       <h1 className="flex items-center justify-center text-xl md:text-header">
-        Speciality Coffee
+        Specialty Coffee
       </h1>
       {isMobile ? (
         // Mobile view: normal slider without grid
