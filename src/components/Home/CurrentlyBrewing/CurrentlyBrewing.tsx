@@ -100,8 +100,8 @@ export default function CurrentlyBrewing() {
     <>
       <div className="flex flex-col md:my-10">
         <div className="hidden items-center justify-start gap-8 uppercase tracking-[4px] md:flex">
-          <span className="mt-2 h-2 w-20 border-t border-black"></span>what's
-          new
+          <span className="mt-2 h-2 w-20 border-t border-black"></span>
+          what;&apos;s new
         </div>
         <div className="my-10 flex justify-center gap-2 text-2xl md:my-0 md:justify-start md:text-header">
           <h3>Currently</h3>{" "}

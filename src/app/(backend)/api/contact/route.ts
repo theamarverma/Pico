@@ -33,9 +33,7 @@ export async function POST(req: NextRequest) {
     );
 
     // generate booking ID
-    const generateReadableBookingId = async (
-      length: number = 8,
-    ): Promise<string> => {
+    const generateReadableBookingId = async (length = 8): Promise<string> => {
       const characters = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
       let result = "";
       let isUnique = false;

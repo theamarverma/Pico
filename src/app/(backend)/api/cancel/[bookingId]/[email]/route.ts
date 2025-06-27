@@ -6,15 +6,19 @@ import type { NextRequest } from "next/server";
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
+interface RouteParams {
+  bookingId: string;
+  email: string;
+}
+
 export async function DELETE(
   req: NextRequest,
-  { params }: { params: { bookingId: string; email: string } },
+  { params }: { params: Promise<RouteParams> },
 ) {
   try {
     await connectDB();
-    const id = await params;
-    const bookingId = id.bookingId;
-    const email = id.email;
+    const resolvedParams = await params;
+    const { bookingId, email } = resolvedParams;
     // console.log(bookingId, email);
     if (!bookingId || !email) {
       return NextResponse.json({ error: "Missing required fields" });

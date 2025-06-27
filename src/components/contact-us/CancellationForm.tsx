@@ -34,12 +34,12 @@ const CancellationForm = () => {
         console.log(bookingId, email);
         await http.delete(`/api/cancel/${bookingId}/${email}`);
         form.reset();
-        await toast.success("Cancellation Successful");
+        toast.success("Cancellation Successful");
       } catch (error: any) {
-        toast.error("Error submitting reservation:", error);
+        // toast.error("Error submitting reservation:", error);
         console.error("Error submitting reservation:", error);
         if (error.response && error.response.data) {
-          alert(`Submission failed: ${error.response.data.error}`);
+          toast.error(`Kindly check email and booking ID`);
         } else {
           alert("Something went wrong. Please try again.");
         }

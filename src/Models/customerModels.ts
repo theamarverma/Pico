@@ -38,8 +38,9 @@ const customerSchema: Schema<ICustomer> = new mongoose.Schema({
   },
 });
 
+// "If mongoose.models.Customer is null or undefined, then create a new model; otherwise, use the existing one."
 const Customer: Model<ICustomer> =
-  mongoose.models.Customer ||
+  mongoose.models.Customer ??
   mongoose.model<ICustomer>("Customer", customerSchema);
 
 export default Customer;
