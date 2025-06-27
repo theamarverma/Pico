@@ -11,12 +11,12 @@ const Gallery = () => {
           <h1 className="">PICO</h1>
           <h3 className="italic text-picoTeal">Frames</h3>
         </div>
-        <div className="flex items-center justify-center pb-10 text-xl text-picoTextGray">
+        <div className="flex items-center justify-center pb-10 text-picoTextGray md:text-xl">
           A Glimpse Into Our World
         </div>
       </div>
       <div className="grid grid-cols-3 grid-rows-2 gap-4">
-        <div className="h-[300px]">
+        <div className="h-[200px] md:h-[300px]">
           <Image
             className="h-full w-full object-cover"
             src={"/images/homepage/gallery/coffee.png"}
@@ -26,7 +26,7 @@ const Gallery = () => {
           />
         </div>
 
-        <div className="h-[300px]">
+        <div className="h-[200px] md:h-[300px]">
           <Image
             className="h-full"
             src={"/images/homepage/gallery/iceTea.png"}
@@ -35,7 +35,7 @@ const Gallery = () => {
             height={1000}
           />
         </div>
-        <div className="h-[300px]">
+        <div className="h-[200px] md:h-[300px]">
           <Image
             className="h-full object-cover"
             src={"/images/homepage/gallery/noodles.png"}
@@ -44,7 +44,7 @@ const Gallery = () => {
             height={1000}
           />
         </div>
-        <div className="h-[300px]">
+        <div className="h-[200px] md:h-[300px]">
           <Image
             className="h-full w-full object-cover"
             src={"/images/homepage/gallery/coffee.png"}
@@ -54,7 +54,7 @@ const Gallery = () => {
           />
         </div>
 
-        <div className="h-[300px]">
+        <div className="h-[200px] md:h-[300px]">
           <Image
             className="h-full object-cover"
             src={"/images/homepage/gallery/iceTea.png"}
@@ -63,7 +63,7 @@ const Gallery = () => {
             height={1000}
           />
         </div>
-        <div className="h-[300px]">
+        <div className="h-[200px] md:h-[300px]">
           <Image
             className="h-full object-cover"
             src={"/images/homepage/gallery/noodles.png"}

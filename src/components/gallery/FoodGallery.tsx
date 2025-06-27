@@ -69,7 +69,7 @@ const FoodGallery = () => {
         onSwiper={setSwiperRef}
         slidesPerView={2}
         grid={{
-          rows: 2,
+          rows: 3,
           fill: "row",
         }}
         spaceBetween={16}

@@ -71,7 +71,8 @@ const CoffeeGallery = () => {
             delay: 300,
             disableOnInteraction: false,
           }}
-          modules={[Autoplay]}
+          grid={{ rows: 3, fill: "row" }}
+          modules={[Autoplay, Grid]}
         >
           {coffeItems.map((item, index) => (
             <SwiperSlide key={index}>
@@ -84,7 +85,7 @@ const CoffeeGallery = () => {
         <Swiper
           onSwiper={setSwiperRef}
           slidesPerView={3}
-          grid={{ rows: 2, fill: "row" }}
+          grid={{ rows: 3, fill: "row" }}
           spaceBetween={16}
           loop={false}
           modules={[Grid]}

@@ -6,7 +6,7 @@ import { useCallback, useState, useEffect } from "react";
 
 import { GrNext, GrPrevious } from "react-icons/gr";
 
-import { Autoplay } from "swiper/modules";
+import { Autoplay, Grid } from "swiper/modules";
 
 interface VideoPlayerProps {
   videoUrl: string;
@@ -137,6 +137,7 @@ const VideoContainer = () => {
           },
         }}
         loop={false}
+        grid={{ rows: 2, fill: "row" }}
         autoplay={
           isMobile
             ? {
@@ -145,7 +146,7 @@ const VideoContainer = () => {
               }
             : false
         }
-        modules={[Autoplay]}
+        modules={[Autoplay, Grid]}
       >
         {mediaItems.map((item, index) => (
           <SwiperSlide key={index}>

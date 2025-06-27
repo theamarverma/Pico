@@ -14,6 +14,12 @@ const MediaCarousel = () => {
 
   const cards = [
     {
+      title: "Vietnamese Coffee",
+      date: "23 June 2025",
+      imageSrc: "/images/homepage/media/viet.png",
+      link: "https://www.telegraphindia.com/my-kolkata/food/why-kolkata-is-falling-in-love-with-vietnamese-coffee-a-condensed-take/cid/2109325",
+    },
+    {
       title: "From Pi to Co",
       date: "11 June 2025",
       imageSrc: "/images/homepage/media/epapertele.jpg",
@@ -100,14 +106,14 @@ const MediaCarousel = () => {
 
   return (
     <>
-      <div className="flex justify-between">
-        <div>
-          <div className="flex items-center justify-start gap-8 uppercase tracking-[4px]">
+      <div className="justify-between md:flex">
+        <div className="">
+          <div className="hidden items-center justify-start gap-8 uppercase tracking-[4px] md:flex">
             <span className="mt-2 h-2 w-20 border-t border-black"></span>
             featured
           </div>
-          <div className="flex gap-2 text-xl md:text-header">
-            <h1 className="text-xl md:text-header">Media </h1>
+          <div className="mb-10 flex justify-center gap-2 text-2xl md:mb-0 md:text-header">
+            <h1 className="">Media </h1>
             <h3 className="italic text-picoTeal">Coverage</h3>
           </div>
         </div>

@@ -49,17 +49,19 @@ const PizzaExperience = () => {
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-bgCreamDark py-12">
-      <div className="container mx-auto px-4">
-        <div className="mb-12 text-center">
-          <h2 className="mb-2 font-serif text-4xl text-gray-800">
+      <div className="container mx-auto px-8">
+        <div className="text-center md:mb-12">
+          <h2 className="mb-2 font-serif text-xl text-gray-800 md:text-4xl">
             Where Flavour Meets Perfection
           </h2>
-          <p className="text-xl text-gray-600">
+          <p className="text-gray-600 md:text-xl">
             The Ultimate Coffee & Pizza Experience
           </p>
         </div>
-
-        <div className="flex flex-col items-center justify-center gap-12 lg:flex-row">
+        {/* //----------------------- */}
+        {/* Desktop Design */}
+        {/* //----------------------- */}
+        <div className="hidden flex-col items-center justify-center gap-12 md:flex lg:flex-row">
           {/* Left Column Features */}
           <div className="order-2 flex flex-col gap-24 md:grid-cols-2 lg:order-1 lg:w-[20%]">
             {leftFeatures.map((feature: any) => (
@@ -113,6 +115,74 @@ const PizzaExperience = () => {
                   {feature.title}
                 </h3>
                 <p className="text-sm text-gray-500">{feature.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+        {/* //----------------------- */}
+        {/* Mobile Design */}
+        {/* //----------------------- */}
+        <div className="flex flex-col items-center justify-center md:hidden">
+          {/* Left Column Features */}
+          <div className="order-1 flex flex-col">
+            {leftFeatures.map((feature: any) => (
+              <div
+                key={feature.id}
+                className="flex items-center justify-center gap-4"
+              >
+                <div className="h-36 w-36">
+                  <Image
+                    src={feature.icon}
+                    alt={feature.alt}
+                    width={100}
+                    height={98}
+                    className="h-full w-full text-teal-600"
+                  />
+                </div>
+                <div>
+                  <h3 className="mb-2 text-xl font-semibold text-gray-700">
+                    {feature.title}
+                  </h3>
+                  <p className="text-sm text-gray-500">{feature.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Pizza Image */}
+          <div className="order-3 flex justify-center">
+            <Image
+              src="/images/homepage/features/pizza_c.png"
+              alt="Delicious Mixo Pizza"
+              width={1000}
+              height={1000}
+              className="h-full max-w-full object-cover"
+              priority
+            />
+          </div>
+
+          {/* Right Column Features */}
+          <div className="order-1 flex flex-col">
+            {rightFeatures.map((feature: any) => (
+              <div
+                key={feature.id}
+                className="flex items-center justify-center gap-4"
+              >
+                <div className="h-36 w-36">
+                  <Image
+                    src={feature.icon}
+                    alt={feature.alt}
+                    width={100}
+                    height={98}
+                    className="h-full w-full text-teal-600"
+                  />
+                </div>
+                <div>
+                  <h3 className="mb-2 text-xl font-semibold text-gray-700">
+                    {feature.title}
+                  </h3>
+                  <p className="text-sm text-gray-500">{feature.description}</p>
+                </div>
               </div>
             ))}
           </div>

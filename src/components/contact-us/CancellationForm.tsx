@@ -59,7 +59,7 @@ const CancellationForm = () => {
         <div className="mx-auto flex max-w-56 items-center justify-center bg-picoChocolate p-2 px-10 text-sm text-white">
           For Cancellation
         </div>
-        <div className="mx-auto flex w-[500px] justify-center gap-4">
+        <div className="mx-4 flex justify-center gap-4 md:mx-auto md:w-[500px]">
           {/* Email Field */}
           <div className="flex flex-col gap-2">
             <form.Field

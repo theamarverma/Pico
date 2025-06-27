@@ -21,8 +21,8 @@ const ContactSection = () => {
   return (
     <div>
       <div className="mx-4 flex flex-col gap-8 md:mx-20 md:flex-row md:gap-20">
-        <div className="flex flex-col gap-4 md:justify-around">
-          <div>
+        <div className="flex flex-col gap-4">
+          <div className="text-center md:mb-12 md:text-start">
             {" "}
             <h3 className="text-lg uppercase text-picoTeal md:font-bold">
               Get in Touch
@@ -31,7 +31,7 @@ const ContactSection = () => {
           </div>
 
           <div className="space-y-4">
-            <div className="flex gap-2">
+            <div className="flex gap-4">
               <div className="flex h-16 w-16 items-center justify-center rounded-full bg-picoJuteBrown">
                 <IoCallOutline color="white" size={32} />
               </div>
@@ -41,7 +41,7 @@ const ContactSection = () => {
                 <div>+91 8240912328</div>
               </div>
             </div>
-            <div className="flex gap-2">
+            <div className="flex gap-4">
               <div className="flex h-16 w-16 items-center justify-center rounded-full bg-picoJuteBrown">
                 <IoMailOutline color="white" size={32} />
               </div>
@@ -51,7 +51,7 @@ const ContactSection = () => {
                 <div>info@picokolkata.com</div>
               </div>
             </div>
-            <div className="flex gap-2">
+            <div className="flex gap-4">
               <div className="flex h-16 w-16 items-center justify-center rounded-full bg-picoJuteBrown">
                 <LuClock9 color="white" size={32} />
               </div>
@@ -61,7 +61,7 @@ const ContactSection = () => {
                 <div>Everyday from 11 AM - 11 PM</div>
               </div>
             </div>
-            <div className="flex gap-2">
+            <div className="flex gap-4">
               <div className="flex h-16 w-16 items-center justify-center rounded-full bg-picoJuteBrown">
                 <IoLocationOutline color="white" size={32} />
               </div>
@@ -83,9 +83,9 @@ const ContactSection = () => {
         </div>
         {/* Google Map */}
         <div className="md:w-[70%]">
-          <div className="h-[400px] w-full overflow-hidden bg-none md:h-[900px]">
+          <div className="h-[400px] w-full overflow-hidden bg-none md:h-[700px]">
             <iframe
-              className="h-[400px] w-full md:h-[900px]"
+              className="h-[400px] w-full md:h-[700px]"
               src="https://maps.google.com/maps?width=626&height=900&hl=en&q=pico cafe kolkata&t=&z=14&ie=UTF8&iwloc=B&output=embed"
             ></iframe>
             <a

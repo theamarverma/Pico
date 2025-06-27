@@ -15,10 +15,10 @@ interface ImagePlayerProps {
 const ImagePlayer = ({ imageUrl, alt = "" }: ImagePlayerProps) => (
   <div
     style={{ position: "relative", width: "100%" }}
-    className="h-[20rem] w-full md:h-[70vh]"
+    className="h-[10rem] w-full md:h-[40rem]"
   >
     <Image
-      className="object-contain md:object-center"
+      className="object-center"
       src={imageUrl}
       alt={alt}
       fill
@@ -166,16 +166,16 @@ const ImageContainer = () => {
 
   return (
     <>
-      <h1 className="flex items-center justify-center text-xl md:text-header">
+      <h1 className="mb-6 flex items-center justify-center text-xl md:mb-12 md:text-header">
         PICO Behind The Scenes
       </h1>
 
       <Swiper
         onSwiper={setSwiperRef}
-        slidesPerView={1}
-        spaceBetween={16}
+        slidesPerView={3}
+        spaceBetween={8}
         breakpoints={{
-          576: { slidesPerView: 2 },
+          576: { slidesPerView: 3 },
           768: { slidesPerView: 3 },
         }}
         loop={false}

@@ -13,13 +13,13 @@ const FormSection = () => {
   };
   return (
     <div>
-      <div className="flex flex-col gap-10 md:mx-20 md:flex-row md:py-12">
-        <div className="left text-center md:w-[40%] md:text-start">
-          <h1 className="text-xl text-picoJuteBrown md:text-header">
+      <div className="mx-6 flex flex-col gap-10 md:mx-20 md:flex-row md:py-12">
+        <div className="left md:w-[40%] md:text-start">
+          <h1 className="text-center text-xl text-picoJuteBrown md:text-start md:text-header">
             {" "}
             Secure your table-
           </h1>{" "}
-          <h3 className="text-xl italic text-picoTeal md:text-header">
+          <h3 className="text-center text-lg italic text-picoTeal md:text-start md:text-header">
             {" "}
             for an unforgettable experience
           </h3>

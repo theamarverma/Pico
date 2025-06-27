@@ -98,12 +98,12 @@ export default function CurrentlyBrewing() {
 
   return (
     <>
-      <div className="my-10 flex flex-col">
-        <div className="flex items-center justify-start gap-8 uppercase tracking-[4px]">
+      <div className="flex flex-col md:my-10">
+        <div className="hidden items-center justify-start gap-8 uppercase tracking-[4px] md:flex">
           <span className="mt-2 h-2 w-20 border-t border-black"></span>what's
           new
         </div>
-        <div className="flex gap-2 md:text-header">
+        <div className="my-10 flex justify-center gap-2 text-2xl md:my-0 md:justify-start md:text-header">
           <h3>Currently</h3>{" "}
           <h3 className="inline-block italic text-picoTeal">Brewing</h3>
         </div>
@@ -142,14 +142,14 @@ export default function CurrentlyBrewing() {
                 }
               : false
           }
-          className="mySwiper h-[500px]"
+          className="mySwiper h-[300px] md:h-[500px]"
           modules={[Keyboard, Navigation, Pagination, Autoplay]}
         >
           {cards.map((card, index) => (
             <SwiperSlide key={index}>
               <a href={card.link} target="_blank" rel="noopener noreferrer">
                 <div className="mx-auto flex w-[80%] flex-col justify-center">
-                  <div className="relative h-[400px] overflow-hidden rounded-xl">
+                  <div className="relative h-[200px] overflow-hidden rounded-xl md:h-[400px]">
                     <Image
                       src={card.imageSrc}
                       alt={card.title}
@@ -158,7 +158,7 @@ export default function CurrentlyBrewing() {
                       className="w-full rounded-xl object-contain"
                     />
                   </div>
-                  <h1 className="text-start text-header"> {card.title}</h1>
+                  <h1 className="text-start md:text-header"> {card.title}</h1>
                   <h3>{card.date}</h3>
                 </div>
               </a>
@@ -166,7 +166,7 @@ export default function CurrentlyBrewing() {
           ))}
         </Swiper>
 
-        <div className="absolute top-1/2 z-10 flex w-full -translate-y-1/2 justify-between px-4">
+        <div className="absolute top-1/2 z-10 hidden w-full -translate-y-1/2 justify-between px-4 md:flex">
           <button
             id="custom-prev-button"
             className="hover:bg-primary-dark hover:text-charity-primary flex h-10 w-10 items-center justify-center rounded-full border border-picoJuteBrown text-picoJuteBrown shadow-md md:h-16 md:w-16"

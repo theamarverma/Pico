@@ -35,8 +35,8 @@ const ContactBanner = () => {
           height={400}
         />
         {/* popup image */}
-        <div className="absolute bottom-4 z-[10] md:-top-48 md:right-32">
-          <div className="mx-10 bg-[url(/images/about/popupCard.png)] bg-cover bg-center md:mx-0 md:h-[470px] md:w-[380px]">
+        <div className="absolute bottom-4 z-[10] md:-top-[30%] md:right-32">
+          <div className="mx-10 bg-[url(/images/about/popupCard.png)] bg-cover bg-center md:mx-0 md:h-[420px] md:w-[380px]">
             <div className="flex flex-col items-center justify-center p-4 md:p-8">
               <div className="hidden w-full items-center gap-2 md:flex">
                 <div className="w-1/6 border-t border-white"></div>
