@@ -1,6 +1,6 @@
 import * as React from "react";
 import { CalendarIcon } from "@radix-ui/react-icons";
-import { format, addDays, isWeekend } from "date-fns"; // Import addDays and isWeekend
+import { format, addDays, isWeekend, isSameDay } from "date-fns"; // Import addDays and isWeekend
 
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
@@ -49,7 +49,8 @@ export function DateTimePicker({ value, onChange }: DateTimePickerProps) {
       if (
         isWeekend(selectedDate) ||
         selectedDate < today ||
-        selectedDate > maxDate
+        selectedDate > maxDate ||
+        nationalHolidays.some((holiday) => isSameDay(selectedDate, holiday))
       ) {
         console.warn(
           "Attempted to select an invalid date (past, weekend, or too far in future). Ignoring.",
@@ -167,6 +168,27 @@ export function DateTimePicker({ value, onChange }: DateTimePickerProps) {
       updateDate(newDate);
     }
   };
+  const nationalHolidays: Date[] = [
+    new Date(2025, 0, 1),
+    new Date(2025, 0, 26),
+    new Date(2025, 1, 26),
+    new Date(2025, 2, 14),
+    new Date(2025, 2, 31),
+    new Date(2025, 3, 10),
+    new Date(2025, 3, 18),
+    new Date(2025, 4, 1),
+    new Date(2025, 4, 12),
+    new Date(2025, 5, 7),
+    new Date(2025, 6, 6),
+    new Date(2025, 7, 15),
+    new Date(2025, 7, 16),
+    new Date(2025, 8, 5),
+    new Date(2025, 9, 2),
+    new Date(2025, 9, 3),
+    new Date(2025, 9, 20),
+    new Date(2025, 10, 5),
+    new Date(2025, 11, 25),
+  ];
 
   // Filter function for the Calendar
   const filterDays = (day: Date) => {
@@ -182,6 +204,10 @@ export function DateTimePicker({ value, onChange }: DateTimePickerProps) {
     if (day > maxDate) {
       return true;
     }
+    if (nationalHolidays.some((holiday) => isSameDay(day, holiday))) {
+      return true; // Return true to disable the day if it matches any holiday
+    }
+
     return false; // Enable all other days
   };
 
