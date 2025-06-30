@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function NewsLetter() {
   return (
     <div>
@@ -13,7 +15,9 @@ export default function NewsLetter() {
             products, and services.
           </h3>
           <button className="rounded-full border-2 border-[#FFC986] p-3 text-xl text-[#E0B354]">
-            <h3 className="italic"> Get the News Letter</h3>
+            <Link href="/Newsletter_PICO.pdf" target="_blank">
+              <h3 className="italic"> Get the News Letter</h3>
+            </Link>
           </button>
         </div>
       </div>
