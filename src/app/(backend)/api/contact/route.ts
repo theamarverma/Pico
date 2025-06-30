@@ -131,7 +131,7 @@ export async function POST(req: NextRequest) {
       Booking ID: bookingID
       Address: Kolkata, Kolkata
 
-      In our endeavor to ensure you have a wonderful experience with us, we request you to keep in mind that your table will be held 15 minutes from the time of reservation, post which it stands released.
+      Please remember, your table will be held for 15 minutes from your reservation time, after which it will be released.
 
       For any queries or further assistance, kindly connect with the restaurant on “+918240912328”
 
