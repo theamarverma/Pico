@@ -94,13 +94,22 @@ const HeaderBanner = () => {
       </div>
       {/* Mobile screen */}
 
-      <div className="relative h-[300px] md:hidden">
-        <Image
-          src={"/images/homepage/header.png"}
-          alt="header"
-          width={1000}
-          height={540}
-        />
+      <div className="relative h-[400px] md:hidden">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          // controls
+          poster="images/homepage/header.png"
+          className="absolute left-1/2 top-1/3 h-[250px] w-full -translate-x-1/2 -translate-y-1/2 object-cover"
+        >
+          <source
+            src="https://res.cloudinary.com/dzpuwffzh/video/upload/v1750159869/header_dprsgp.mp4"
+            type="video/mp4"
+          />
+          Your browser does not support the video tag.
+        </video>
         <div className="absolute top-2/4 mx-10 w-[80%]">
           <div className="flex flex-col justify-start bg-picoTeal">
             <div className="mx-4 my-4 flex flex-col gap-2">
