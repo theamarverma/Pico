@@ -94,7 +94,7 @@ const HeaderBanner = () => {
       </div>
       {/* Mobile screen */}
 
-      <div className="relative h-[400px] md:hidden">
+      <div className="relative h-[370px] md:hidden">
         <video
           autoPlay
           loop
@@ -102,7 +102,7 @@ const HeaderBanner = () => {
           playsInline
           // controls
           poster="images/homepage/header.png"
-          className="absolute left-1/2 top-1/3 h-[250px] w-full -translate-x-1/2 -translate-y-1/2 object-cover"
+          className="absolute left-1/2 top-[40%] h-[250px] w-full -translate-x-1/2 -translate-y-1/2 object-cover"
         >
           <source
             src="https://res.cloudinary.com/dzpuwffzh/video/upload/v1750159869/header_dprsgp.mp4"
