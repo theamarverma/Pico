@@ -117,7 +117,7 @@ const Header = () => {
       {/* Mobile Navigation Panel (slides in from the left) */}
       <div
         className={`fixed left-0 top-0 z-[100002] h-full w-64 transform bg-bgCream shadow-lg transition-transform duration-300 ${
-          mobileNavOpen ? "translate-x-0" : "-translate-x-full"
+          mobileNavOpen ? "-translate-x-0" : "-translate-x-full"
         }`}
       >
         <div className="p-4">
@@ -128,7 +128,18 @@ const Header = () => {
             <IoMdClose className="h-8 w-8" />
             <span className="sr-only">Close navigation menu</span>
           </button>
-          {/* Pass the callback to MobileNavLinks */}
+          <div className="flex items-center justify-center">
+            <Link href="/" className="flex items-center justify-center">
+              <Image
+                src="/logo.png"
+                alt="logo"
+                width={100}
+                height={100}
+                className=""
+              />
+            </Link>
+          </div>
+
           <MobileNavLinks handleLinkClick={() => setMobileNavOpen(false)} />
         </div>
       </div>
