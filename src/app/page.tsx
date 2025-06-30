@@ -55,7 +55,7 @@ export default function HomePage() {
         {" "}
         <Gallery />
       </section>
-      <section className="hidden bg-bgCream px-4 pb-10 md:block md:px-20 md:pb-24">
+      <section className="bg-bgCream px-4 pb-10 md:px-20 md:pb-24">
         {" "}
         <NewsLetter />
       </section>

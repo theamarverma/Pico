@@ -6,7 +6,7 @@ export default function NewsLetter() {
       <div className="relative h-[500px] bg-[url('/images/homepage/newsletter/news_bg.png')] bg-cover bg-center">
         <div className="absolute inset-x-0 h-full bg-[linear-gradient(180deg,rgba(115,115,115,0.28)_0%,#000000_100%)]" />
         <div className="absolute flex h-full w-full flex-col items-center justify-center gap-4 text-center">
-          <div className="flex gap-2 text-header text-white">
+          <div className="flex flex-col gap-2 text-4xl text-white md:flex-row md:text-header">
             <h3 className="italic">Stay Updated </h3>
             <h1>with PICO!</h1>
           </div>
