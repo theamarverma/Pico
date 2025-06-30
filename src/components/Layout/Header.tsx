@@ -117,10 +117,10 @@ const Header = () => {
       {/* Mobile Navigation Panel (slides in from the left) */}
       <div
         className={`fixed left-0 top-0 z-[100002] h-full w-64 transform bg-bgCream shadow-lg transition-transform duration-300 ${
-          mobileNavOpen ? "-translate-x-0" : "-translate-x-full"
+          mobileNavOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
-        <div className="p-4">
+        <div className="space-y-4 p-4">
           <button
             onClick={() => setMobileNavOpen(false)}
             className="mb-4 text-picoTeal"
