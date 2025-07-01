@@ -32,7 +32,7 @@ const FoodGallery = () => {
       name: "Fungi Pesto Pizza Veg ",
       path: "/images/gallery/food/fungiPesto.jpg",
     },
-    { name: "Fire E Chicken ", path: "/images/gallery/food/fireChicken.jpg" },
+
     { name: "Filo Parmesan", path: "/images/gallery/food/filoParmesan.jpg" },
   ];
   const [swiperRef, setSwiperRef] = useState<SwiperClass | null>(null);

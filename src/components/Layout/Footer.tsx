@@ -252,7 +252,7 @@ const Footer = () => {
               <Image
                 className="h-[160px] w-[160px]"
                 alt=""
-                src={"/logo.png"}
+                src={"/footer_logo.png"}
                 width={160}
                 height={160}
               />

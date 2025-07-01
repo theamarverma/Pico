@@ -3,6 +3,28 @@ import React from "react";
 import PicoButton from "../Global/PicoButton";
 import Link from "next/link";
 
+interface GalleryImageCardProps {
+  src: string;
+  alt: string;
+  priority?: boolean;
+}
+
+const GalleryImageCard = ({
+  src,
+  alt,
+  priority = false,
+}: GalleryImageCardProps) => (
+  <div className="relative h-[150px] md:h-[300px]">
+    <Image
+      className="h-full w-full object-cover"
+      src={src}
+      alt={alt}
+      width={600}
+      height={1000}
+      priority={priority}
+    />
+  </div>
+);
 const Gallery = () => {
   return (
     <div>
@@ -15,63 +37,36 @@ const Gallery = () => {
           A Glimpse Into Our World
         </div>
       </div>
-      <div className="grid grid-cols-3 grid-rows-2 gap-4">
-        <div className="h-[200px] md:h-[300px]">
-          <Image
-            className="h-full w-full object-cover"
-            src={"/images/homepage/gallery/coffee.png"}
-            alt=""
-            width={600}
-            height={1000}
-          />
-        </div>
+      <div className="grid grid-cols-3 gap-2 md:gap-4">
+        <GalleryImageCard
+          src="/images/homepage/gallery/coffee.png"
+          alt="A steaming cup of coffee"
+          priority={true}
+        />
+        <GalleryImageCard
+          src="/images/homepage/gallery/iceTea.png"
+          alt="A glass of refreshing iced tea"
+          priority={true}
+        />
+        <GalleryImageCard
+          src="/images/homepage/gallery/noodles.png"
+          alt="A bowl of delicious noodles"
+          priority={true}
+        />
 
-        <div className="h-[200px] md:h-[300px]">
-          <Image
-            className="h-full"
-            src={"/images/homepage/gallery/iceTea.png"}
-            alt=""
-            width={600}
-            height={1000}
-          />
-        </div>
-        <div className="h-[200px] md:h-[300px]">
-          <Image
-            className="h-full object-cover"
-            src={"/images/homepage/gallery/noodles.png"}
-            alt=""
-            width={600}
-            height={1000}
-          />
-        </div>
-        <div className="h-[200px] md:h-[300px]">
-          <Image
-            className="h-full w-full object-cover"
-            src={"/images/homepage/gallery/coffee.png"}
-            alt=""
-            width={600}
-            height={1000}
-          />
-        </div>
-
-        <div className="h-[200px] md:h-[300px]">
-          <Image
-            className="h-full object-cover"
-            src={"/images/homepage/gallery/iceTea.png"}
-            alt=""
-            width={600}
-            height={1000}
-          />
-        </div>
-        <div className="h-[200px] md:h-[300px]">
-          <Image
-            className="h-full object-cover"
-            src={"/images/homepage/gallery/noodles.png"}
-            alt=""
-            width={600}
-            height={1000}
-          />
-        </div>
+        {/* Second Row (automatically created by grid) */}
+        <GalleryImageCard
+          src="/images/homepage/gallery/coffee.png"
+          alt="Another steaming cup of coffee"
+        />
+        <GalleryImageCard
+          src="/images/homepage/gallery/iceTea.png"
+          alt="Another glass of refreshing iced tea"
+        />
+        <GalleryImageCard
+          src="/images/homepage/gallery/noodles.png"
+          alt="Another bowl of delicious noodles"
+        />
       </div>
 
       <Link href="/gallery" className="mt-10 flex items-center justify-center">
