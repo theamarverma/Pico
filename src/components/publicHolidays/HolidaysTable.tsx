@@ -54,7 +54,7 @@ export function HolidaysTable() {
       <TableBody className="">
         {holidays.map((holiday, index) => (
           <TableRow key={index}>
-            <TableCell className="w-1/4 md:w-1/5 md:font-medium">
+            <TableCell className="w-1/4 font-medium md:w-1/5">
               {holiday.date}
             </TableCell>
             <TableCell>{holiday.day}</TableCell>
