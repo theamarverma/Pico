@@ -13,7 +13,7 @@ const holidays = [
   { date: "23 Jan", day: "Thu", holiday: "Netaji Subhas Chandra Bose Jayanti" },
   { date: "26 Jan", day: "Sun", holiday: "Republic Day" },
   { date: "03 Feb", day: "Mon", holiday: "Vasant Panchami" },
-  { date: "14 Feb", day: "Mon", holiday: "Valentine Day" },
+  { date: "14 Feb", day: "Mon", holiday: "Valentine's Day" },
   { date: "14 Mar", day: "Fri", holiday: "Doljatra" },
   { date: "31 Mar", day: "Mon", holiday: "Id-ul-Fitr (Ramzan Eid)" },
   {
