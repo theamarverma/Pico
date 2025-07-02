@@ -8,6 +8,7 @@ import { GrNext, GrPrevious } from "react-icons/gr";
 import { Autoplay, Grid } from "swiper/modules";
 import PicoImage from "../Global/PicoImage";
 import React from "react";
+import Image from "next/image";
 
 const CoffeeGallery = () => {
   const coffeItems = [
@@ -76,7 +77,25 @@ const CoffeeGallery = () => {
         >
           {coffeItems.map((item, index) => (
             <SwiperSlide key={index}>
-              <PicoImage path={item.path} name={item.name} />
+              <div>
+                <div className="relative h-[196px] md:h-[500px]">
+                  <Image
+                    src={item.path}
+                    alt="Normal Image"
+                    fill
+                    className="absolute inset-0 z-10 object-cover"
+                  />
+                  {/* gradient */}
+                  <div className="absolute inset-x-0 bottom-0 z-10 h-16 bg-gradient-to-b from-black/5 via-black/30 to-black" />
+                  {/* Text Overlay */}
+                  <div className="absolute bottom-0 left-0 right-0 z-30 p-2 text-center text-white">
+                    <h1 className="text-[10px] leading-relaxed md:text-xl">
+                      {" "}
+                      {item.name}
+                    </h1>
+                  </div>
+                </div>
+              </div>
             </SwiperSlide>
           ))}
         </Swiper>
