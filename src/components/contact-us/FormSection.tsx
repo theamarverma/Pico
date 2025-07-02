@@ -57,7 +57,7 @@ const FormSection = () => {
             </h3>
           </div>
         </div>
-        <div className="right flex-grow">
+        <div className="right mx-0 flex-grow md:mx-4">
           <ContactForm />
         </div>
       </div>
