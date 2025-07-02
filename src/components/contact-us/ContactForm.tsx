@@ -56,7 +56,7 @@ export default function ReservationForm() {
   });
 
   return (
-    <div>
+    <div className="flex h-full flex-col justify-center">
       <form
         className="space-y-10"
         onSubmit={(e) => {
