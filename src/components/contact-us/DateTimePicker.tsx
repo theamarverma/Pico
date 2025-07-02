@@ -1,6 +1,6 @@
 import * as React from "react";
 import { CalendarIcon } from "@radix-ui/react-icons";
-import { format, addDays, isWeekend, isSameDay } from "date-fns"; // Import addDays and isWeekend
+import { format, addDays, isWeekend, isSameDay } from "date-fns";
 
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
@@ -24,15 +24,12 @@ export function DateTimePicker({ value, onChange }: DateTimePickerProps) {
   const date = value ?? internalDate;
   const [isOpen, setIsOpen] = React.useState(false);
 
-  // Define the minimum selectable date as today (start of day)
   const today = new Date();
   today.setHours(0, 0, 0, 0);
 
-  // Define the maximum selectable date (today + 7 days, end of day)
-  const maxDate = addDays(new Date(), 7); // Use date-fns addDays
-  maxDate.setHours(23, 59, 59, 999); // Set to end of the 7th day
+  const maxDate = addDays(new Date(), 7);
+  maxDate.setHours(23, 59, 59, 999);
 
-  // Define business hours (11 AM to 11 PM)
   const hours = Array.from({ length: 13 }, (_, i) => 11 + i);
 
   const updateDate = (newDate: Date) => {
@@ -45,7 +42,6 @@ export function DateTimePicker({ value, onChange }: DateTimePickerProps) {
 
   const handleDateSelect = (selectedDate: Date | undefined) => {
     if (selectedDate) {
-      // Apply the same filtering logic to ensure selected date is valid
       if (
         isWeekend(selectedDate) ||
         selectedDate < today ||
@@ -55,22 +51,18 @@ export function DateTimePicker({ value, onChange }: DateTimePickerProps) {
         console.warn(
           "Attempted to select an invalid date (past, weekend, or too far in future). Ignoring.",
         );
-        return; // Do not update if the date is invalid
+        return;
       }
 
       if (date) {
         const newDate = new Date(selectedDate);
         newDate.setHours(date.getHours(), date.getMinutes());
 
-        // If the selected date is today, and the current time of day for newDate is in the past,
-        // adjust to the earliest selectable time (11 AM for the current day).
         const now = new Date();
         const elevenAMToday = new Date(selectedDate);
         elevenAMToday.setHours(11, 0, 0, 0);
 
         if (newDate.toDateString() === now.toDateString() && newDate < now) {
-          // If the selected date is today, and the time set is already in the past,
-          // set it to the current time, or the earliest available time (e.g., 11 AM if earlier than 11 AM).
           const earliestValidTime = Math.max(
             now.getTime(),
             elevenAMToday.getTime(),
@@ -80,8 +72,6 @@ export function DateTimePicker({ value, onChange }: DateTimePickerProps) {
 
         updateDate(newDate);
       } else {
-        // If no date is currently selected, set it to the selectedDate
-        // Ensure initial selection respects time constraints for today
         const now = new Date();
         const initialDate = new Date(selectedDate);
         const elevenAMSelectedDay = new Date(selectedDate);
@@ -100,7 +90,6 @@ export function DateTimePicker({ value, onChange }: DateTimePickerProps) {
           initialDate.toDateString() !== now.toDateString() &&
           initialDate < elevenAMSelectedDay
         ) {
-          // For future days, default to 11 AM if no time is explicitly set
           initialDate.setHours(11, 0, 0, 0);
         }
 
@@ -115,21 +104,17 @@ export function DateTimePicker({ value, onChange }: DateTimePickerProps) {
   ) => {
     if (date) {
       const newDate = new Date(date);
+
       if (type === "hour") {
         const selectedHour = parseInt(value);
         let newHour = selectedHour;
         const currentAMPM = newDate.getHours() >= 12 ? "PM" : "AM";
 
-        // Adjust for AM/PM logic based on current state to maintain integrity
-        // Simplified AM/PM handling for 12-hour display conversion
-        if (currentAMPM === "PM" && selectedHour < 12 && selectedHour !== 0) {
-          // If PM and selected is 1-11, add 12
+        if (currentAMPM === "PM" && selectedHour < 12) {
           newHour = selectedHour + 12;
         } else if (currentAMPM === "AM" && selectedHour === 12) {
-          // If AM and selected is 12, make it 12 AM (0 hour)
           newHour = 0;
         } else if (selectedHour === 12 && currentAMPM === "PM") {
-          // If selected 12 PM, keep 12
           newHour = 12;
         } else {
           newHour = selectedHour;
@@ -146,25 +131,38 @@ export function DateTimePicker({ value, onChange }: DateTimePickerProps) {
         }
       }
 
-      // Check if the new combined date and time is in the past OR outside business hours (11 AM to 11 PM)
+      // Always allow AM/PM changes, then validate the final time
       const now = new Date();
       const isToday = newDate.toDateString() === now.toDateString();
 
-      // Ensure time is within 11 AM - 11 PM range
+      // Check if time is within allowed business hours
       const newHour = newDate.getHours();
-      if (newHour < 11 || newHour > 23) {
-        // 11 AM (11) to 11 PM (23)
+      const newMinute = newDate.getMinutes();
+
+      // Valid times: 11:00 AM, 11:30 AM, and 12:00 PM - 10:30 PM
+      const isValidTime =
+        (newHour === 11 && (newMinute === 0 || newMinute === 30)) || // 11:00 AM or 11:30 AM
+        (newHour >= 12 && newHour <= 22); // 12:00 PM - 10:59 PM
+
+      // Additional check for 10 PM - only allow up to 10:30 PM
+      if (newHour === 22 && newMinute > 30) {
+        console.warn("Time after 10:30 PM is not allowed. Ignoring.");
+        return;
+      }
+
+      // Only validate business hours for hour and minute changes, not AM/PM changes
+      if (type !== "ampm" && !isValidTime) {
         console.warn(
-          "Attempted to select time outside business hours (11 AM - 11 PM). Ignoring.",
+          "Attempted to select time outside business hours (11:00 AM, 11:30 AM, or 12:00 PM - 10:30 PM). Ignoring.",
         );
         return;
       }
 
       if (isToday && newDate < now) {
         console.warn("Attempted to select a past time for today. Ignoring.");
-        // Optionally, reset to current time or disallow update
         return;
       }
+
       updateDate(newDate);
     }
   };
@@ -190,25 +188,21 @@ export function DateTimePicker({ value, onChange }: DateTimePickerProps) {
     new Date(2025, 11, 25),
   ];
 
-  // Filter function for the Calendar
   const filterDays = (day: Date) => {
-    // Disable Saturdays and Sundays
     if (isWeekend(day)) {
       return true;
     }
-    // Disable dates before today (already handled by fromDate, but good for explicit filter)
     if (day < today) {
       return false;
     }
-    // Disable dates more than 7 days from today
     if (day > maxDate) {
       return true;
     }
     if (nationalHolidays.some((holiday) => isSameDay(day, holiday))) {
-      return true; // Return true to disable the day if it matches any holiday
+      return true;
     }
 
-    return false; // Enable all other days
+    return false;
   };
 
   return (
@@ -236,37 +230,34 @@ export function DateTimePicker({ value, onChange }: DateTimePickerProps) {
             selected={date}
             onSelect={handleDateSelect}
             initialFocus
-            fromDate={today} // Restrict past dates
-            toDate={maxDate} // Restrict dates beyond 7 days (optional, filter will also handle)
-            disabled={filterDays} // Apply the custom filter function
+            fromDate={today}
+            toDate={maxDate}
+            disabled={filterDays}
           />
           <div className="flex flex-col divide-y sm:h-[300px] sm:flex-row sm:divide-x sm:divide-y-0">
-            {/* Hour Selector */}
             <ScrollArea className="w-64 sm:w-auto">
               <div className="flex p-2 sm:flex-col">
                 {hours
                   .slice()
-                  .reverse() // Display in descending order for better scroll experience
+                  .reverse()
+                  .filter((hour) => hour !== 23)
                   .map((hour) => {
                     const displayHour =
-                      hour > 12 ? hour - 12 : hour === 0 ? 12 : hour; // Convert 24-hour to 12-hour format, 0 to 12 AM
+                      hour > 12 ? hour - 12 : hour === 0 ? 12 : hour;
                     const isCurrentHour = date && date.getHours() === hour;
 
-                    // Disable hours if they are in the past for the selected day AND it's today
                     const now = new Date();
                     const isSelectedDateToday =
                       date && date.toDateString() === now.toDateString();
+
                     const isDisabled =
                       isSelectedDateToday &&
-                      (hour < now.getHours() || hour < 11 || hour > 23); // Also disable if outside business hours
+                      (hour < now.getHours() || hour < 11 || hour > 22);
                     if (
                       isSelectedDateToday &&
                       hour === now.getHours() &&
                       now.getMinutes() > 30
                     ) {
-                      // If current minute is past 30, and we only allow 00 or 30, then this hour is effectively passed for new bookings
-                      // Or, more simply, disable if the current time is past the target hour
-                      // This specific logic depends on how granular you want the "past time" check to be.
                     }
 
                     return (
@@ -287,7 +278,6 @@ export function DateTimePicker({ value, onChange }: DateTimePickerProps) {
               </div>
               <ScrollBar orientation="horizontal" className="sm:hidden" />
             </ScrollArea>
-            {/* Minute Selector */}
             <ScrollArea className="w-64 sm:w-auto">
               <div className="flex p-2 sm:flex-col">
                 {[0, 30].map((minute) => {
@@ -298,10 +288,6 @@ export function DateTimePicker({ value, onChange }: DateTimePickerProps) {
                   const isCurrentHour =
                     date && date.getHours() === now.getHours();
 
-                  // Disable minutes if:
-                  // 1. It's today AND
-                  // 2. It's the current hour AND
-                  // 3. The minute is less than the current minute
                   const isDisabled =
                     isSelectedDateToday &&
                     isCurrentHour &&
@@ -325,7 +311,6 @@ export function DateTimePicker({ value, onChange }: DateTimePickerProps) {
               </div>
               <ScrollBar orientation="horizontal" className="sm:hidden" />
             </ScrollArea>
-            {/* AM/PM Selector */}
             <ScrollArea>
               <div className="flex p-2 sm:flex-col">
                 {["AM", "PM"].map((ampm) => {
@@ -338,14 +323,13 @@ export function DateTimePicker({ value, onChange }: DateTimePickerProps) {
                   const isSelectedDateToday =
                     date && date.toDateString() === now.toDateString();
 
-                  // Disable AM/PM if it makes the time go into the past for today
                   const isDisabled =
                     isSelectedDateToday &&
-                    ((ampm === "AM" && now.getHours() >= 12) || // Cannot select AM if it's already PM
+                    ((ampm === "AM" && now.getHours() >= 12) ||
                       (ampm === "PM" &&
                         now.getHours() < 12 &&
                         date &&
-                        date.getHours() < 11)); // Cannot select PM if it's currently AM and selected hour is before business hours (11 AM)
+                        date.getHours() < 11));
 
                   return (
                     <Button
