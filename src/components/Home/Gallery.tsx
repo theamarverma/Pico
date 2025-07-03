@@ -14,7 +14,7 @@ const GalleryImageCard = ({
   alt,
   priority = false,
 }: GalleryImageCardProps) => (
-  <div className="relative h-[150px] md:h-[300px]">
+  <div className="relative h-[150px] md:h-[500px]">
     <Image
       className="h-full w-full object-cover"
       src={src}
@@ -26,6 +26,32 @@ const GalleryImageCard = ({
   </div>
 );
 const Gallery = () => {
+  const galleryImages = [
+    {
+      src: "https://res.cloudinary.com/dzpuwffzh/image/upload/v1751557610/DOC-20250703-WA0002_bxpt3s.jpg",
+      alt: "A steaming cup of coffee",
+    },
+    {
+      src: "https://res.cloudinary.com/dzpuwffzh/image/upload/v1751557584/DOC-20250703-WA0004_lqqsrv.jpg",
+      alt: "A glass of refreshing iced tea",
+    },
+    {
+      src: "https://res.cloudinary.com/dzpuwffzh/image/upload/v1751557609/DOC-20250703-WA0003_z8mcyh.jpg",
+      alt: "A bowl of delicious noodles",
+    },
+    {
+      src: "https://res.cloudinary.com/dzpuwffzh/image/upload/v1751557594/DOC-20250703-WA0005_qsuzic.jpg",
+      alt: "Another steaming cup of coffee",
+    },
+    {
+      src: "https://res.cloudinary.com/dzpuwffzh/image/upload/v1751557604/DOC-20250703-WA0007_fyj3aa.jpg",
+      alt: "Another glass of refreshing iced tea",
+    },
+    {
+      src: "https://res.cloudinary.com/dzpuwffzh/image/upload/v1751557622/DOC-20250703-WA0006_y6w5v8.jpg",
+      alt: "Another bowl of delicious noodles",
+    },
+  ];
   return (
     <div>
       <div className="">
@@ -38,35 +64,14 @@ const Gallery = () => {
         </div>
       </div>
       <div className="grid grid-cols-3 gap-2 md:gap-4">
-        <GalleryImageCard
-          src="/images/homepage/gallery/coffee.png"
-          alt="A steaming cup of coffee"
-          priority={true}
-        />
-        <GalleryImageCard
-          src="/images/homepage/gallery/iceTea.png"
-          alt="A glass of refreshing iced tea"
-          priority={true}
-        />
-        <GalleryImageCard
-          src="/images/homepage/gallery/noodles.png"
-          alt="A bowl of delicious noodles"
-          priority={true}
-        />
-
-        {/* Second Row (automatically created by grid) */}
-        <GalleryImageCard
-          src="/images/homepage/gallery/coffee.png"
-          alt="Another steaming cup of coffee"
-        />
-        <GalleryImageCard
-          src="/images/homepage/gallery/iceTea.png"
-          alt="Another glass of refreshing iced tea"
-        />
-        <GalleryImageCard
-          src="/images/homepage/gallery/noodles.png"
-          alt="Another bowl of delicious noodles"
-        />
+        {galleryImages.map((image, index) => (
+          <GalleryImageCard
+            key={index}
+            src={image.src}
+            alt={image.alt}
+            priority={index === 0}
+          />
+        ))}
       </div>
 
       <Link href="/gallery" className="mt-10 flex items-center justify-center">
