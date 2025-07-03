@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/table";
 
 const holidays = [
+  { date: "01 Jan", day: "Wed", holiday: "New Year's Day" },
   { date: "12 Jan", day: "Sun", holiday: "Swami Vivekananda Jayanti" },
   { date: "23 Jan", day: "Thu", holiday: "Netaji Subhas Chandra Bose Jayanti" },
   { date: "26 Jan", day: "Sun", holiday: "Republic Day" },
@@ -37,6 +38,7 @@ const holidays = [
   { date: "21 Oct", day: "Tue", holiday: "Diwali (Deepavali) (Tentative)" },
   { date: "05 Nov", day: "Wed", holiday: "Guru Nanak Jayanti" },
   { date: "25 Dec", day: "Thu", holiday: "Christmas Day" },
+  { date: "31 Dec", day: "Wed", holiday: "New Year's Eve" },
 ];
 
 export function HolidaysTable() {
