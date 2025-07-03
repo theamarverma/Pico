@@ -81,6 +81,8 @@ const Nav = () => {
 };
 
 const Header = () => {
+  const [mobileNavOpen, setMobileNavOpen] = useState(false);
+
   return (
     <div className="fixed z-[100000] w-full">
       {/* Desktop Header */}
@@ -98,6 +100,48 @@ const Header = () => {
         <Link href="/" className="flex items-center justify-center">
           <Image src="/logo.png" alt="logo" width={60} height={60} />
         </Link>
+        <button onClick={() => setMobileNavOpen(true)} className="text-black">
+          <RxHamburgerMenu className="h-8 w-8" />
+          <span className="sr-only">Open navigation menu</span>
+        </button>
+      </div>
+
+      {/* Mobile Navigation Backdrop */}
+      {mobileNavOpen && (
+        <div
+          className="fixed inset-0 z-[100001] bg-black bg-opacity-50"
+          onClick={() => setMobileNavOpen(false)}
+        ></div>
+      )}
+
+      {/* Mobile Navigation Panel (slides in from the left) */}
+      <div
+        className={`fixed left-0 top-0 z-[100002] h-full w-64 transform bg-bgCream shadow-lg transition-transform duration-300 ${
+          mobileNavOpen ? "translate-x-0" : "-translate-x-full"
+        }`}
+      >
+        <div className="space-y-4 p-4">
+          <button
+            onClick={() => setMobileNavOpen(false)}
+            className="mb-4 text-picoTeal"
+          >
+            <IoMdClose className="h-8 w-8" />
+            <span className="sr-only">Close navigation menu</span>
+          </button>
+          <div className="flex items-center justify-center">
+            <Link href="/" className="flex items-center justify-center">
+              <Image
+                src="/logo.png"
+                alt="logo"
+                width={100}
+                height={100}
+                className=""
+              />
+            </Link>
+          </div>
+
+          <MobileNavLinks handleLinkClick={() => setMobileNavOpen(false)} />
+        </div>
       </div>
     </div>
   );
