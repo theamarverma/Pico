@@ -33,8 +33,10 @@ const Specialities = () => {
         <div className="h-[460px]">
           {" "}
           <Image
-            className="h-[90%] md:h-full"
-            src={"/images/about/pizzas.png"}
+            className="h-[90%] object-cover md:h-full"
+            src={
+              "https://res.cloudinary.com/dzpuwffzh/image/upload/v1751557623/DOC-20250703-WA0001_yma7tv.jpg"
+            }
             alt="best menu"
             width={1000}
             height={600}
@@ -47,7 +49,7 @@ const Specialities = () => {
         <div className="h-[460px]">
           {" "}
           <Image
-            className="h-[90%] md:h-full"
+            className="h-[90%] object-cover md:h-full"
             src={"/images/about/coffees.png"}
             alt="best menu"
             width={1000}
@@ -58,7 +60,7 @@ const Specialities = () => {
         <div className="h-[460px]">
           {" "}
           <Image
-            className="h-[90%] md:h-full"
+            className="h-[90%] object-cover md:h-full"
             src={"/images/about/breads.png"}
             alt="best menu"
             width={1000}

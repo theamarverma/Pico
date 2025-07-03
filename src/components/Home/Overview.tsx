@@ -38,9 +38,7 @@ const Overview = () => {
             <Image
               className=""
               alt="overview"
-              src={
-                "https://res.cloudinary.com/dzpuwffzh/image/upload/v1751557623/DOC-20250703-WA0001_yma7tv.jpg"
-              }
+              src={"/images/homepage/overview.png"}
               width={1000}
               height={600}
             />
