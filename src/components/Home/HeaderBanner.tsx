@@ -98,7 +98,6 @@ const HeaderBanner = () => {
         <video
           autoPlay
           loop
-          muted
           playsInline
           // controls
           poster="images/homepage/header.png"

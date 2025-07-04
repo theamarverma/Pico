@@ -21,15 +21,15 @@ const FoodGallery = () => {
     },
     { name: "Pesto Burrata ", path: "/images/gallery/food/pestoBurrata.jpg" },
     {
-      name: "Pepporoni Pizza ",
+      name: "Pepperoni Pizza ",
       path: "/images/gallery/food/pepperoniPizza.jpg",
     },
     {
-      name: "Margerita Pizza Veg ",
+      name: "Margerita Pizza ",
       path: "/images/gallery/food/mageritaPizza.jpg",
     },
     {
-      name: "Fungi Pesto Pizza Veg ",
+      name: "Fungi Pesto Pizza ",
       path: "/images/gallery/food/fungiPesto.jpg",
     },
 
