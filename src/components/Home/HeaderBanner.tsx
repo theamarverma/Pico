@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import Link from "next/link";
 import {
@@ -7,9 +7,30 @@ import {
   IoCallOutline,
   IoLogoWhatsapp,
 } from "react-icons/io5";
-
+import { FaVolumeMute } from "react-icons/fa";
+import { FaVolumeHigh } from "react-icons/fa6";
 import { CiMail } from "react-icons/ci";
+
 const HeaderBanner = () => {
+  const [isDesktopMuted, setIsDesktopMuted] = useState(true);
+  const [isMobileMuted, setIsMobileMuted] = useState(true);
+
+  const toggleDesktopMute = () => {
+    const video = document.getElementById("desktopVideo") as HTMLVideoElement;
+    if (video) {
+      video.muted = !video.muted;
+      setIsDesktopMuted(video.muted);
+    }
+  };
+
+  const toggleMobileMute = () => {
+    const video = document.getElementById("mobileVideo") as HTMLVideoElement;
+    if (video) {
+      video.muted = !video.muted;
+      setIsMobileMuted(video.muted);
+    }
+  };
+
   return (
     <div>
       <div className="mx-4 md:mx-20 md:w-[790px]">
@@ -31,11 +52,11 @@ const HeaderBanner = () => {
       {/* Laptop screen */}
       <div className="parent relative hidden w-full flex-col justify-end md:flex md:h-[1040px]">
         <video
+          id="desktopVideo"
           autoPlay
           loop
           muted
           playsInline
-          // controls
           poster="images/homepage/header.png"
           className="absolute left-1/2 top-1/2 h-full w-full -translate-x-1/2 -translate-y-1/2 object-cover"
         >
@@ -45,6 +66,30 @@ const HeaderBanner = () => {
           />
           Your browser does not support the video tag.
         </video>
+        <button
+          onClick={toggleDesktopMute}
+          style={{
+            position: "absolute",
+            top: 15,
+            left: 15,
+            backgroundColor: "rgba(0, 0, 0, 0.4)",
+            border: "none",
+            borderRadius: 25,
+            padding: 8,
+            cursor: "pointer",
+            zIndex: 10,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+          className="mute-button"
+        >
+          {isDesktopMuted ? (
+            <FaVolumeMute color="white" size={20} />
+          ) : (
+            <FaVolumeHigh color="white" size={20} />
+          )}
+        </button>
         {/* /----------------popup card---------------- */}
         <div className="absolute -top-[20%] right-16 z-10">
           <div className="parent flex h-[400px] w-[340px] flex-col justify-start bg-[url('/images/homepage/card.png')] bg-cover bg-center">
@@ -96,10 +141,11 @@ const HeaderBanner = () => {
 
       <div className="relative h-[370px] md:hidden">
         <video
+          id="mobileVideo"
           autoPlay
           loop
+          muted
           playsInline
-          // controls
           poster="images/homepage/header.png"
           className="absolute left-1/2 top-1/2 h-full w-full -translate-x-1/2 -translate-y-1/2 object-cover"
         >
@@ -109,6 +155,30 @@ const HeaderBanner = () => {
           />
           Your browser does not support the video tag.
         </video>
+        <button
+          onClick={toggleMobileMute}
+          style={{
+            position: "absolute",
+            top: 15,
+            left: 15,
+            backgroundColor: "rgba(0, 0, 0, 0.4)",
+            border: "none",
+            borderRadius: 25,
+            padding: 8,
+            cursor: "pointer",
+            zIndex: 10,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+          className="mute-button"
+        >
+          {isMobileMuted ? (
+            <FaVolumeMute color="white" size={20} />
+          ) : (
+            <FaVolumeHigh color="white" size={20} />
+          )}
+        </button>
         <div className="top-2/4 mx-10 hidden w-[80%]">
           <div className="flex flex-col justify-start bg-picoTeal">
             <div className="mx-4 my-4 flex flex-col gap-2">
