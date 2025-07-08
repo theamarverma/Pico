@@ -4,6 +4,7 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { IoMdClose } from "react-icons/io";
+import CatalogueDropdown from "./CataloguesDropdown";
 interface Props {
   handleLinkClick: () => void;
 }
@@ -38,6 +39,23 @@ const MobileNavLinks = ({ handleLinkClick }: Props) => {
       >
         Contact Us
       </Link>
+      <Link
+        href={"/Beverage_Menu_PICO.pdf"}
+        target="_blank"
+        onClick={handleLinkClick}
+        className="block text-lg hover:text-picoTeal"
+      >
+        Beverage Menu
+      </Link>
+      <Link
+        href={"/Food_Menu_PICO.pdf"}
+        target="_blank"
+        onClick={handleLinkClick}
+        className="block text-lg hover:text-picoTeal"
+      >
+        Food Menu
+      </Link>
+      <CatalogueDropdown />
     </div>
   );
 };
