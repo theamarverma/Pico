@@ -67,7 +67,7 @@ const Footer = () => {
             {/* Social Links */}
             <div className="">
               <h2>Social Links</h2>
-              <ul>
+              <ul className="footer-ul">
                 <li>
                   <Link
                     href={"https://www.instagram.com/picokolkata?utm_source=qr"}
@@ -126,7 +126,7 @@ const Footer = () => {
             {/* Important Links */}
             <div>
               <h2>Important Links</h2>
-              <ul>
+              <ul className="footer-ul">
                 <li>
                   <Link
                     target="_blank"
@@ -304,7 +304,7 @@ const Footer = () => {
               {/* Social Links */}
               <div className="">
                 <h2>Social Links</h2>
-                <ul>
+                <ul className="footer-ul">
                   <li>
                     <Link
                       href={
@@ -368,7 +368,7 @@ const Footer = () => {
               {/* Important Links */}
               <div className="w-[80%]">
                 <h2>Important Links</h2>
-                <ul>
+                <ul className="footer-ul">
                   <li>
                     <Link
                       target="_blank"

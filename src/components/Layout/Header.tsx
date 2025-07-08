@@ -5,6 +5,7 @@ import React, { useState } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { IoMdClose } from "react-icons/io";
 import CatalogueDropdown from "./CataloguesDropdown";
+import MenuDropdown from "./MenuDropdown";
 interface Props {
   handleLinkClick: () => void;
 }
@@ -39,22 +40,7 @@ const MobileNavLinks = ({ handleLinkClick }: Props) => {
       >
         Contact Us
       </Link>
-      <Link
-        href={"/Beverage_Menu_PICO.pdf"}
-        target="_blank"
-        onClick={handleLinkClick}
-        className="block text-lg hover:text-picoTeal"
-      >
-        Beverage Menu
-      </Link>
-      <Link
-        href={"/Food_Menu_PICO.pdf"}
-        target="_blank"
-        onClick={handleLinkClick}
-        className="block text-lg hover:text-picoTeal"
-      >
-        Food Menu
-      </Link>
+      <MenuDropdown />
       <CatalogueDropdown />
     </div>
   );
@@ -65,7 +51,7 @@ const Nav = () => {
     <div className="flex items-center gap-10">
       <Link
         href="/"
-        className="group relative mt-2 inline-block hover:text-picoTeal"
+        className="group relative inline-block text-md hover:text-picoTeal"
       >
         Home
         <span className="absolute -bottom-2 left-1/2 hidden h-[2px] w-0 -translate-x-1/2 transform bg-picoTeal transition-all duration-300 group-hover:flex group-hover:w-[40px] group-hover:items-center group-hover:justify-center md:block"></span>
@@ -73,7 +59,7 @@ const Nav = () => {
 
       <Link
         href="/about-us"
-        className="group relative mt-2 inline-block hover:text-picoTeal"
+        className="group relative inline-block text-md hover:text-picoTeal"
       >
         About Us
         <span className="absolute -bottom-2 left-1/2 hidden h-[2px] w-0 -translate-x-1/2 transform bg-picoTeal transition-all duration-300 group-hover:flex group-hover:w-[40px] group-hover:items-center group-hover:justify-center md:block"></span>
@@ -81,7 +67,7 @@ const Nav = () => {
 
       <Link
         href="/gallery"
-        className="group relative mt-2 inline-block hover:text-picoTeal"
+        className="group relative inline-block text-md hover:text-picoTeal"
       >
         Gallery
         <span className="absolute -bottom-2 left-1/2 hidden h-[2px] w-0 -translate-x-1/2 transform bg-picoTeal transition-all duration-300 group-hover:flex group-hover:w-[40px] group-hover:items-center group-hover:justify-center md:block"></span>
@@ -89,11 +75,13 @@ const Nav = () => {
 
       <Link
         href="/contact-us"
-        className="group relative mt-2 inline-block hover:text-picoTeal"
+        className="group relative inline-block text-md hover:text-picoTeal"
       >
         Contact Us
         <span className="absolute -bottom-2 left-1/2 hidden h-[2px] w-0 -translate-x-1/2 transform bg-picoTeal transition-all duration-300 group-hover:flex group-hover:w-[40px] group-hover:items-center group-hover:justify-center md:block"></span>
       </Link>
+      <MenuDropdown />
+      <CatalogueDropdown />
     </div>
   );
 };
@@ -102,7 +90,7 @@ const Header = () => {
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
 
   return (
-    <div className="fixed z-[100000] w-full">
+    <div className="fixed z-[100] w-full">
       {/* Desktop Header */}
       <div className="hidden border-b border-picoJuteBrown bg-bgCream md:block">
         <div className="flex justify-between px-20 py-4">
