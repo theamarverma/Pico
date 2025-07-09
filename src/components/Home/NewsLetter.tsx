@@ -34,11 +34,6 @@ export default function NewsLetter() {
               </button>
             </TabsContent>
           </Tabs>
-          {/* <button className="rounded-full border-2 border-[#FFC986] p-3 text-xl text-[#E0B354]">
-            <Link href="/Newsletter_PICO.pdf" target="_blank">
-              <h3 className="italic"> Get the News Letter</h3>
-            </Link>
-          </button> */}
         </div>
       </div>
     </div>
