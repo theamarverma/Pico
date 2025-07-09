@@ -29,6 +29,93 @@ const ImagePlayer = ({ imageUrl, alt = "" }: ImagePlayerProps) => (
 
 const ImageContainer = () => {
   const mediaItems = [
+    // updated 9th - july
+    {
+      imageUrl:
+        "https://res.cloudinary.com/dzpuwffzh/image/upload/v1752070514/Pico_Cold_Brew_1_frp4cb.jpg",
+      alt: "Image 1",
+    },
+    {
+      imageUrl:
+        "https://res.cloudinary.com/dzpuwffzh/image/upload/v1752070514/Pico_Crew_4_iq1e8k.jpg",
+      alt: "Sample 3",
+    },
+    {
+      imageUrl:
+        "https://res.cloudinary.com/dzpuwffzh/image/upload/v1752070513/Pico_Coffee_3_obgspu.jpg",
+      alt: "Sample 3",
+    },
+    {
+      imageUrl:
+        "https://res.cloudinary.com/dzpuwffzh/image/upload/v1752070511/Pico_Newsletter_caqtqg.jpg",
+      alt: "Sample 3",
+    },
+    {
+      imageUrl:
+        "https://res.cloudinary.com/dzpuwffzh/image/upload/v1752070509/Pico_Crew_1_i1ubsw.jpg",
+      alt: "Sample 5",
+    },
+    {
+      imageUrl:
+        "https://res.cloudinary.com/dzpuwffzh/image/upload/v1752070507/Pico_Crew_3_r7thx3.jpg",
+      alt: "Image 1",
+    },
+    {
+      imageUrl:
+        "https://res.cloudinary.com/dzpuwffzh/image/upload/v1752070505/Pico_Cold_Brew_2_yxbtjo.jpg",
+      alt: "Sample 2",
+    },
+    {
+      imageUrl:
+        "https://res.cloudinary.com/dzpuwffzh/image/upload/v1752070502/Pico_Crew_2_s5p7ku.jpg",
+      alt: "Sample 3",
+    },
+    {
+      imageUrl:
+        "https://res.cloudinary.com/dzpuwffzh/image/upload/v1752070500/Pico_Mango_Tart_abo3iy.jpg",
+      alt: "Image 1",
+    },
+    {
+      imageUrl:
+        "https://res.cloudinary.com/dzpuwffzh/image/upload/v1752070499/Pico_Watermelon_Concoction_1_h8mxxj.jpg",
+      alt: "Sample 2",
+    },
+    {
+      imageUrl:
+        "https://res.cloudinary.com/dzpuwffzh/image/upload/v1752070499/Pico_Orange_Matcha_fghomv.jpg",
+      alt: "Sample 3",
+    },
+    {
+      imageUrl:
+        "https://res.cloudinary.com/dzpuwffzh/image/upload/v1752070498/Pico_Watermelon_Concoction_2_ckwtpt.jpg",
+      alt: "Image 1",
+    },
+    {
+      imageUrl:
+        "https://res.cloudinary.com/dzpuwffzh/image/upload/v1752070498/Pico_Chefs_1_z2o651.jpg",
+      alt: "Sample 2",
+    },
+    {
+      imageUrl:
+        "https://res.cloudinary.com/dzpuwffzh/image/upload/v1752070497/Pico_Chef_4_phehxh.jpg",
+      alt: "Sample 3",
+    },
+    {
+      imageUrl:
+        "https://res.cloudinary.com/dzpuwffzh/image/upload/v1752070495/Pico_Coffee_2_w3ranl.jpg",
+      alt: "Sample 3",
+    },
+    {
+      imageUrl:
+        "https://res.cloudinary.com/dzpuwffzh/image/upload/v1752070494/Pico_Chefs_2_xdqgbg.jpg",
+      alt: "Sample 3",
+    },
+    {
+      imageUrl:
+        "https://res.cloudinary.com/dzpuwffzh/image/upload/v1752070489/Pico_Coffee_1_axk4bd.jpg",
+      alt: "Sample 3",
+    },
+    // break
     {
       imageUrl:
         "https://res.cloudinary.com/dzpuwffzh/image/upload/v1745212016/Nucleus_2_obkrkh.jpg",
