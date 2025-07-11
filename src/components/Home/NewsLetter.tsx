@@ -14,6 +14,26 @@ export default function NewsLetter() {
             Subscribe to our newsletter to get the latest updates on our brand,
             products, and services.
           </h3>
+          <Tabs className="" defaultValue="2024">
+            <TabsList className="flex gap-2 border border-orange-400 bg-transparent text-xl">
+              <TabsTrigger value="2024">Old Newsletter</TabsTrigger>
+              <TabsTrigger value="2025">New Newsletter</TabsTrigger>
+            </TabsList>
+            <TabsContent value="2024">
+              <button className="rounded-full border-2 border-[#FFC986] p-3 text-xl text-[#E0B354]">
+                <Link href="/Newsletter_PICO.pdf" target="_blank">
+                  <h3 className="italic"> Get the News Letter</h3>
+                </Link>
+              </button>
+            </TabsContent>
+            <TabsContent value="2025">
+              <button className="rounded-full border-2 border-[#FFC986] p-3 text-xl text-[#E0B354]">
+                <Link href="/Newsletter_Pico_2025.pdf" target="_blank">
+                  <h3 className="italic"> Get the News Letter</h3>
+                </Link>
+              </button>
+            </TabsContent>
+          </Tabs>
           <button className="rounded-full border-2 border-[#FFC986] p-3 text-xl text-[#E0B354]">
             <Link
               href="https://drive.google.com/drive/folders/1fAGPxn_PPBOWxu7gSJUOcYqqEMAwlbrG?usp=sharing"
