@@ -34,14 +34,14 @@ export default function NewsLetter() {
               </button>
             </TabsContent>
           </Tabs>
-          <button className="rounded-full border-2 border-[#FFC986] p-3 text-xl text-[#E0B354]">
+          {/* <button className="rounded-full border-2 border-[#FFC986] p-3 text-xl text-[#E0B354]">
             <Link
               href="https://drive.google.com/drive/folders/1fAGPxn_PPBOWxu7gSJUOcYqqEMAwlbrG?usp=sharing"
               target="_blank"
             >
               <h3 className="italic"> Get the News Letter</h3>
             </Link>
-          </button>
+          </button> */}
         </div>
       </div>
     </div>
