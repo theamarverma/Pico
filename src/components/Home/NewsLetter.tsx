@@ -16,8 +16,8 @@ export default function NewsLetter() {
           </h3>
           <Tabs className="" defaultValue="2024">
             <TabsList className="flex gap-2 border border-orange-400 bg-transparent text-xl">
-              <TabsTrigger value="2024">Old Newsletter</TabsTrigger>
-              <TabsTrigger value="2025">New Newsletter</TabsTrigger>
+              <TabsTrigger value="2024">2024</TabsTrigger>
+              <TabsTrigger value="2025">2025</TabsTrigger>
             </TabsList>
             <TabsContent value="2024">
               <button className="rounded-full border-2 border-[#FFC986] p-3 text-xl text-[#E0B354]">
