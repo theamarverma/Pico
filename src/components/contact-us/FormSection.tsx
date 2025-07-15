@@ -24,7 +24,7 @@ const FormSection = () => {
             {" "}
             for an unforgettable experience
           </h3>
-          <ul style={listStyle}>
+          <ul style={listStyle} className="my-6 flex-col">
             <li className="pl-2">
               {" "}
               No bookings available on weekends and{" "}

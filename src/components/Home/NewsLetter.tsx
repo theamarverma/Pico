@@ -15,7 +15,7 @@ export default function NewsLetter() {
             products, and services.
           </h3>
           <Tabs className="" defaultValue="2024">
-            <TabsList className="flex gap-2 border border-orange-400 bg-transparent text-xl">
+            <TabsList className="mx-auto flex max-w-36 border border-picoChocolate bg-transparent text-xl">
               <TabsTrigger value="2024">2024</TabsTrigger>
               <TabsTrigger value="2025">2025</TabsTrigger>
             </TabsList>
