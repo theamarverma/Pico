@@ -50,7 +50,7 @@ const FindUs = () => {
         </Link>
 
         <Link
-          href="https://www.tripadvisor.in/Restaurant_Review-g304558-d27826578-Reviews-Pico_Pizzeria_Coffee_Bar-Kolkata_Calcutta_Kolkata_District_West_Bengal.html"
+          href="https://www.tripadvisor.com/Restaurant_Review-g304558-d28051666-Reviews-Pico_Pizzeria_Coffee_Bar-Kolkata_Calcutta_Kolkata_District_West_Bengal.html"
           target="_blank"
           rel="noopener noreferrer"
         >
